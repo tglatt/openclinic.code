@@ -81,6 +81,7 @@ public class MedwanQuery {
     private Hashtable config;
     private Hashtable restrictedDiagnoses;
     private Hashtable labels;
+    private boolean reloadingConfig = false;
     private Hashtable labelsCache = new Hashtable();
     private SortedMap labelsCacheDates = new TreeMap();
     private Hashtable forwards;
@@ -2378,6 +2379,8 @@ public class MedwanQuery {
     }
     
     public void reloadConfigValues(){
+        if(reloadingConfig) return;
+        reloadingConfig = true;
         // load values from "OC_Config"
         Debug.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Reloading config values");
         Debug.println("Initial state is "+config.size()+" config values");
@@ -2417,8 +2420,11 @@ public class MedwanQuery {
         catch(Exception e){
             Debug.println(e.getMessage());
         }
+        finally{
+            reloadingConfig = false;
+        }
     }
-    
+
     public String getGermCode(String germ){
     	String germcode="";
     	Connection conn = getOpenclinicConnection();
