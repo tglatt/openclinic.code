@@ -1,0 +1,5 @@
+<report title="Rapport mensuel des examens positifs">
+	<analysis codes="P001" positive="Positive">Recherche de plasmodium</analysis>
+	<analysis codes="" positive="">Recherche BK</analysis>
+	<analysis codes="" positive="">Test HIV</analysis>
+</report>

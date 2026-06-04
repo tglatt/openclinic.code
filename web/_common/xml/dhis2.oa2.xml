@@ -1,0 +1,28 @@
+	<dataset label="Registre DEMO - traitement par age et sexe" type="item" 
+			transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_TRAINING_PROGRAMIOSIS" 
+			itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CONTEXT_ENCOUNTERUID" 
+			uid="jkILDXpYbrK">
+		<attributeOptionCombo type="default">
+			<option uid="HllvX50cXC0" name="Default"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="agegender">
+			<option uid="nJHxPH7HanV" min="0" max="15" gender="m" name="Homme 0-14 ans"/>
+			<option uid="I6j7F9UcpmU" min="15" max="999" gender="m" name="Homme 15 ans et plus"/>
+			<option uid="YyPqLt4spH2" min="0" max="15" gender="f" name="Femme 0-14 ans"/>
+			<option uid="GTe3sKqcpXb" min="15" max="999" gender="f" name="Femme 15 ans et plus"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="encounters" calculate="itemCount" label="Traitement au jus de bissap" uid="NkOYkBKRmCo">
+				<item sametransaction="1" 
+						itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TREATMENT" itemvalue="1"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" label="Traitement au jus de gingembre" uid="ECiZOoMQpjv">
+				<item sametransaction="1" 
+						itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TREATMENT" itemvalue="2"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" label="Traitement au lait de chamelle" uid="MyjUUD5pm97">
+				<item sametransaction="1" 
+						itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TREATMENT" itemvalue="3"/>
+			</dataelement>
+		</dataelements>
+	</dataset>

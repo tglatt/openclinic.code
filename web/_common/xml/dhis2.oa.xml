@@ -1,0 +1,200 @@
+<dhis2>
+	<!-- *************************************************************************************** -->
+	<!-- Registre DEMO																		 -->
+	<!-- *************************************************************************************** -->
+	<dataset label="Registre DEMO - suivi de la programmiose" type="title" uid="jkILDXpYbrK"/>
+	<dataset label="Registre DEMO - cas par type de transaction" type="item" 
+			transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_TRAINING_PROGRAMIOSIS,be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_TRAINING_PROGRAMIOSIS_FOLLOWUP" 
+			itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CONTEXT_ENCOUNTERUID" 
+			encountertype="admission"
+			uid="jkILDXpYbrK">
+		<attributeOptionCombo type="department">
+			<option uid="kRK085g8TwA" value="chi" name="Chirurgie"/>
+			<option uid="YgRvU7qxLmI" value="med" name="Médecine interne"/>
+			<option uid="q3yLRmF8a5K" value="ped" name="Pédiatrie"/>
+			<option uid="syxXlHoFHd3" value="gyn" name="Gynécologie-obstétrique"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="age">
+			<option uid="hZmqD6GDWsL" min="0" max="15" name="0-14 ans"/>
+			<option uid="rao3AsaRRN6" min="15" max="999" name="15 ans et plus"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="encounters" label="Cas de programmiose vus en hospitalisation" uid="Ubrxlp2BzU3"/>
+		</dataelements>
+	</dataset>
+	<dataset label="Registre DEMO - cas par type de transaction|1" type="item" 
+			transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_TRAINING_PROGRAMIOSIS,be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_TRAINING_PROGRAMIOSIS_FOLLOWUP" 
+			itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CONTEXT_ENCOUNTERUID" 
+			encountertype="visit"
+			uid="jkILDXpYbrK">
+		<attributeOptionCombo type="department">
+			<option uid="kRK085g8TwA" value="chi" name="Chirurgie"/>
+			<option uid="YgRvU7qxLmI" value="med" name="Médecine interne"/>
+			<option uid="q3yLRmF8a5K" value="ped" name="Pédiatrie"/>
+			<option uid="syxXlHoFHd3" value="gyn" name="Gynécologie-obstétrique"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="age">
+			<option uid="hZmqD6GDWsL" min="0" max="15" name="0-14 ans"/>
+			<option uid="rao3AsaRRN6" min="15" max="999" name="15 ans et plus"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="encounters" label="Cas de programmiose vus en consultation" uid="kVLECCqVgiv"/>
+		</dataelements>
+	</dataset>
+	<dataset label="Registre DEMO - cas par sexe" type="item" 
+			transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_TRAINING_PROGRAMIOSIS,be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_TRAINING_PROGRAMIOSIS_FOLLOWUP" 
+			itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CONTEXT_ENCOUNTERUID" 
+			uid="jkILDXpYbrK">
+		<attributeOptionCombo type="department">
+			<option uid="kRK085g8TwA" value="chi" name="Chirurgie"/>
+			<option uid="YgRvU7qxLmI" value="med" name="Médecine interne"/>
+			<option uid="q3yLRmF8a5K" value="ped" name="Pédiatrie"/>
+			<option uid="syxXlHoFHd3" value="gyn" name="Gynécologie-obstétrique"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="agegender">
+			<option uid="DFpgV62ecNx" min="0" max="999" gender="m" name="Homme"/>
+			<option uid="eJYUg7zkvat" min="0" max="999" gender="f" name="Femme"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="encounters" calculate="itemCount" label="Cas de programmiose confirmée" uid="afrar6n61Dh">
+				<item sametransaction="1" 
+						itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CONFIRMEDCASE" itemvalue="1{sem}"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" label="Cas de programmiose traitée" uid="ZNDtDgaFVJu">
+				<item sametransaction="1" 
+						itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TREATEDCASE" itemvalue="1{sem}"/>
+			</dataelement>
+			<dataelement unique="encounters" label="Cas de programmiose vus" uid="td9Mg3zW1ZF"/>
+		</dataelements>
+	</dataset>
+	<dataset label="Registre DEMO - traitements par age et sexe" type="item" 
+			transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_TRAINING_PROGRAMIOSIS" 
+			itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CONTEXT_ENCOUNTERUID" 
+			uid="jkILDXpYbrK">
+		<attributeOptionCombo type="department">
+			<option uid="kRK085g8TwA" value="chi" name="Chirurgie"/>
+			<option uid="YgRvU7qxLmI" value="med" name="Médecine interne"/>
+			<option uid="q3yLRmF8a5K" value="ped" name="Pédiatrie"/>
+			<option uid="syxXlHoFHd3" value="gyn" name="Gynécologie-obstétrique"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="agegender">
+			<option uid="nJHxPH7HanV" min="0" max="15" gender="m" name="Homme 0-14 ans"/>
+			<option uid="I6j7F9UcpmU" min="15" max="999" gender="m" name="Homme 15 ans et plus"/>
+			<option uid="YyPqLt4spH2" min="0" max="15" gender="f" name="Femme 0-14 ans"/>
+			<option uid="GTe3sKqcpXb" min="15" max="999" gender="f" name="Femme 15 ans et plus"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="encounters" calculate="itemCount" label="Traitement au jus de bissap avec complications" uid="JYI4IGyZlWU">
+				<item sametransaction="1" 
+						itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TREATMENT" itemvalue="1"/>
+				<item sametransaction="1" 
+						itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_COMPLICATIONS" itemvalue="1{sem}"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" label="Traitement au jus de gingembre avec complications" uid="vSLDAeWJZY7">
+				<item sametransaction="1" 
+						itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TREATMENT" itemvalue="2"/>
+				<item sametransaction="1" 
+						itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_COMPLICATIONS" itemvalue="1{sem}"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" label="Traitement au jus de bissap" uid="NkOYkBKRmCo">
+				<item sametransaction="1" 
+						itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TREATMENT" itemvalue="1"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" label="Traitement au jus de gingembre" uid="ECiZOoMQpjv">
+				<item sametransaction="1" 
+						itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TREATMENT" itemvalue="2"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" label="Traitement au lait de chamelle" uid="MyjUUD5pm97">
+				<item sametransaction="1" 
+						itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TREATMENT" itemvalue="3"/>
+			</dataelement>
+		</dataelements>
+	</dataset>
+	<dataset label="Registre DEMO - traitements par provenance" type="item" 
+			transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_TRAINING_PROGRAMIOSIS" 
+			itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CONTEXT_ENCOUNTERUID" 
+			uid="jkILDXpYbrK">
+		<attributeOptionCombo type="department">
+			<option uid="kRK085g8TwA" value="chi" name="Chirurgie"/>
+			<option uid="YgRvU7qxLmI" value="med" name="Médecine interne"/>
+			<option uid="q3yLRmF8a5K" value="ped" name="Pédiatrie"/>
+			<option uid="syxXlHoFHd3" value="gyn" name="Gynécologie-obstétrique"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="origin">
+			<option uid="nJHxPH7HanV" value="1" name="Domicile"/>
+			<option uid="I6j7F9UcpmU" value="2" name="Centre de santé"/>
+			<option uid="YyPqLt4spH2" value="3" name="Hôpital"/>
+			<option uid="GTe3sKqcpXb" value="4" name="Accident sur la route"/>
+			<option uid="GTe3sKqcpXb" value="5" name="Autre"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="encounters" calculate="itemCount" itemsneeded="1" label="Traitement au jus de bissap ou gingembre" uid="NkOYkBKRmCo">
+				<item sametransaction="1" 
+						itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TREATMENT" itemvalue="1"/>
+				<item sametransaction="1" 
+						itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TREATMENT" itemvalue="2"/>
+			</dataelement>
+		</dataelements>
+	</dataset>
+
+	<!-- *************************************************************************************** -->
+	<!-- Registre DEMO2																		 -->
+	<!-- *************************************************************************************** -->
+	<dataset label="Registre DEMO 2 - suivi de la programmiose" type="title" uid="Krrh6jVyDf9"/>
+	<dataset label="Registre DEMO 2 - cas par âge" type="item" 
+			transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_TRAINING_PROGRAMIOSIS" 
+			itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CONTEXT_ENCOUNTERUID" 
+			uid="Krrh6jVyDf9">
+		<attributeOptionCombo type="department">
+			<option uid="kRK085g8TwA" value="chi" name="Chirurgie"/>
+			<option uid="YgRvU7qxLmI" value="med" name="Médecine interne"/>
+			<option uid="q3yLRmF8a5K" value="ped" name="Pédiatrie"/>
+			<option uid="syxXlHoFHd3" value="gyn" name="Gynécologie-obstétrique"/>
+			<option uid="syxXlHoFHd3" value="den,con,oph" name="Autres services"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="age">
+			<option uid="hZmqD6GDWsL" min="0" max="15" name="0-14 ans"/>
+			<option uid="rao3AsaRRN6" min="15" max="999" name="15 ans et plus"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="encounters" calculate="itemCount" label="Cas de programmiose confirmée" 
+					uid="WJgMJ4SZgtz">
+				<item sametransaction="1" 
+						itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CONFIRMEDCASE" 
+						itemvalue="1{sem}"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" label="Cas de programmiose traitée" 
+					uid="Pw0XIX8Cb7f">
+				<item sametransaction="1" 
+						itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TREATEDCASE" 
+						itemvalue="1{sem}"/>
+			</dataelement>
+		</dataelements>
+	</dataset>
+	<dataset label="Registre DEMO 2 - cas par évolution" type="item" 
+			transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_TRAINING_PROGRAMIOSIS" 
+			itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CONTEXT_ENCOUNTERUID" 
+			uid="Krrh6jVyDf9">
+		<attributeOptionCombo type="default">
+			<option uid="HllvX50cXC0" name="Default"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="outcome">
+			<option uid="AEbFcpVzRK1" value="healed|better" name="Guérison"/>
+			<option uid="FIO8oGtnKzb" value="deadafter24|deadbefore24" name="Décès"/>
+			<option uid="jF50jScMV7S" value="transfer.infra" name="Transfert niveau inférieur"/>
+			<option uid="PJtf8B7gLwX" value="transfer.supra|transfer.supra.1|transfer.supra.2|transfer.supra.3|transfer.supra.4|transfer.supra.5|transfer.supra.6|transfer.supra.7" name="Transfert niveau supérieur"/>
+			<option uid="uIxAkzLYGu1" value="againstmedicaladvice|contrareference|escape|missing|transfer.equal" name="Autre"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="encounters" calculate="itemCount" label="Cas traités au lait de chamelle" 
+					uid="WCC0yTGoEku">
+				<item sametransaction="1" 
+						itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TREATMENT" 
+						itemvalue="3"/>
+			</dataelement>
+		</dataelements>
+	</dataset>
+
+</dhis2>
+
+

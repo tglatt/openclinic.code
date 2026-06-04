@@ -1,0 +1,12 @@
+<defaultPages>
+    <defaultPage type='administration'>
+        <page>
+            patientdata.do
+        </page>
+    </defaultPage>
+     <defaultPage type='maintenance'>
+        <page>
+            main.do?Page=assets/home.jsp
+        </page>
+    </defaultPage>
+</defaultPages>

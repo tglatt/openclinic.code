@@ -1,0 +1,28 @@
+<table width='100%' cellpadding="0" cellspacing="0">
+	<tr>
+		<td id='td1' width='50%' height='1000px' style='vertical-align: top'>
+			<iframe id='leftframe' width='100%' height='980px' src=""></iframe>
+		</td>
+		<td id='td2' width='50%' height='1000px' style='vertical-align: top'>
+			<iframe id='rightframe' width='100%' height='980px' src=""></iframe>
+		</td>
+	</tr>
+</table>
+
+<script>
+	let params = new URLSearchParams(document.location.search.substring(1));
+	let role = params.get('role') || 'observer';
+	let room = params.get('roomid') || '';
+	let room2 = params.get('roomid2') || '';
+	let user = params.get('user') || '';
+	let observerStorageURL = params.get('observerStorageURL') || '';
+	let patient = params.get('patient') || '';
+	document.getElementById('leftframe').src="https://webrtc.hnrw.org:448/room.html?roomid="+room;
+	if(room2=='' || room2=='null'){
+		document.getElementById('td2').style.display='none';
+		document.getElementById('td1').width='100%';
+	}
+	else{
+		document.getElementById('rightframe').src="https://webrtc.hnrw.org:448/room.html?roomid="+room2;
+	}
+</script>

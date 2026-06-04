@@ -1,0 +1,83 @@
+<rules>
+	<probability fr="Quelle est la probabilité du diagnostic malaria et le traitement conseillé pour mon patient avec les signes suivants:" en="What is the probability of malaria diagnosis for my patient with the following signs:"/>
+	<probability_bi fr="Quelle est la probabilité du diagnostic malaria et le traitement conseillé pour mon patient au Burundi avec les signes suivants:" en="What is the probability of malaria diagnosis for my patient in Burundi with the following signs:"/>
+	<probability_ne fr="Quelle est la probabilité du diagnostic malaria et le traitement conseillé pour mon patient au Niger avec les signes suivants:" en="What is the probability of malaria diagnosis for my patient in Niger with the following signs:"/>
+	<probability_gn fr="Quelle est la probabilité du diagnostic malaria et le traitement conseillé pour mon patient en Guinée-Conakry avec les signes suivants:" en="What is the probability of malaria diagnosis for my patient in Guinea-Conakry with the following signs:"/>
+	<differentialdiagnosis fr="Quels sont les diagnostics différentiels (maximum 10), leur probabilité et les 5 examens complémentaires les plus importants à réaliser à considérer pour mon patient avec les signes suivants:" en="What are the differential diagnoses (maximum 10), their probability in percent and the 5 most important additional examinations to be considered for my patient iwith the following signs:"/>
+	<differentialdiagnosis_bi fr="Quels sont les diagnostics différentiels (maximum 10), leur probabilité et les 5 examens complémentaires les plus importants à réaliser à considérer pour mon patient au Burundi avec les signes suivants:" en="What are the differential diagnoses (maximum 10), their probability in percent and the 5 most important additional examinations to be considered for my patient in Burundi with the following signs:"/>
+	<differentialdiagnosis_ne fr="Quels sont les diagnostics différentiels (maximum 10), leur probabilité et les 5 examens complémentaires les plus importants à réaliser à considérer pour mon patient au Niger avec les signes suivants:" en="What are the differential diagnoses (maximum 10), their probability in percent and the 5 most important additional examinations to be considered for my patient in Niger with the following signs:"/>
+	<differentialdiagnosis_gn fr="Quels sont les diagnostics différentiels (maximum 10), leur probabilité et les 5 examens complémentaires les plus importants à réaliser à considérer pour mon patient en Guinée-Conakry avec les signes suivants:" en="What are the differential diagnoses (maximum 10), their probability in percent and the 5 most important additional examinations to be considered for my patient in Guinea-Conakry with the following signs:"/>
+	<htmlformat fr="Formattez le résultat en HTML;Remplacez les caractères unicode au delà de 125 par leur code HTML escape;" en="Format the output in HTML;HTML escape all characters above unicode 125;"/>
+	<rule id='ITEM_TYPE_PREGNANTWOMEN.1' fr='Le patient est enceinte' en='The patient is pregnant'/>
+	<rule id='ITEM_TYPE_PREGNANCYDURATION' addvalue='1' fr='Durée de la grossesse en semaines' en='Pregnancy duration in weeks'/>
+	<rule id='[GENERAL.ANAMNESE]ITEM_TYPE_TEMPERATURE' addvalue="1" fr='Température en degrés celsius' en='Temperature in degrees celsius'/>
+	<rule id='temperature' addvalue="1" fr='Température en degrés celsius' en='Temperature in degrees celsius'/>
+	<rule id='ITEM_TYPE_BIOMETRY_HEIGHT' addvalue="1" fr='Taille en cm' en='Height in cm'/>
+	<rule id='ITEM_TYPE_BIOMETRY_WEIGHT' addvalue="1" fr='Poids en kg' en='Poids en kg'/>
+	<rule id='[GENERAL.ANAMNESE]ITEM_TYPE_SATURATION' addvalue="1" fr='SaO2' en='SaO2'/>
+	<rule id='ITEM_TYPE_FOETAL_HEARTRATE' addvalue="1" fr='Fréquence cardiaque foetale' en='Foetal heartrate'/>
+	<rule id='ITEM_TYPE_ARM_CIRCUMFERENCE' addvalue="1" fr='Périmètre brachial' en='Arm circumference'/>
+	<rule id='ITEM_TYPE_BIOMETRY_GLYCEMIA' addvalue="1" fr='Glycémie capillaire en g/dl' en='Capillary glycemia in g/dl'/>
+	<rule id='ITEM_TYPE_CARDIAL_CLINICAL_EXAMINATION_SYSTOLIC_PRESSURE_RIGHT' addvalue="1" fr='Tension artérielle systolique en mmHg' en='Systolic blood pressure in mmHg'/>
+	<rule id='ITEM_TYPE_CARDIAL_CLINICAL_EXAMINATION_DIASTOLIC_PRESSURE_RIGHT' addvalue="1" fr='Tension artérielle diastolique en mmHg' en='Diastolic blood pressure in mmHg'/>
+	<rule id='[GENERAL.ANAMNESE]ITEM_TYPE_RESPIRATORY_FREQUENCY' addvalue="1" fr='Fréquence respiratoire' en='Respiratory frequency'/>
+	<rule id='ITEM_TYPE_CARDIAL_CLINICAL_EXAMINATION_HEART_FREQUENCY' addvalue="1" fr='Fréquence cardiaque en bpm' en='Heart frequency in bpm'/>
+	<rule id='ITEM_TYPE_SEVERITYSIGNS.01' fr='Prostration' en='Prostration'/>
+	<rule id='ITEM_TYPE_SEVERITYSIGNS.02' fr='Multiples convulsions' en='Multiple convulsions'/>
+	<rule id='ITEM_TYPE_SEVERITYSIGNS.03' fr='Conscience altérée' en='Altered conscience'/>
+	<rule id='ITEM_TYPE_SEVERITYSIGNS.04' fr='Détresse respiratoire' en='Respiratory distress'/>
+	<rule id='ITEM_TYPE_SEVERITYSIGNS.06' fr='Ictère' en='Jaundice'/>
+	<rule id='ITEM_TYPE_SEVERITYSIGNS.07' fr='Hémoglobinurie macroscopique' en='Macroscopic hemoglobinuria'/>
+	<rule id='ITEM_TYPE_SEVERITYSIGNS.08' fr='Paleur palmoplantaire' en='Palmoplantar palor'/>
+	<rule id='ITEM_TYPE_SEVERITYSIGNS.09' fr='Oligurie/anurie' en='Oliguria/anuria'/>
+	<rule id='ITEM_TYPE_SEVERITYSIGNS.10' fr='Insufficience rénale' en='Renal failure'/>
+	<rule id='ITEM_TYPE_SEVERITYSIGNS.11' fr='Hypoglycémie' en='Hypoglycemia'/>
+	<rule id='ITEM_TYPE_SEVERITYSIGNS.12' fr='Etat de choc' en='Shock'/>
+	<rule id='ITEM_TYPE_SEVERITYSIGNS.13' fr='Hyperparasitémie' en='Hyperparasitemia'/>
+	<rule id='ITEM_TYPE_SEVERITYSIGNS.14' addvalue="1" fr='' en=''/>
+	<rule id='ITEM_TYPE_OTHERSIGNS.2' fr='Céphalées' en='Headache'/>
+	<rule id='ITEM_TYPE_OTHERSIGNS.3' fr='Goût amer' en='Bitter taste'/>
+	<rule id='ITEM_TYPE_OTHERSIGNS.4' fr='Arthromyalgies' en='Musscle and joint pain'/>
+	<rule id='ITEM_TYPE_OTHERSIGNS.5' fr='Vomissements' en='Vomiting'/>
+	<rule id='ITEM_TYPE_OTHERSIGNS.6' addvalue='1' fr='' en=''/>
+	<rule id='ITEM_TYPE_MEDICALHISTORY.1' fr='A été traité pour paludisme dans les derniers 28 jours' en='Has been treated for malaria in the past 28 days'/>
+	<rule id='ITEM_TYPE_MEDICALHISTORY.2' fr='Antécédents de insuffisance rénale' en='Kidney failure in the past'/>
+	<rule id='ITEM_TYPE_MEDICALHISTORY.3' fr='Antécédents de diabète' en='Diabetes'/>
+	<rule id='ITEM_TYPE_MEDICALHISTORY.4' fr='Antécédents de hypertension artérielle' en='Arterial hypertension in the past'/>
+	<rule id='ITEM_TYPE_MEDICALHISTORY.5' addvalue='1' fr='' en=''/>
+	<rule id='ITEM_TYPE_NEUROLOGIC.1' fr='Hypotonie' en='Hypotony'/>
+	<rule id='ITEM_TYPE_NEUROLOGIC.2' fr='Hypertonie' en='Hypertony'/>
+	<rule id='ITEM_TYPE_NEUROLOGIC.3' fr='Raideur de la nuque' en='Neck stiffness'/>
+	<rule id='ITEM_TYPE_RESPIRATORY.1' fr='Râles crépitants (auscultation)' en='Crackling rales (auscultation)'/>
+	<rule id='ITEM_TYPE_RESPIRATORY.2' fr='Râles sibilants (auscultation)' en='Sibilant rales (auscultation)'/>
+	<rule id='ITEM_TYPE_RESPIRATORY.3' fr='Silence auscultatoire' en='Auscultatory silence'/>
+	<rule id='ITEM_TYPE_RESPIRATORY.4' fr='Hypersonorité (auscultation)' en='Hypersonority (auscultation)'/>
+	<rule id='ITEM_TYPE_RESPIRATORY.5' addvalue='1' fr='' en=''/>
+	<rule id='ITEM_TYPE_SKIN.1' fr='Pâleur' en='Paleness'/>
+	<rule id='ITEM_TYPE_SKIN.2' fr='Cyanose' en='Cyanosis'/>
+	<rule id='ITEM_TYPE_SKIN.3' fr='Pli cutané persistant' en='Persisting skin fold'/>
+	<rule id='ITEM_TYPE_DIGESTIVE.1' fr='Balonnement abdominal' en='Abdominal bloating'/>
+	<rule id='ITEM_TYPE_DIGESTIVE.2' fr='Splénomégalie' en='Splenomegaly'/>
+	<rule id='ITEM_TYPE_DIGESTIVE.3' fr='Hépatomégalie' en='Hepatomegaly'/>
+	<rule id='ITEM_TYPE_DIGESTIVE.4' fr='Matité déclive abdominale' en='Abdominal declining dullness'/>
+	<rule id='ITEM_TYPE_DIGESTIVE.5' fr='Iléus paralytique' en='Paralytic ilius'/>
+	<rule id='ITEM_TYPE_DIGESTIVE.8' addvalue='1' fr='Diarrhée' en='Diarrea'/>
+	<rule id='ITEM_TYPE_UTERUSHEIGHT' addvalue='1' fr='Hauteur utérine en cm' en='Uterus height in cm'/>
+	<rule id='ITEM_TYPE_FETALMOVEMENT' value='1' fr='Mouvements foetaux présents' en='Foetal movements present'/>
+	<rule id='ITEM_TYPE_FETALMOVEMENT' value='0' fr='Absence de mouvements foetaux' en='No foetal movements'/>
+	<rule id='ITEM_TYPE_GLASGOW' addvalue='1' fr='Glasgow coma scale' en='Glasgow coma scale'/>
+	<rule id='ITEM_TYPE_BLANTYRE' addvalue='1' fr='Blantyre coma scale' en='Blantyre coma scale'/>
+	<rule id='ITEM_TYPE_AVPU' addvalue='1' fr='AVPU coma scale' en='AVPU coma scale'/>
+
+	<rule type='lab' loinc='70569-9' value='+' fr='Test rapide paludisme positif' en='Postitive rapid test malaria'/>
+	<rule type='lab' loinc='70569-9' value='-' fr='Test rapide paludisme négatif' en='Negative rapid test malaria'/>
+	<rule type='lab' loinc='32700-7' addvalue='1' fr='Goutte épaisse' en='Thick smear'/>
+	<rule type='lab' loinc='637-9' addvalue='1' fr='Type de parasite' en='Malaria species'/>
+	<rule type='lab' loinc='718-7' addvalue='1' fr='Hémoglobine en g/dl' en='Hemoglobin in g/dl'/>
+	<rule type='lab' loinc='789-8' addvalue='1' fr='Globules rouges en 10^12/l' en='Red blood cells in 10^12/l'/>
+	<rule type='lab' loinc='26464-8' addvalue='1' fr='Globules blancs en 10^9/l' en='White blood cells in 10^9/l'/>
+	<rule type='lab' loinc='26515-7' addvalue='1' fr='Plaquettes en 10^9/l' en='Platelets in 10^9/l'/>
+	<rule type='lab' loinc='3091-6' addvalue='1' fr='Urée en mg/dl' en='Urea in mg/dl'/>
+	<rule type='lab' loinc='1988-5' addvalue='1' fr='Créatinine en mg/dl' en='Creatinin in mg/dl'/>
+	
+</rules>

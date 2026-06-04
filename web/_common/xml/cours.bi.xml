@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dhis2>
+	<dataset label="Mon premier rapport" type="title" uid="dataset.1"/>
+	<dataset label="Mon premier rapport - résultats" type="encounter" encountertype="visit" incoming="1" uid="dataset.1">
+		<categoryOptionCombo type="age">
+			<option uid="option.1" min="0" max="1" name="0-11 mois"/>
+			<option uid="option.2" min="1" max="20" name="1-19 ans"/>
+			<option uid="option.3" min="20" max="999999" name="20 ans et plus"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="patients" uid="datalement.1" label="Nombre de consultations du mois"/>
+		</dataelements>
+	</dataset>
+</dhis2>

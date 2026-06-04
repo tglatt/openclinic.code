@@ -1,0 +1,26 @@
+<report title="Rapport annuel des examens réalisés">
+	<title>Examens de biochimie</title>
+	<analysis codes="LAB26;LAB68">Glycémie</analysis>
+	<analysis codes="###">Azotémie</analysis>
+	<analysis codes="###">Créatinine</analysis>
+	<analysis codes="###">Acide urique</analysis>
+	<analysis codes="###">Transaminase TGO</analysis>
+	<analysis codes="###">Transaminase TGP</analysis>
+	<analysis codes="###">Amylasémie</analysis>
+	<analysis codes="###">Cholestérol total</analysis>
+	<analysis codes="###">HDL-LDL</analysis>
+	<analysis codes="###">Triglycérides</analysis>
+	<analysis codes="###">Calcémie</analysis>
+	<analysis codes="###">Billirubine total+direct</analysis>
+	<analysis codes="###">Phosphatase alcaline</analysis>
+	<analysis codes="###">Lipasémie</analysis>
+	<analysis codes="###">LDH</analysis>
+	<analysis codes="###">Gamma GT</analysis>
+	<analysis codes="###">Fer sérique</analysis>
+	<analysis codes="###">Protéine total</analysis>
+	<title>Examens immuno-hémato</title>
+	<analysis codes="###">NFS</analysis>
+	<analysis codes="###">Réticulocytes</analysis>
+	<analysis codes="###" positive="Positive">VSH</analysis>
+	<analysis codes="LAB01;LAB18;LAB16">Hémoglobine+hématocrite</analysis>
+</report>

@@ -1,0 +1,24 @@
+<sync>
+	<table name="admin" database="admin" ts="updatetime" key="personid"/>
+	<table name="adminprivate" database="admin" ts="updatetime" key="privateid"/>
+	<table name="adminextends" database="admin" ts="updatetime" key="personid,extendtype,labelid"/>
+	<table name="users" database="admin" ts="updatetime" key="userid"/>
+	<table name="userparameters" database="admin" ts="updatetime" key="userid,parameter"/>
+	<table name="userservices" database="admin" ts="updatetime" key="userid,serviceid"/>
+	<table name="userprofiles" database="admin" ts="updatetime" key="userprofileid"/>
+	<table name="userprofilepermissions" database="admin" ts="updatetime" key="userprofileid,screenid,permission"/>
+	<table name="services" database="admin" ts="updatetime" key="serviceid"/>
+	<table name="oc_labels" database="openclinic" ts="oc_label_updatetime" key="oc_label_type,oc_label_id,oc_label_language"/>
+	<table name="labanalysis" database="openclinic" ts="updatetime" key="labID"/>
+	<table name="labprofiles" database="openclinic" ts="updatetime" key="profileID"/>
+	<table name="labprofilesanalysis" database="openclinic" ts="updatetime" key="profileID,labID"/>
+	<table name="healthrecord" database="openclinic" ts="dateBegin" key="personid"/>
+	<table name="oc_encounters" database="openclinic" ts="oc_encounter_updatetime" key="oc_encounter_serverid,oc_encounter_objectid"/>
+	<table name="transactions" database="openclinic" ts="ts" key="serverid,transactionid"/>
+	<table name="items" database="openclinic" ts="date" key="serverid,itemid"/>
+	<table name="requestedlabanalyses" database="openclinic" ts="updatetime" key="serverid,transactionid,analysiscode"/>
+	<table name="oc_credits" database="openclinic" ts="oc_credit_updatetime" key="oc_credit_serverid,oc_credit_objectid"/>
+	<table name="oc_debets" database="openclinic" ts="oc_debet_updatetime" key="oc_debet_serverid,oc_debet_objectid"/>
+	<table name="oc_diagnoses" database="openclinic" ts="oc_diagnosis_updatetime" key="oc_diagnosis_serverid,oc_diagnosis_objectid"/>
+	<table name="oc_rfe" database="openclinic" ts="oc_rfe_updatetime" key="oc_rfe_serverid,oc_rfe_objectid"/>
+</sync>

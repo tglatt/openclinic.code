@@ -1,0 +1,294 @@
+package be.openclinic.system;
+
+import java.lang.management.ManagementFactory;
+import java.net.InetAddress;
+import java.net.NetworkInterface;
+import java.util.Enumeration;
+import java.util.Hashtable;
+
+import be.mxs.common.util.db.MedwanQuery;
+import be.mxs.common.util.system.HTMLEntities;
+
+public class SystemInfo {
+	private String vpnDomain="?";
+	private String vpnName="?";
+	private String vpnAddress="?";
+	private String vpnPort="80";
+	private long upTime=-1;
+	private long diskSpace=-1;
+	private int usersConnected=-1;
+	private int openclinicVersion=0;
+	private Hashtable<String,String> hIndicators = new Hashtable<String,String>();
+	
+	public void setIndicator(String key, String value) {
+		hIndicators.put(key, value);
+	}
+	
+	public String getIndicator(String key) {
+		return SH.c(hIndicators.get(key));
+	}
+	
+	public void setIndicators(String s) {
+		if(SH.c(s).length()>0) {
+			String[] pairs = s.split("\\|");
+			for(int n=0;n<pairs.length;n++) {
+				if(pairs[n].split("=").length>1) {
+					this.setIndicator(pairs[n].split("=")[0], pairs[n].split("=")[1]);
+				}
+			}
+		}
+	}
+	
+	public int getOpenclinicVersion() {
+		return openclinicVersion;
+	}
+
+	public void setOpenclinicVersion(int openclinicVersion) {
+		this.openclinicVersion = openclinicVersion;
+	}
+
+	public String serialize() {
+		String indicators="";
+		Enumeration<String> e = hIndicators.keys();
+		while(e.hasMoreElements()) {
+			String key = e.nextElement();
+			indicators+=key+"="+hIndicators.get(key)+"|";
+		}
+		return vpnDomain+";"+vpnName+";"+vpnAddress+";"+upTime+";"+diskSpace+";"+usersConnected+";"+vpnPort+";"+openclinicVersion+";"+indicators;
+	}
+	
+	public String getVpnPort() {
+		return vpnPort;
+	}
+
+	public void setVpnPort(String vpnPort) {
+		this.vpnPort = vpnPort;
+	}
+
+	public static SystemInfo parse(String s) {
+		s=HTMLEntities.unhtmlentities(s);
+		SystemInfo systemInfo = new SystemInfo();
+		if(s.split(";").length>=6) {
+			systemInfo.setVpnDomain(s.split(";")[0]);
+			systemInfo.setVpnName(s.split(";")[1]);
+			systemInfo.setVpnAddress(s.split(";")[2]);
+			try {
+				systemInfo.setUpTime(Long.parseLong(s.split(";")[3]));
+			}
+			catch(Exception e) {e.printStackTrace();}
+			try {
+				systemInfo.setDiskSpace(Long.parseLong(s.split(";")[4]));
+			}
+			catch(Exception e) {e.printStackTrace();}
+			try {
+				systemInfo.setUsersConnected(Integer.parseInt(s.split(";")[5]));
+			}
+			catch(Exception e) {e.printStackTrace();}
+		}
+		if(s.split(";").length>=7) {
+			systemInfo.setVpnPort(s.split(";")[6]);
+		}
+		if(s.split(";").length>=8) {
+			try {
+				systemInfo.setOpenclinicVersion(Integer.parseInt(s.split(";")[7]));
+			}
+			catch(Exception e) {e.printStackTrace();}
+		}
+		if(s.split(";").length>=9) {
+			String[] pairs = s.split(";")[8].split("\\|");
+			for(int n=0;n<pairs.length;n++) {
+				if(pairs[n].split("=").length>1) {
+					systemInfo.setIndicator(pairs[n].split("=")[0], pairs[n].split("=")[1]);
+				}
+			}
+		}
+		return systemInfo;
+	}
+	
+	public String getVpnDomain() {
+		return vpnDomain;
+	}
+
+	public void setVpnDomain(String vpnDomain) {
+		this.vpnDomain = vpnDomain;
+	}
+
+	public String getVpnName() {
+		return vpnName;
+	}
+
+
+	public void setVpnName(String vpnName) {
+		this.vpnName = vpnName;
+	}
+
+
+	public String getVpnAddress() {
+		return vpnAddress;
+	}
+
+
+	public void setVpnAddress(String vpnAddress) {
+		this.vpnAddress = vpnAddress;
+	}
+
+
+	public long getUpTime() {
+		return upTime;
+	}
+
+	public String getUpTimeFormatted() {
+		long minute = 60;
+		long hour = 60*minute;
+		long day = 24*hour;
+		return upTime/day+"d "+(upTime%day)/hour+"h "+(upTime%hour)/minute+"m "+(upTime%minute)+"s";
+	}
+
+	public static String getUpTimeFormatted(long upTime) {
+		long minute = 60;
+		long hour = 60*minute;
+		long day = 24*hour;
+		return upTime/day+"d "+(upTime%day)/hour+"h "+(upTime%hour)/minute+"m "+(upTime%minute)+"s";
+	}
+
+	public void setUpTime(long upTime) {
+		this.upTime = upTime;
+	}
+
+	public void setUpTime(String upTime) {
+		try {
+			this.upTime = Long.parseLong(upTime);
+		}
+		catch(Exception e) {e.printStackTrace();}
+	}
+
+
+	public long getDiskSpace() {
+		return diskSpace;
+	}
+
+	public void setDiskSpace(long diskSpace) {
+		this.diskSpace = diskSpace;
+	}
+
+	public void setDiskSpace(String diskSpace) {
+		try {
+			this.diskSpace = Long.parseLong(diskSpace);
+		}
+		catch(Exception e) {e.printStackTrace();}
+	}
+
+	public int getUsersConnected() {
+		return usersConnected;
+	}
+
+	public void setUsersConnected(int usersConnected) {
+		this.usersConnected = usersConnected;
+	}
+
+	public void setUsersConnected(String usersConnected) {
+		try {
+			this.usersConnected = Integer.parseInt(usersConnected);
+		}
+		catch(Exception e) {e.printStackTrace();}
+	}
+
+	public void setOpenclinicVersion(String openclinicVersion) {
+		try {
+			this.openclinicVersion = Integer.parseInt(openclinicVersion);
+		}
+		catch(Exception e) {e.printStackTrace();}
+	}
+
+	public static String getVPNIpAddress() {
+		String s = "";
+		try {
+			Enumeration e = NetworkInterface.getNetworkInterfaces();
+			while(e.hasMoreElements())
+			{
+			    NetworkInterface n = (NetworkInterface) e.nextElement();
+			    Enumeration ee = n.getInetAddresses();
+			    while (ee.hasMoreElements())
+			    {
+			        InetAddress i = (InetAddress) ee.nextElement();
+			        if(i.getHostAddress().startsWith(MedwanQuery.getInstance().getConfigString("vpnPrefix","10.8.")) || i.getHostAddress().startsWith(MedwanQuery.getInstance().getConfigString("vpnPrefix","10.9."))) {
+			        	s=i.getHostAddress();
+			        	break;
+			        }
+			    }
+			}		
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		return s;
+	}
+
+	public static String getVPNIpAddress(Enumeration networkInterfaces) {
+		String s = "";
+		try {
+			Enumeration e = networkInterfaces;
+			while(e.hasMoreElements())
+			{
+			    NetworkInterface n = (NetworkInterface) e.nextElement();
+			    Enumeration ee = n.getInetAddresses();
+			    while (ee.hasMoreElements())
+			    {
+			        InetAddress i = (InetAddress) ee.nextElement();
+			        if(i.getHostAddress().startsWith(MedwanQuery.getInstance().getConfigString("vpnPrefix","10.8.")) || i.getHostAddress().startsWith(MedwanQuery.getInstance().getConfigString("vpnPrefix","10.9."))) {
+			        	s=i.getHostAddress();
+			        	break;
+			        }
+			    }
+			}		
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		return s;
+	}
+
+	public static long getSystemUptime() {
+		long systemUptime = -1;
+		systemUptime=ManagementFactory.getRuntimeMXBean().getUptime();
+		return systemUptime;
+	}
+	
+	public static long getSystemDiskSpace() {
+		long systemDiskSpace = new java.io.File(MedwanQuery.getInstance().getConfigString("datacenterDataPartition","/")).getUsableSpace();
+		return systemDiskSpace;
+	}
+	
+	public static int getActiveUserCount() {
+		int userCount = MedwanQuery.getSessions().size();
+		return userCount;
+	}
+	
+	public static int getAvailableProcessors() {
+		return ManagementFactory.getOperatingSystemMXBean().getAvailableProcessors();
+	}
+
+	public static double getSystemLoadAverage() {
+		return ManagementFactory.getOperatingSystemMXBean().getSystemLoadAverage();
+	}
+	
+	public static long getInitialMemory() {
+		return ManagementFactory.getMemoryMXBean().getHeapMemoryUsage().getInit();
+	}
+	
+	public static long getMaximumMemory() {
+		return ManagementFactory.getMemoryMXBean().getHeapMemoryUsage().getMax();
+	}
+	
+	public static long getUsedMemory() {
+		return ManagementFactory.getMemoryMXBean().getHeapMemoryUsage().getUsed();
+	}
+	
+	public static long getCommittedMemory() {
+		return ManagementFactory.getMemoryMXBean().getHeapMemoryUsage().getCommitted();
+	}
+	
+	public static long getFreeMemory() {
+		return getMaximumMemory()-getUsedMemory();
+	}
+}

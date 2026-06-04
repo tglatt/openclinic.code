@@ -1,0 +1,16 @@
+mysql -e "create user 'replica-user'@'%' identified with mysql_native_password by 'replic@'"
+mysql -e "grant replication slave on *.* to 'replica-user'@'%'"
+mysql -e "flush privileges"
+kill -9 $(ps aux | grep -v grep | grep tomcat | awk '{print $2}')
+service mysql restart
+mysql -e "reset master"
+mysql -e "show master status"
+service mysql stop
+cd /var/lib
+rm -rf mysql.copy
+cp -rf mysql mysql.copy
+service mysql start
+/root/restarttmct
+cd /var/lib
+tar czf mysql.copy.tar.gz mysql.copy
+

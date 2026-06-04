@@ -1,0 +1,20 @@
+#!/bin/bash
+echo IP address of the master?
+read var1
+echo Filename of the master binlog?
+read var2
+echo Position in the master binlog?
+read var3
+service mysql stop
+cd /var/lib
+mv mysql mysql.old
+tar zxf mysql.copy.tar.gz
+mv mysql.copy mysql
+chown -R mysql:mysql mysql
+cd mysql
+rm auto.cnf
+service mysql start
+mysql -e "change master to master_host='$var1',master_user='replica-user',master_password='replic@',master_log_file='$var2',master_log_pos=$var3"
+mysql -e "start slave"
+sleep 5
+mysql -e "show slave status\G"

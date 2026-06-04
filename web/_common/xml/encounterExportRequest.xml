@@ -1,0 +1,31 @@
+<export>
+	<begin>202603010000000</begin>
+	<end>202603010000000</end>
+	<includes>
+		<patient>
+			<minAge/>
+			<maxAge/>
+			<gender/>
+		</patient>
+		<encounter>
+			<types/>
+			<origins/>
+			<zones/>
+			<outcomes/>
+		</encounter>
+		<transactions>
+			<transactionTypes/>
+			<itemTypes/>
+		</transactions>
+		<labResults>
+			<analysisCodes/>
+		</labResults>
+		<invoices>
+			<insurers/>
+			<statuses/>
+			<debets>
+				<healthServiceCodes></healthServiceCodes>
+			</debets>
+		</invoices>
+	</includes>
+</export>

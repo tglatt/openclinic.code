@@ -1,0 +1,50 @@
+<dashboards>
+	<!-- nextid=38 -->
+	<group labelid="financial">
+		<dashboard id="7" accessright="dashboard" labelid="income" file="/dashboards/income/dashboard.jsp"/>
+		<dashboard id="8" accessright="dashboard" labelid="invoicecompleteness" file="/dashboards/invoicecompleteness/dashboard.jsp"/>
+		<dashboard id="9" accessright="dashboard" labelid="invoicerecovery" file="/dashboards/invoicerecovery/dashboard.jsp"/>
+		<dashboard id="16" accessright="dashboard" labelid="incomeevolution" file="/dashboards/incomeevolution/dashboard.jsp"/>
+		<dashboard id="17" accessright="dashboard" labelid="todaysincome" file="/dashboards/todaysincome/dashboard.jsp"/>
+		<dashboard id="18" accessright="dashboard" labelid="openinvoices" file="/dashboards/openinvoices/dashboard.jsp"/>
+	</group>
+	<group labelid="administration">
+		<dashboard id="1" accessright="dashboard" labelid="activelogins" file="/dashboards/activelogins/dashboard.jsp"/>
+		<dashboard id="23" accessright="dashboard" labelid="lengthofstay" file="/dashboards/lengthofstay/dashboard.jsp"/>
+		<dashboard id="24" accessright="dashboard" labelid="recentlengthofstay" file="/dashboards/recentlengthofstay/dashboard.jsp"/>
+		<dashboard id="25" accessright="dashboard" labelid="bedoccupancy" file="/dashboards/bedoccupancy/dashboard.jsp"/>
+		<dashboard id="26" accessright="dashboard" labelid="actualbedoccupancy" file="/dashboards/actualbedoccupancy/dashboard.jsp"/>
+		<dashboard id="29" accessright="dashboard" labelid="lastmonthcontacts" file="/dashboards/lastmonthcontacts/dashboard.jsp"/>
+		<dashboard id="30" accessright="dashboard" labelid="contactsperpatient" file="/dashboards/contactsperpatient/dashboard.jsp"/>
+	</group>
+	<group labelid="clinical">
+		<dashboard id="2" accessright="dashboard" labelid="admissiondiagnosis" file="/dashboards/admissiondiagnosis/dashboard.jsp"/>
+		<dashboard id="5" accessright="dashboard" labelid="clinicalcoverage" file="/dashboards/clinicalcoverage/dashboard.jsp"/>
+		<dashboard id="4" accessright="dashboard" labelid="clinicalcompleteness" file="/dashboards/clinicalcompleteness/dashboard.jsp"/>
+		<dashboard id="14" accessright="dashboard" labelid="rfecoverage" file="/dashboards/rfecompleteness/dashboard.jsp"/>
+		<dashboard id="19" accessright="dashboard" labelid="maternalmortality" file="/dashboards/maternalmortality/dashboard.jsp"/>
+		<dashboard id="20" accessright="dashboard" labelid="perinatalmortality" file="/dashboards/perinatalmortality/dashboard.jsp"/>
+		<dashboard id="21" accessright="dashboard" labelid="prematures" file="/dashboards/prematures/dashboard.jsp"/>
+		<dashboard id="22" accessright="dashboard" labelid="recentprematures" file="/dashboards/recentprematures/dashboard.jsp"/>
+		<dashboard id="31" accessright="dashboard" labelid="covid.cases" file="/dashboards/covidcases/dashboard.jsp"/>
+		<dashboard id="32" accessright="dashboard" labelid="covid.contacts" file="/dashboards/covidcontacts/dashboard.jsp"/>
+		<dashboard id="33" accessright="dashboard" labelid="covid.positivity" file="/dashboards/covidpositivity/dashboard.jsp"/>
+		<dashboard id="34" accessright="dashboard" labelid="covid.admissions" file="/dashboards/covidadmissions/dashboard.jsp"/>
+	</group>
+	<group labelid="malaria">
+		<dashboard id="36" accessright="dashboard" labelid="malariaseverity" file="/dashboards/malariaseverity/dashboard.jsp"/>
+		<dashboard id="37" accessright="dashboard" labelid="malariaoutcome" file="/dashboards/malariaoutcome/dashboard.jsp"/>
+	</group>
+	<group labelid="system">
+		<dashboard id="3" accessright="dashboard" labelid="availableram" file="/dashboards/availableram/dashboard.jsp"/>
+		<dashboard id="6" accessright="dashboard" labelid="freeram" file="/dashboards/freeram/dashboard.jsp"/>
+		<dashboard id="10" accessright="dashboard" labelid="maxram" file="/dashboards/maxram/dashboard.jsp"/>
+		<dashboard id="11" accessright="dashboard" labelid="ram" file="/dashboards/ram/dashboard.jsp"/>
+		<dashboard id="12" accessright="dashboard" labelid="ramtext" file="/dashboards/ramtext/dashboard.jsp"/>
+		<dashboard id="13" accessright="dashboard" labelid="reservedram" file="/dashboards/reservedram/dashboard.jsp"/>
+		<dashboard id="15" accessright="dashboard" labelid="time" file="/dashboards/time/dashboard.jsp"/>
+		<dashboard id="27" accessright="dashboard" labelid="activeusers" file="/dashboards/activeusers/dashboard.jsp"/>
+		<dashboard id="28" accessright="dashboard" labelid="activesessions" file="/dashboards/activesessions/dashboard.jsp"/>
+		<dashboard id="35" accessright="dashboard" labelid="diskspace" file="/dashboards/diskspace/dashboard.jsp"/>
+	</group>
+</dashboards>

@@ -1,0 +1,20 @@
+<%@page import="java.util.*,
+                be.mxs.common.util.system.HTMLEntities"%>
+<%@page errorPage="/includes/error.jsp"%>
+<%@include file="/includes/validateUser.jsp"%>
+<%
+	String sFindRegion   = checkString(request.getParameter("FindRegion")),
+	       sFindDistrict = checkString(request.getParameter("FindDistrict")),
+		   sFindSector = checkString(request.getParameter("FindSector"));
+
+    Vector vCities = Zipcode.getCities(sFindRegion,sFindSector,sFindDistrict,MedwanQuery.getInstance().getConfigString("zipcodetable","RwandaZipcodes"));
+    Collections.sort(vCities);
+   
+    String sTmpCity, sCities = "";
+    for(int i=0; i<vCities.size(); i++){
+        sTmpCity = (String)vCities.elementAt(i);
+        sCities+= "$"+checkString(sTmpCity);
+    }
+    
+    out.print(sCities);
+%>

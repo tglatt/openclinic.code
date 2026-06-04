@@ -1,0 +1,381 @@
+<dhis2>
+	<!-- 
+		Configuration demo for DSN - Niger
+	 -->
+	<config>
+		<uri>http://niger.dhis.africa</uri>
+		<api>/api</api>
+		<port>8088</port>
+		<user>SIH_Enabel</user>
+		<password><![CDATA[a^D75<-W5pAG]]></password>
+	</config>
+	<!-- 
+		DataSet: HOP_02_CONSULTATIONS 
+	-->
+	<dataset label="Consultations" type="title" uid="qezW1UShSFA"/>
+	<dataset label="Consultation externe" type="encounter" encountertype="visit" uid="qezW1UShSFA">
+		<attributeOptionCombo type="department">
+			<option uid="chi-getorguid" value="chi" name="Chirurgie"/>
+			<option uid="med-getorguid" value="med" name="Medecine interne"/>
+			<option uid="orl-getorguid" value="orl" name="ORL"/>
+			<option uid="oph-getorguid" value="oph" name="Ophtalmologie"/>
+			<option uid="ped-getorguid" value="ped" name="Pédiatrie"/>
+			<option uid="psy-getorguid" value="psy" name="Santé mentale"/>
+			<option uid="gyn-getorguid" value="gyn" name="Gynécologie/obstétrique"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="age">
+			<option uid="OfgifKSFiib" min="0" max="1" name="&lt;1 an"/>
+			<option uid="Xj9ayPI0QYh" min="1" max="5" name="1-4 ans"/>
+			<option uid="AkcjRa8rdqa" min="5" max="15" name="5-14 ans"/>
+			<option uid="LqxtDRM0nb1" min="15" max="999" name="&gt;=15 ans"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="patients" calculate="itemCount" label="Consultants directs" uid="mvmPcDnpbqE">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TYPEOFCONSULTATION" itemvalue="1"/>
+			</dataelement>
+			<dataelement unique="patients" calculate="itemCount" label="Consultants référés" uid="QtrruTrU127">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TYPEOFCONSULTATION" itemvalue="2"/>
+			</dataelement>
+			<dataelement unique="patients" calculate="itemCount" label="Visites de retour" uid="kCwhI3al0xl">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TYPEOFCONSULTATION" itemvalue="3"/>
+			</dataelement>
+			<dataelement unique="patients" minage="60" label="Consultants &gt;=60 ans" uid="k5m9yuvLX8Z"/>
+			<dataelement unique="patients" calculate="itemCount" label="Handicapés" uid="u0gk1GdwFaV">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_DISABLED"/>
+			</dataelement>
+			<dataelement unique="patients" calculate="itemCount" label="Evacuations/références niv. supérieur" uid="zxAMzzlpU5e">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_RESULTS" itemvalue="2"/>
+			</dataelement>
+		</dataelements>
+	</dataset>
+	<dataset label="Urgences" type="encounter" uid="qezW1UShSFA">
+		<attributeOptionCombo type="department">
+			<option uid="urg-getorguid" value="urg" name="Urgences"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="age">
+			<option uid="OfgifKSFiib" min="0" max="1" name="&lt;1 an"/>
+			<option uid="Xj9ayPI0QYh" min="1" max="5" name="1-4 ans"/>
+			<option uid="AkcjRa8rdqa" min="5" max="15" name="5-14 ans"/>
+			<option uid="LqxtDRM0nb1" min="15" max="999" name="&gt;=15 ans"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="patients" calculate="itemCount" label="Consultants directs" uid="DPyo6EUCfmU">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TYPEOFCONSULTATION" itemvalue="1"/>
+			</dataelement>
+			<dataelement unique="patients" minage="60" label="Consultants &gt;=60 ans" uid="wrn1AyK5azJ"/>
+			<dataelement unique="patients" calculate="itemCount" label="Consultants référés" uid="lzqbAxuF9fx">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TYPEOFCONSULTATION" itemvalue="2"/>
+			</dataelement>
+			<dataelement unique="patients" calculate="itemCount" label="Transférés en hospitalisation" uid="ikcHxiqgfiz">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_RESULTS" itemvalue="1"/>
+			</dataelement>
+			<dataelement unique="patients" calculate="itemCount" label="Retour au domicile" uid="JCNyT5miWIg">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_RESULTS" itemvalue="4"/>
+			</dataelement>
+			<dataelement unique="patients" calculate="itemCount" label="Evacuations/références niv. supérieur" uid="sOg0zwsH6Ae">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_RESULTS" itemvalue="2"/>
+			</dataelement>
+			<dataelement unique="patients" calculate="itemCount" label="Décédé aux urgences" uid="CMcbSdrhag1">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_RESULTS" itemvalue="6|7"/>
+			</dataelement>
+		</dataelements>
+	</dataset>
+	<dataset label="Hospitalisations" type="title" uid="MJouWCN868R"/>
+	<dataset label="Hospitalisations|a" type="encounter" encountertype="admission" uid="MJouWCN868R">
+		<attributeOptionCombo type="department">
+			<option uid="chi-getorguid" value="chi" name="Chirurgie"/>
+			<option uid="med-getorguid" value="med" name="Medecine interne"/>
+			<option uid="orl-getorguid" value="orl" name="ORL"/>
+			<option uid="oph-getorguid" value="oph" name="Ophtalmologie"/>
+			<option uid="ped-getorguid" value="ped" name="Pédiatrie"/>
+			<option uid="psy-getorguid" value="psy" name="Santé mentale"/>
+			<option uid="gyn-getorguid" value="gyn" name="Gynécologie/obstétrique"/>
+			<option uid="urg-getorguid" value="urg" name="Urgences"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="default">
+			<option uid="mxbkQOi8fhp" name="Nombre"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement calculate="totalbeds" nolink="1" uid="UqVkeBwgB06" label="Nombre de lits"/>
+		</dataelements>
+	</dataset>
+	<dataset label="Hospitalisations|1" type="encounter" encountertype="admission" beforedate="begin" uid="MJouWCN868R">
+		<attributeOptionCombo type="department">
+			<option uid="chi-getorguid" value="chi" name="Chirurgie"/>
+			<option uid="med-getorguid" value="med" name="Medecine interne"/>
+			<option uid="orl-getorguid" value="orl" name="ORL"/>
+			<option uid="oph-getorguid" value="oph" name="Ophtalmologie"/>
+			<option uid="ped-getorguid" value="ped" name="Pédiatrie"/>
+			<option uid="psy-getorguid" value="psy" name="Santé mentale"/>
+			<option uid="gyn-getorguid" value="gyn" name="Gynécologie/obstétrique"/>
+			<option uid="urg-getorguid" value="urg" name="Urgences"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="default">
+			<option uid="Ktn6cefaz8V" name="Nombre"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement uid="UqVkeBwgB06-1" label="Existant au début"/>
+		</dataelements>
+	</dataset>
+	<dataset label="Hospitalisations - Entrées" type="encounter" encountertype="admission" incoming="1" uid="MJouWCN868R">
+		<attributeOptionCombo type="department">
+			<option uid="chi-getorguid" value="chi" name="Chirurgie"/>
+			<option uid="med-getorguid" value="med" name="Medecine interne"/>
+			<option uid="orl-getorguid" value="orl" name="ORL"/>
+			<option uid="oph-getorguid" value="oph" name="Ophtalmologie"/>
+			<option uid="ped-getorguid" value="ped" name="Pédiatrie"/>
+			<option uid="psy-getorguid" value="psy" name="Santé mentale"/>
+			<option uid="gyn-getorguid" value="gyn" name="Gynécologie/obstétrique"/>
+			<option uid="urg-getorguid" value="urg" name="Urgences"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="default">
+			<option uid="bDk33CXuRo9" name="Nombre"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="encounters" calculate="itemCount" label="Directes" uid="UqVkeBwgB06-2">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_ENTRYTYPE" itemvalue="1"/>
+			</dataelement>
+		</dataelements>
+	</dataset>
+	<dataset label="Hospitalisations - Entrées|1" type="encounter" encountertype="admission" incoming="1" uid="MJouWCN868R">
+		<attributeOptionCombo type="department">
+			<option uid="chi-getorguid" value="chi" name="Chirurgie"/>
+			<option uid="med-getorguid" value="med" name="Medecine interne"/>
+			<option uid="orl-getorguid" value="orl" name="ORL"/>
+			<option uid="oph-getorguid" value="oph" name="Ophtalmologie"/>
+			<option uid="ped-getorguid" value="ped" name="Pédiatrie"/>
+			<option uid="psy-getorguid" value="psy" name="Santé mentale"/>
+			<option uid="gyn-getorguid" value="gyn" name="Gynécologie/obstétrique"/>
+			<option uid="urg-getorguid" value="urg" name="Urgences"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="default">
+			<option uid="MLGLuR5CK0f" name="Nombre"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="encounters" calculate="itemCount" label="Référées" uid="UqVkeBwgB06-3">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_ENTRYTYPE" itemvalue="2"/>
+			</dataelement>
+		</dataelements>
+	</dataset>
+	<dataset label="Hospitalisations - Entrées|2" type="encounter" encountertype="admission" incoming="1" uid="MJouWCN868R">
+		<attributeOptionCombo type="department">
+			<option uid="chi-getorguid" value="chi" name="Chirurgie"/>
+			<option uid="med-getorguid" value="med" name="Medecine interne"/>
+			<option uid="orl-getorguid" value="orl" name="ORL"/>
+			<option uid="oph-getorguid" value="oph" name="Ophtalmologie"/>
+			<option uid="ped-getorguid" value="ped" name="Pédiatrie"/>
+			<option uid="psy-getorguid" value="psy" name="Santé mentale"/>
+			<option uid="gyn-getorguid" value="gyn" name="Gynécologie/obstétrique"/>
+			<option uid="urg-getorguid" value="urg" name="Urgences"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="default">
+			<option uid="vxmwRpP1cBe" name="Nombre"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="encounters" calculate="itemCount" label="Transférées" uid="UqVkeBwgB06-4">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_ENTRYTYPE" itemvalue="3"/>
+			</dataelement>
+		</dataelements>
+	</dataset>
+	<dataset label="Hospitalisations - Sorties" type="encounter" encountertype="admission" outgoing="1" uid="MJouWCN868R">
+		<attributeOptionCombo type="department">
+			<option uid="chi-getorguid" value="chi" name="Chirurgie"/>
+			<option uid="med-getorguid" value="med" name="Medecine interne"/>
+			<option uid="orl-getorguid" value="orl" name="ORL"/>
+			<option uid="oph-getorguid" value="oph" name="Ophtalmologie"/>
+			<option uid="ped-getorguid" value="ped" name="Pédiatrie"/>
+			<option uid="psy-getorguid" value="psy" name="Santé mentale"/>
+			<option uid="gyn-getorguid" value="gyn" name="Gynécologie/obstétrique"/>
+			<option uid="urg-getorguid" value="urg" name="Urgences"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="outcome">
+			<option value="healed" uid="ZKdaOX8O5w8" name="Nombre"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="encounters" calculate="itemCount" label="Guéris" uid="UqVkeBwgB06-5"/>
+		</dataelements>
+	</dataset>
+	<dataset label="Hospitalisations - Sorties|1" type="encounter" encountertype="admission" outgoing="1" uid="MJouWCN868R">
+		<attributeOptionCombo type="department">
+			<option uid="chi-getorguid" value="chi" name="Chirurgie"/>
+			<option uid="med-getorguid" value="med" name="Medecine interne"/>
+			<option uid="orl-getorguid" value="orl" name="ORL"/>
+			<option uid="oph-getorguid" value="oph" name="Ophtalmologie"/>
+			<option uid="ped-getorguid" value="ped" name="Pédiatrie"/>
+			<option uid="psy-getorguid" value="psy" name="Santé mentale"/>
+			<option uid="gyn-getorguid" value="gyn" name="Gynécologie/obstétrique"/>
+			<option uid="urg-getorguid" value="urg" name="Urgences"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="outcome">
+			<option value="better" uid="FYfWw5fNUUE" name="Nombre"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="encounters" calculate="itemCount" label="Améliorés" uid="UqVkeBwgB06-6"/>
+		</dataelements>
+	</dataset>
+	<dataset label="Hospitalisations - Sorties|2" type="encounter" encountertype="admission" outgoing="1" uid="MJouWCN868R">
+		<attributeOptionCombo type="department">
+			<option uid="chi-getorguid" value="chi" name="Chirurgie"/>
+			<option uid="med-getorguid" value="med" name="Medecine interne"/>
+			<option uid="orl-getorguid" value="orl" name="ORL"/>
+			<option uid="oph-getorguid" value="oph" name="Ophtalmologie"/>
+			<option uid="ped-getorguid" value="ped" name="Pédiatrie"/>
+			<option uid="psy-getorguid" value="psy" name="Santé mentale"/>
+			<option uid="gyn-getorguid" value="gyn" name="Gynécologie/obstétrique"/>
+			<option uid="urg-getorguid" value="urg" name="Urgences"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="outcome">
+			<option value="deadbefore24|deadafter24" uid="vgdSzy5iJbZ" name="Nombre"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="encounters" calculate="itemCount" label="Total décès" uid="UqVkeBwgB06-7"/>
+		</dataelements>
+	</dataset>
+	<dataset label="Hospitalisations - Sorties|3" type="encounter" encountertype="admission" outgoing="1" uid="MJouWCN868R">
+		<attributeOptionCombo type="department">
+			<option uid="chi-getorguid" value="chi" name="Chirurgie"/>
+			<option uid="med-getorguid" value="med" name="Medecine interne"/>
+			<option uid="orl-getorguid" value="orl" name="ORL"/>
+			<option uid="oph-getorguid" value="oph" name="Ophtalmologie"/>
+			<option uid="ped-getorguid" value="ped" name="Pédiatrie"/>
+			<option uid="psy-getorguid" value="psy" name="Santé mentale"/>
+			<option uid="gyn-getorguid" value="gyn" name="Gynécologie/obstétrique"/>
+			<option uid="urg-getorguid" value="urg" name="Urgences"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="outcome">
+			<option value="deadbefore24" uid="BO2G5nXn9jy" name="Nombre"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="encounters" calculate="itemCount" label="Décès dans les 24h" uid="UqVkeBwgB06-8"/>
+		</dataelements>
+	</dataset>
+	<dataset label="Hospitalisations - Sorties|4" type="encounter" encountertype="admission" outgoing="1" uid="MJouWCN868R">
+		<attributeOptionCombo type="department">
+			<option uid="chi-getorguid" value="chi" name="Chirurgie"/>
+			<option uid="med-getorguid" value="med" name="Medecine interne"/>
+			<option uid="orl-getorguid" value="orl" name="ORL"/>
+			<option uid="oph-getorguid" value="oph" name="Ophtalmologie"/>
+			<option uid="ped-getorguid" value="ped" name="Pédiatrie"/>
+			<option uid="psy-getorguid" value="psy" name="Santé mentale"/>
+			<option uid="gyn-getorguid" value="gyn" name="Gynécologie/obstétrique"/>
+			<option uid="urg-getorguid" value="urg" name="Urgences"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="outcome">
+			<option value="contrareference|reference" uid="xYFcf1wTdWc" name="Nombre"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="encounters" calculate="itemCount" label="Référés" uid="UqVkeBwgB06-9"/>
+		</dataelements>
+	</dataset>
+	<dataset label="Hospitalisations - Sorties|5" type="encounter" encountertype="admission" outgoing="1" uid="MJouWCN868R">
+		<attributeOptionCombo type="department">
+			<option uid="chi-getorguid" value="chi" name="Chirurgie"/>
+			<option uid="med-getorguid" value="med" name="Medecine interne"/>
+			<option uid="orl-getorguid" value="orl" name="ORL"/>
+			<option uid="oph-getorguid" value="oph" name="Ophtalmologie"/>
+			<option uid="ped-getorguid" value="ped" name="Pédiatrie"/>
+			<option uid="psy-getorguid" value="psy" name="Santé mentale"/>
+			<option uid="gyn-getorguid" value="gyn" name="Gynécologie/obstétrique"/>
+			<option uid="urg-getorguid" value="urg" name="Urgences"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="outcome">
+			<option value="transfer.equal|transfer.infra|transfer.intra|transfer.supra|transfer.supra.1|transfer.supra.2|transfer.supra.3|transfer.supra.4|transfer.supra.5|transfer.supra.6|transfer.supra.7" uid="qqdveLPkKRa" name="Nombre"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="encounters" calculate="itemCount" label="Transférés" uid="UqVkeBwgB06-10"/>
+		</dataelements>
+	</dataset>
+	<dataset label="Hospitalisations - Sorties|6" type="encounter" encountertype="admission" outgoing="1" uid="MJouWCN868R">
+		<attributeOptionCombo type="department">
+			<option uid="chi-getorguid" value="chi" name="Chirurgie"/>
+			<option uid="med-getorguid" value="med" name="Medecine interne"/>
+			<option uid="orl-getorguid" value="orl" name="ORL"/>
+			<option uid="oph-getorguid" value="oph" name="Ophtalmologie"/>
+			<option uid="ped-getorguid" value="ped" name="Pédiatrie"/>
+			<option uid="psy-getorguid" value="psy" name="Santé mentale"/>
+			<option uid="gyn-getorguid" value="gyn" name="Gynécologie/obstétrique"/>
+			<option uid="urg-getorguid" value="urg" name="Urgences"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="outcome">
+			<option value="againstmedicaladvice" uid="LpuRwcPzHoS" name="Nombre"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="encounters" calculate="itemCount" label="Contre avis médical" uid="UqVkeBwgB06-11"/>
+		</dataelements>
+	</dataset>
+	<dataset label="Hospitalisations - Sorties|7" type="encounter" encountertype="admission" outgoing="1" uid="MJouWCN868R">
+		<attributeOptionCombo type="department">
+			<option uid="chi-getorguid" value="chi" name="Chirurgie"/>
+			<option uid="med-getorguid" value="med" name="Medecine interne"/>
+			<option uid="orl-getorguid" value="orl" name="ORL"/>
+			<option uid="oph-getorguid" value="oph" name="Ophtalmologie"/>
+			<option uid="ped-getorguid" value="ped" name="Pédiatrie"/>
+			<option uid="psy-getorguid" value="psy" name="Santé mentale"/>
+			<option uid="gyn-getorguid" value="gyn" name="Gynécologie/obstétrique"/>
+			<option uid="urg-getorguid" value="urg" name="Urgences"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="outcome">
+			<option value="escape" uid="DqjrTU7Nzf6" name="Nombre"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="encounters" calculate="itemCount" label="Evadés" uid="UqVkeBwgB06-12"/>
+		</dataelements>
+	</dataset>
+	<dataset label="Hospitalisations - Journées d'hospitalisation" type="encounter" encountertype="admission" outgoing="1" uid="MJouWCN868R">
+		<attributeOptionCombo type="department">
+			<option uid="chi-getorguid" value="chi" name="Chirurgie"/>
+			<option uid="med-getorguid" value="med" name="Medecine interne"/>
+			<option uid="orl-getorguid" value="orl" name="ORL"/>
+			<option uid="oph-getorguid" value="oph" name="Ophtalmologie"/>
+			<option uid="ped-getorguid" value="ped" name="Pédiatrie"/>
+			<option uid="psy-getorguid" value="psy" name="Santé mentale"/>
+			<option uid="gyn-getorguid" value="gyn" name="Gynécologie/obstétrique"/>
+			<option uid="urg-getorguid" value="urg" name="Urgences"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="default">
+			<option uid="KRTRF7KWfIc" name="Nombre"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement calculate="admissionDays" uid="UqVkeBwgB06-13" label="Sortants"/>
+		</dataelements>
+	</dataset>
+	<dataset label="Hospitalisations - Journées d'hospitalisation|1" type="encounter" encountertype="admission" uid="MJouWCN868R">
+		<attributeOptionCombo type="department">
+			<option uid="chi-getorguid" value="chi" name="Chirurgie"/>
+			<option uid="med-getorguid" value="med" name="Medecine interne"/>
+			<option uid="orl-getorguid" value="orl" name="ORL"/>
+			<option uid="oph-getorguid" value="oph" name="Ophtalmologie"/>
+			<option uid="ped-getorguid" value="ped" name="Pédiatrie"/>
+			<option uid="psy-getorguid" value="psy" name="Santé mentale"/>
+			<option uid="gyn-getorguid" value="gyn" name="Gynécologie/obstétrique"/>
+			<option uid="urg-getorguid" value="urg" name="Urgences"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="default">
+			<option uid="q0BLyxnU6XD" name="Nombre"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement calculate="admissionDays" uid="UqVkeBwgB06-14" label="Totales"/>
+		</dataelements>
+	</dataset>
+	<dataset label="Hospitalisations - Décès des enfants de moins de 5 ans" type="encounter" encountertype="admission" uid="MJouWCN868R">
+		<attributeOptionCombo type="department">
+			<option uid="chi-getorguid" value="chi" name="Chirurgie"/>
+			<option uid="med-getorguid" value="med" name="Medecine interne"/>
+			<option uid="orl-getorguid" value="orl" name="ORL"/>
+			<option uid="oph-getorguid" value="oph" name="Ophtalmologie"/>
+			<option uid="ped-getorguid" value="ped" name="Pédiatrie"/>
+			<option uid="psy-getorguid" value="psy" name="Santé mentale"/>
+			<option uid="gyn-getorguid" value="gyn" name="Gynécologie/obstétrique"/>
+			<option uid="urg-getorguid" value="urg" name="Urgences"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="outcome">
+			<option value="deadbefore24" uid="HllvX50cXC0" name="Nombre"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="encounters" maxage="5" calculate="itemCount" label="1. Décès dans les 24h après admission" uid="KLpuJTMfj2M"/>
+			<dataelement unique="encounters" maxage="5" calculate="itemCount" label="2. Décès dans les 24h après admission enquêtés" uid="yiFlyTirVS4">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DECEASED_AUDIT" itemvalue="1{sem}"/>
+			</dataelement>
+		</dataelements>
+	</dataset>
+</dhis2>

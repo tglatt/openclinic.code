@@ -1,0 +1,1189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dhis2>
+	<!-- *****************************************************************************************************
+			Informations générales sur les activités de santé mentale
+	 	 ***************************************************************************************************** -->
+	<dataset label="Informations générales sur les activités de santé mentale" type="title" uid="jgB9JSy5T00"/>
+	<dataset label="Informations générales sur les activités de santé mentale - consultations" type="item" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_CLEFS_CHILDREN" uid="jgB9JSy5T00">
+		<categoryOptionCombo type="default">
+			<option uid="PNQASAL2zL0" name="Valeur"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="encounters" calculate="itemCount" uid="e0YxA701AC7" label="Nombre de consultations - enfants"/>
+			<dataelement unique="patients" calculate="itemCount" uid="vzXUHOvvMyu" label="Nombre de patients - enfants"/>
+		</dataelements>
+	</dataset>
+	<dataset label="Informations générales sur les activités de santé mentale - consultations|1" type="item" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_CLEFS_ADULT" uid="jgB9JSy5T00">
+		<categoryOptionCombo type="default">
+			<option uid="ecDV5WLxrSk" name="Valeur"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="encounters" calculate="itemCount" uid="e0YxA701AC7" label="Nombre de consultations - adultes"/>
+			<dataelement unique="patients" calculate="itemCount" uid="vzXUHOvvMyu" label="Nombre de patients - adultes"/>
+		</dataelements>
+	</dataset>
+	<dataset label="Informations générales sur les activités de santé mentale - consultations|2" type="item" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_CLEFS_PERINATAL" uid="jgB9JSy5T00">
+		<categoryOptionCombo type="default">
+			<option uid="dex3JovGI5K" name="Valeur"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="encounters" calculate="itemCount" uid="e0YxA701AC7" label="Nombre de consultations - période périnatale"/>
+			<dataelement unique="patients" calculate="itemCount" uid="vzXUHOvvMyu" label="Nombre de patients - période périnatale"/>
+		</dataelements>
+	</dataset>
+	<dataset label="Informations générales sur les activités de santé mentale - consultations par tranche d'âge" type="item" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_CLEFS_" uid="jgB9JSy5T00">
+		<categoryOptionCombo type="age">
+			<option uid="tvRVvb8LP9a" min="0" max="5" name="&lt;5 ans"/>
+			<option uid="T9VW50bpk3C" min="5" max="10" name="5 à 10 ans"/>
+			<option uid="HF1HVt3FDcr" min="10" max="15" name="10 à 15 ans"/>
+			<option uid="dn4OjuRfJpl" min="15" max="30" name="15 à 30 ans"/>
+			<option uid="XVJIjIOXL7Q" min="30" max="50" name="30 à 50 ans"/>
+			<option uid="zzO1XyPeOXc" min="50" max="9999" name="50 ans et plus"/>
+			<option uid="--uid_1" min="0" max="9999" name="Total"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="encounters" calculate="itemCount" uid="xvDwcG2CwTN" label="Nombre de consultations santé mentale"/>
+			<dataelement unique="patients" calculate="itemCount" uid="KoVDkOdZyk4" label="Nombre de patients santé mentale"/>
+		</dataelements>
+	</dataset>
+	<dataset label="Informations générales sur les activités de santé mentale - consultations par tranche d'âge|1" type="encounter" uid="jgB9JSy5T00">
+		<categoryOptionCombo type="age">
+			<option uid="tvRVvb8LP9a" min="0" max="5" name="&lt;5 ans"/>
+			<option uid="T9VW50bpk3C" min="5" max="10" name="5 à 10 ans"/>
+			<option uid="HF1HVt3FDcr" min="10" max="15" name="10 à 15 ans"/>
+			<option uid="dn4OjuRfJpl" min="15" max="30" name="15 à 30 ans"/>
+			<option uid="XVJIjIOXL7Q" min="30" max="50" name="30 à 50 ans"/>
+			<option uid="zzO1XyPeOXc" min="50" max="9999" name="50 ans et plus"/>
+			<option uid="--uid_2" min="0" max="9999" name="Total"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="encounters" calculate="itemCount" uid="cSlXXcDWPLZ" label="Nombre de consultations (total)"/>
+			<dataelement unique="patients" calculate="itemCount" uid="AOAs6Y9LgKo" label="Nombre de patients (total)"/>
+		</dataelements>
+	</dataset>
+	<!-- *****************************************************************************************************
+			Tableau croisé santé mentale Enfants
+	 	 ***************************************************************************************************** -->
+	<dataset label="Tableau croisé santé mentale Enfants" type="title" uid="Dn1K7VvlA81"/>
+	<dataset label="Tableau croisé santé mentale Enfants - Diagnostics et symptômes généraux" type="item" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_CLEFS_CHILDREN" uid="Dn1K7VvlA81">
+		<categoryOptionCombo type="transactionitemvalue">
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_DIAG1" uid="tcMHxifCT2Q" outputItemValue="medwan.common.true" name="Comportement"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_DIAG2" uid="UfyKi5EYBdB" outputItemValue="medwan.common.true" name="Conduite"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_DIAG3" uid="cHZqlqPxijs" outputItemValue="medwan.common.true" name="Développement"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_DIAG4" uid="RJt7YhIJdg8" outputItemValue="medwan.common.true" name="Alcool"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_DIAG5" uid="yVrud08hlS0" outputItemValue="medwan.common.true" name="Drogues"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_DIAG6" uid="TEGNXhiruI1" outputItemValue="medwan.common.true" name="Attention"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_DIAG7" uid="GW0uPbWuSir" outputItemValue="medwan.common.true" name="Anxiété"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_DIAG8" uid="XHOxwUiXq7P" outputItemValue="medwan.common.true" name="Stress/trauma"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_DIAG9" uid="DezgZX7tfoZ" outputItemValue="medwan.common.true" name="Dépression"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_DIAG10" uid="eCC9ux2Xfg9" outputItemValue="medwan.common.true" name="Adaptation"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_DIAG11" uid="d2ix7kUUFhC" outputItemValue="medwan.common.true" name="Psychose"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_DIAG12" uid="bxRrMQ5Euu8" outputItemValue="medwan.common.true" name="Suicide"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="encounters" calculate="itemCount" uid="GfbzHdmtecT" label="Difficultés activité quotidienne">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMGEN1"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="KTIV9pKoHAs" label="Agitation psychomotrice">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMGEN2"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="vgXrcjDyGp2" label="Difficultés de concentration">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMGEN3"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="dXbrEfyyvhM" label="Difficultés de sommeil">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMGEN4"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="ilbIV0A6twZ" label="Humeur irritable">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMGEN5"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="fnU5695Epnn" label="Accès de colère">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMGEN6"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="F0wK8VykL4s" label="Fatigue">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMGEN7"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="wCITCm8FEDz" label="Plaintes somatiques">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMGEN8"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="Tkhi7w0ODJa" label="Diminution du rendement scolaire">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMGEN9"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="oIOVLaiT7fx" label="Manque d´espoir face à l´avenir">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMGEN10"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="q4R0aCrFULJ" label="Pensées récurrentes de mort">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMGEN11"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="PmRPtpbSaW7" label="Gestes visant à se faire du mal ou à se tuer">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMGEN12"/>
+			</dataelement>
+		</dataelements>
+	</dataset>
+	<dataset label="Tableau croisé santé mentale Enfants - Diagnostics et symptômes spécifiques" type="item" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_CLEFS_CHILDREN" uid="Dn1K7VvlA81">
+		<categoryOptionCombo type="transactionitemvalue">
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_DIAG1" uid="tcMHxifCT2Q" outputItemValue="medwan.common.true" name="Comportement"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_DIAG2" uid="UfyKi5EYBdB" outputItemValue="medwan.common.true" name="Conduite"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_DIAG3" uid="cHZqlqPxijs" outputItemValue="medwan.common.true" name="Développement"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_DIAG4" uid="RJt7YhIJdg8" outputItemValue="medwan.common.true" name="Alcool"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_DIAG5" uid="yVrud08hlS0" outputItemValue="medwan.common.true" name="Drogues"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_DIAG6" uid="TEGNXhiruI1" outputItemValue="medwan.common.true" name="Attention"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_DIAG7" uid="GW0uPbWuSir" outputItemValue="medwan.common.true" name="Anxiété"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_DIAG8" uid="XHOxwUiXq7P" outputItemValue="medwan.common.true" name="Stress/trauma"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_DIAG9" uid="DezgZX7tfoZ" outputItemValue="medwan.common.true" name="Dépression"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_DIAG10" uid="eCC9ux2Xfg9" outputItemValue="medwan.common.true" name="Adaptation"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_DIAG11" uid="d2ix7kUUFhC" outputItemValue="medwan.common.true" name="Psychose"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_DIAG12" uid="bxRrMQ5Euu8" outputItemValue="medwan.common.true" name="Suicide"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="encounters" calculate="itemCount" uid="Wuxcicv5X4I" label="Comportements agressifs">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMSPEC1"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="ilptJ1evl9E" label="Non respect des normes sociales">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMSPEC2"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="mgMJ8PNVs9H" label="Retard de développement">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMSPEC3"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="athnW9kXJM1" label="Anomalies dans la communication">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMSPEC4"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="iHew22ZpzHc" label="Consommation récurrente d'alcool">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMSPEC5"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="sgXsi5WsaCg" label="Manifestations observables alcool">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMSPEC6"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="UIUVhT4ZN9F" label="Symptômes somatiques">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMSPEC7"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="csxvgx5yJIf" label="Consommation récurrente de drogues">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMSPEC8"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="e36lo1n8BXP" label="Manifestations observables drogues">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMSPEC9"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="AztSUIiZ6E0" label="Signes indiquant l'utilisation de drogues">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMSPEC10"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="eyL6YSgCW6J" label="Hyperactivité">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMSPEC11"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="H8y5Vyyc7WC" label="Impulsivité excessive">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMSPEC12"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="kWgRkazZiZs" label="Interruption de tâches">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMSPEC12A"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="z1m33d83jRi" label="Anticipation et/ou peur">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMSPEC13"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="RWNH9v2BSlW" label="Symptômes somatiques de tension">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMSPEC14"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="Qj6lZc0Urwq" label="Réaction événements passés">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMSPEC15"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="Q6JLro4Br0s" label="Événements constamment revécus">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMSPEC16"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="ZJYnwF0TDsH" label="Détresse ">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMSPEC17"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="SEqyfSwKJVZ" label="Dissociation">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMSPEC18"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="kxoPwPfWrrF" label="Évitement persistant">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMSPEC19"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="TeofiTgCuLY" label="Hypervigilance">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMSPEC20"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="zNWmBT0GU9m" label="Jeux répétitifs liés au trauma">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMSPEC21"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="Z9JTwaWjoZC" label="Perturbation du développement">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMSPEC22"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="qUJFfQb1C9P" label="Tristesse persistante">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMSPEC23"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="UHnJIq6rEiv" label="Problèmes d'appétit">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMSPEC24"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="xZ3Zm2Y6sxi" label="Diminution de l'estime de soi">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMSPEC25"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="qu4cq2Kz440" label="Ennui">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMSPEC26"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="B7Fe8FEhWUb" label="Diminution de l'intérêt">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMSPEC27"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="eS2Zk6tQFzd" label="Symptômes dépressifs, anxieux ou comportementaux">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMSPEC28"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="sXfHJhBlfj1" label="Facteurs de stress liés à l'histoire vie">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMSPEC29"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="FGLKeECdcJg" label="Hallucinations ">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMSPEC30"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="GC2XMGMe3aM" label="Délires">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMSPEC31"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="mvbf6CQGboM" label="Catatonie">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMSPEC32"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="fGOgq5bhqmv" label="Comportement anormal et désorganisé">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMSPEC33"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="PPuMlN0fxE9" label="Perte de volonté">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMSPEC34"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="AlxWDQVdFxs" label="Dysfonctionnement social">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMSPEC35"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="Qenk762lrJc" label="Agressivité">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_CHILDREN_SYMSPEC36"/>
+			</dataelement>
+		</dataelements>
+	</dataset>
+	<!-- *****************************************************************************************************
+			Tableau croisé santé mentale Adultes
+	 	 ***************************************************************************************************** -->
+	<dataset label="Tableau croisé santé mentale Adultes" type="title" uid="U6BJO8SkQiQ"/>
+	<dataset label="Tableau croisé santé mentale Adultes - Diagnostics et symptômes généraux" type="item" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_CLEFS_ADULT" uid="U6BJO8SkQiQ">
+		<categoryOptionCombo type="transactionitemvalue">
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_DIAG1" uid="NvFLHploXMj" outputItemValue="medwan.common.true" name="Conduite"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_DIAG2" uid="zmf6ZBrqaiV" outputItemValue="medwan.common.true" name="Alcool"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_DIAG3" uid="CFjUUiQOfSk" outputItemValue="medwan.common.true" name="Drogues"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_DIAG4" uid="ct7JmjPPyqw" outputItemValue="medwan.common.true" name="Anxiété"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_DIAG5" uid="A7bibGqGt9Q" outputItemValue="medwan.common.true" name="Stress/trauma"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_DIAG6" uid="uUIJSXyehuJ" outputItemValue="medwan.common.true" name="Dépression"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_DIAG7" uid="NvFLHploXMj" outputItemValue="medwan.common.true" name="Adaptation"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_DIAG8" uid="cBp2TTsAUOM" outputItemValue="medwan.common.true" name="Psychose"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_DIAG9" uid="TZhrWTU2Wrg" outputItemValue="medwan.common.true" name="Suicide"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="encounters" calculate="itemCount" uid="GfbzHdmtecT" label="Difficultés activité quotidienne">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_SYMGEN1"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="KTIV9pKoHAs" label="Agitation psychomotrice">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_SYMGEN2"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="vgXrcjDyGp2" label="Difficultés de concentration">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_SYMGEN3"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="dXbrEfyyvhM" label="Difficultés de sommeil">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_SYMGEN4"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="ilbIV0A6twZ" label="Humeur irritable">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_SYMGEN5"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="V8nQewyElIY" label="Accès de colère">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_SYMGEN6"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="fnU5695Epnn" label="Fatigue">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_SYMGEN7"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="wCITCm8FEDz" label="Plaintes somatiques">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_SYMGEN8"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="oIOVLaiT7fx" label="Manque d´espoir face à l´avenir">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_SYMGEN9"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="q4R0aCrFULJ" label="Pensées récurrentes de mort">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_SYMGEN10"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="PmRPtpbSaW7" label="Gestes visant à se faire du mal ou à se tuer">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_SYMGEN11"/>
+			</dataelement>
+		</dataelements>
+	</dataset>
+	<dataset label="Tableau croisé santé mentale Adultes - Diagnostics et symptômes spécifiques" type="item" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_CLEFS_ADULT" uid="U6BJO8SkQiQ">
+		<categoryOptionCombo type="transactionitemvalue">
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_DIAG1" uid="NvFLHploXMj" outputItemValue="medwan.common.true" name="Conduite"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_DIAG2" uid="zmf6ZBrqaiV" outputItemValue="medwan.common.true" name="Alcool"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_DIAG3" uid="CFjUUiQOfSk" outputItemValue="medwan.common.true" name="Drogues"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_DIAG4" uid="ct7JmjPPyqw" outputItemValue="medwan.common.true" name="Anxiété"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_DIAG5" uid="A7bibGqGt9Q" outputItemValue="medwan.common.true" name="Stress/trauma"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_DIAG6" uid="uUIJSXyehuJ" outputItemValue="medwan.common.true" name="Dépression"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_DIAG7" uid="NvFLHploXMj" outputItemValue="medwan.common.true" name="Adaptation"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_DIAG8" uid="cBp2TTsAUOM" outputItemValue="medwan.common.true" name="Psychose"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_DIAG9" uid="TZhrWTU2Wrg" outputItemValue="medwan.common.true" name="Suicide"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="encounters" calculate="itemCount" uid="Wuxcicv5X4I" label="Comportements agressifs">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_SYMSPEC1"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="ilptJ1evl9E" label="Non respect des normes sociales">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_SYMSPEC2"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="iHew22ZpzHc" label="Consommation récurrente d'alcool">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_SYMSPEC3"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="sgXsi5WsaCg" label="Manifestations observables alcool">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_SYMSPEC4"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="UIUVhT4ZN9F" label="Symptômes somatiques">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_SYMSPEC5"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="csxvgx5yJIf" label="Consommation récurrente de drogues">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_SYMSPEC6"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="e36lo1n8BXP" label="Manifestations observables drogues">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_SYMSPEC7"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="AztSUIiZ6E0" label="Signes indiquant l'utilisation de drogues">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_SYMSPEC8"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="z1m33d83jRi" label="Anticipation et/ou peur">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_SYMSPEC9"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="RWNH9v2BSlW" label="Symptômes somatiques de tension">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_SYMSPEC10"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="Qj6lZc0Urwq" label="Réaction événements passés">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_SYMSPEC11"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="Q6JLro4Br0s" label="Événements constamment revécus">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_SYMSPEC12"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="ZJYnwF0TDsH" label="Détresse">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_SYMSPEC13"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="SEqyfSwKJVZ" label="Dissociation">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_SYMSPEC14"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="kxoPwPfWrrF" label="Evitement">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_SYMSPEC15"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="TeofiTgCuLY" label="Hypervigilance">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_SYMSPEC16"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="qUJFfQb1C9P" label="Tristesse persistante ">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_SYMSPEC17"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="UHnJIq6rEiv" label="Problèmes d'appétit">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_SYMSPEC18"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="xZ3Zm2Y6sxi" label="Diminution de l'estime de soi">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_SYMSPEC19"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="B7Fe8FEhWUb" label="Diminution de l'intérêt">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_SYMSPEC20"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="eS2Zk6tQFzd" label="Symptômes dépressifs, anxieux ou comportementaux">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_SYMSPEC21"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="sXfHJhBlfj1" label="Facteurs de stress liés à l'histoire vie">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_SYMSPEC22"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="FGLKeECdcJg" label="Hallucinations">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_SYMSPEC23"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="GC2XMGMe3aM" label="Délires">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_SYMSPEC24"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="mvbf6CQGboM" label="Catatonie">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_SYMSPEC25"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="fGOgq5bhqmv" label="Comportement anormal et désorganisé">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_SYMSPEC26"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="PPuMlN0fxE9" label="Perte de volonté">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_SYMSPEC27"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="AlxWDQVdFxs" label="Dysfonctionnement social">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_SYMSPEC28"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="Qenk762lrJc" label="Agres	sivité">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_ADULT_SYMSPEC29"/>
+			</dataelement>
+		</dataelements>
+	</dataset>
+	<!-- *****************************************************************************************************
+			Tableau croisé santé mentale Période périnatale
+	 	 ***************************************************************************************************** -->
+	<dataset label="Tableau croisé santé mentale Période périnatale" type="title" uid="JS6me035Yhn"/>
+	<dataset label="Tableau croisé santé mentale Période périnatale - Diagnostics et symptômes généraux" type="item" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_CLEFS_PERINATAL" uid="JS6me035Yhn">
+		<categoryOptionCombo type="transactionitemvalue">
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_PERINATAL_DIAG1" uid="e20pAL6LLpb" outputItemValue="medwan.common.true" name="Anxiété"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_PERINATAL_DIAG2" uid="jXFHSEU15a5" outputItemValue="medwan.common.true" name="Stress/trauma"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_PERINATAL_DIAG3" uid="ERXpRdVG0PL" outputItemValue="medwan.common.true" name="Dépression"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_PERINATAL_DIAG4" uid="M9BwzBVQO88" outputItemValue="medwan.common.true" name="Adaptation"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_PERINATAL_DIAG5" uid="ZyTE7NrNIJD" outputItemValue="medwan.common.true" name="Psychose"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_PERINATAL_DIAG6" uid="IK6AckJO26u" outputItemValue="medwan.common.true" name="Suicide"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="encounters" calculate="itemCount" uid="GfbzHdmtecT" label="Difficultés activité quotidienne">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_PERINATAL_SYMGEN1"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="KTIV9pKoHAs" label="Agitation psychomotrice">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_PERINATAL_SYMGEN2"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="vgXrcjDyGp2" label="Difficultés de concentration">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_PERINATAL_SYMGEN3"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="dXbrEfyyvhM" label="Difficultés de sommeil">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_PERINATAL_SYMGEN4"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="ilbIV0A6twZ" label="Humeur irritable">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_PERINATAL_SYMGEN5"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="fnU5695Epnn" label="Accès de colère">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_PERINATAL_SYMGEN6"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="F0wK8VykL4s" label="Fatigue">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_PERINATAL_SYMGEN7"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="wCITCm8FEDz" label="Plaintes somatiques">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_PERINATAL_SYMGEN8"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="oIOVLaiT7fx" label="Manque d´espoir face à l´avenir">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_PERINATAL_SYMGEN9"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="q4R0aCrFULJ" label="Pensées récurrentes de mort">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_PERINATAL_SYMGEN10"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="PmRPtpbSaW7" label="Gestes visant à se faire du mal ou à se tuer">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_PERINATAL_SYMGEN11"/>
+			</dataelement>
+		</dataelements>
+	</dataset>
+	<dataset label="Tableau croisé santé mentale Période périnatale - Diagnostics et symptômes spécifiques" type="item" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_CLEFS_PERINATAL" uid="JS6me035Yhn">
+		<categoryOptionCombo type="transactionitemvalue">
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_PERINATAL_DIAG1" uid="e20pAL6LLpb" outputItemValue="medwan.common.true" name="Anxiété"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_PERINATAL_DIAG2" uid="jXFHSEU15a5" outputItemValue="medwan.common.true" name="Stress/trauma"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_PERINATAL_DIAG3" uid="ERXpRdVG0PL" outputItemValue="medwan.common.true" name="Dépression"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_PERINATAL_DIAG4" uid="M9BwzBVQO88" outputItemValue="medwan.common.true" name="Adaptation"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_PERINATAL_DIAG5" uid="ZyTE7NrNIJD" outputItemValue="medwan.common.true" name="Psychose"/>
+			<option itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_PERINATAL_DIAG6" uid="IK6AckJO26u" outputItemValue="medwan.common.true" name="Suicide"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="encounters" calculate="itemCount" uid="z1m33d83jRi" label="Anticipation ">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_PERINATAL_SYMSPEC1"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="RWNH9v2BSlW" label="Symptômes somatiques de tension">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_PERINATAL_SYMSPEC2"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="Qj6lZc0Urwq" label="Réaction événements passés">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_PERINATAL_SYMSPEC3"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="Q6JLro4Br0s" label="Événements constamment revécus">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_PERINATAL_SYMSPEC4"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="ZJYnwF0TDsH" label="Détresse">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_PERINATAL_SYMSPEC5"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="SEqyfSwKJVZ" label="Dissociation">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_PERINATAL_SYMSPEC6"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="kxoPwPfWrrF" label="Evitement">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_PERINATAL_SYMSPEC7"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="TeofiTgCuLY" label="Hypervigilance">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_PERINATAL_SYMSPEC8"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="UHnJIq6rEiv" label="Problèmes d'appétit">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_PERINATAL_SYMSPEC10"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="xZ3Zm2Y6sxi" label="Diminution de l'estime de soi">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_PERINATAL_SYMSPEC11"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="B7Fe8FEhWUb" label="Diminution de l'intérêt">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_PERINATAL_SYMSPEC12"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="eS2Zk6tQFzd" label="Symptômes dépressifs, anxieux ou comportementaux">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_PERINATAL_SYMSPEC13"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="sXfHJhBlfj1" label="Facteurs de stress liés à l'histoire vie">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_PERINATAL_SYMSPEC14"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="FGLKeECdcJg" label="Hallucinations">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_PERINATAL_SYMSPEC15"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="GC2XMGMe3aM" label="Délires">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_PERINATAL_SYMSPEC16"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="mvbf6CQGboM" label="Catatonie ">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_PERINATAL_SYMSPEC17"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="fGOgq5bhqmv" label="Comportement anormal et désorganisé">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_PERINATAL_SYMSPEC18"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="PPuMlN0fxE9" label="Perte de volonté">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_PERINATAL_SYMSPEC19"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="AlxWDQVdFxs" label="Dysfonctionnement social">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_PERINATAL_SYMSPEC20"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="Qenk762lrJc" label="Agressivité">
+				<item itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CLEFS_PERINATAL_SYMSPEC21"/>
+			</dataelement>
+		</dataelements>
+	</dataset>
+	<!-- *****************************************************************************************************
+			RMA 1er échelon section 3
+	 	 ***************************************************************************************************** -->
+	<dataset label="RMA 1er échelon section 3" color="darkgreen" dhis2serverprefix="snis.ml." type="title" uid="FomGQrUnwxU"/>
+	<!-- ***************************** Nouveaux cas ***************************** -->
+	<dataset label="RMA 1er échelon section 3 - Consultations curatives, nouveaux cas" dhis2serverprefix="snis.ml." newcase="1" type="encounter" encountertype="visit" incoming="1" uid="FomGQrUnwxU">
+		<categoryOptionCombo type="zone">
+			<option uid="LnBKxq0I2X3" value="1" name="AIRE"/>
+			<option uid="d0tw06piEVK" value="2" name="HORS AIRE"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement minage="-99" maxage="1" unique="encounterdate" uid="h5jhyBeLyyN" label="0-11 mois"/>
+		</dataelements>
+	</dataset>
+	<dataset label="RMA 1er échelon section 3 - Consultations curatives, nouveaux cas|1" dhis2serverprefix="snis.ml." newcase="1" type="encounter" encountertype="visit" incoming="1" uid="FomGQrUnwxU">
+		<categoryOptionCombo type="zone">
+			<option uid="Ap6CvQGCee9" value="1" name="AIRE"/>
+			<option uid="yddwwp7Jet4" value="2" name="HORS AIRE"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement minage="1" maxage="5" unique="encounterdate" uid="h5jhyBeLyyN" label="1 à 4 ans"/>
+		</dataelements>
+	</dataset>
+	<dataset label="RMA 1er échelon section 3 - Consultations curatives, nouveaux cas|2" dhis2serverprefix="snis.ml." newcase="1" type="encounter" encountertype="visit" incoming="1" uid="FomGQrUnwxU">
+		<categoryOptionCombo type="zone">
+			<option uid="ojNCI68us2p" value="1" name="AIRE"/>
+			<option uid="TshjJc4JUCA" value="2" name="HORS AIRE"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement minage="5" maxage="15" unique="encounterdate" uid="h5jhyBeLyyN" label="5 à 14 ans"/>
+		</dataelements>
+	</dataset>
+	<dataset label="RMA 1er échelon section 3 - Consultations curatives, nouveaux cas|3" dhis2serverprefix="snis.ml." newcase="1" type="encounter" encountertype="visit" incoming="1" uid="FomGQrUnwxU">
+		<categoryOptionCombo type="zone">
+			<option uid="Jb8aCJqgHmz" value="1" name="AIRE"/>
+			<option uid="jGZ3KyV0m5W" value="2" name="HORS AIRE"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement minage="15" maxage="45" unique="encounterdate" uid="h5jhyBeLyyN" label="15 à 44 ans"/>
+		</dataelements>
+	</dataset>
+	<dataset label="RMA 1er échelon section 3 - Consultations curatives, nouveaux cas|4" dhis2serverprefix="snis.ml." newcase="1" type="encounter" encountertype="visit" incoming="1" uid="FomGQrUnwxU">
+		<categoryOptionCombo type="zone">
+			<option uid="MJ8ACPtLzFC" value="1" name="AIRE"/>
+			<option uid="tajbucdfsf5" value="2" name="HORS AIRE"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement minage="45" maxage="60" unique="encounterdate" uid="h5jhyBeLyyN" label="45 à 59 ans"/>
+		</dataelements>
+	</dataset>
+	<dataset label="RMA 1er échelon section 3 - Consultations curatives, nouveaux cas|5" dhis2serverprefix="snis.ml." newcase="1" type="encounter" encountertype="visit" incoming="1" uid="FomGQrUnwxU">
+		<categoryOptionCombo type="zone">
+			<option uid="fvRfWairfhL" value="1" name="AIRE"/>
+			<option uid="tWgul9pLIdk" value="2" name="HORS AIRE"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement minage="60" maxage="999" unique="encounterdate" uid="h5jhyBeLyyN" label="60 ans et plus"/>
+		</dataelements>
+	</dataset>
+	<!-- ***************************** Nombre total de cas ***************************** -->
+	<dataset label="RMA 1er échelon section 3 - Consultations curatives, nombre total des cas" dhis2serverprefix="snis.ml." type="encounter" encountertype="visit" incoming="1" uid="FomGQrUnwxU">
+		<categoryOptionCombo type="zone">
+			<option uid="LnBKxq0I2X3" value="1" name="AIRE"/>
+			<option uid="d0tw06piEVK" value="2" name="HORS AIRE"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement minage="-99" maxage="1" unique="encounterdate" uid="gSRmKknjFw7" label="0-11 mois"/>
+		</dataelements>
+	</dataset>
+	<dataset label="RMA 1er échelon section 3 - Consultations curatives, nombre total des cas|1" dhis2serverprefix="snis.ml." type="encounter" encountertype="visit" incoming="1" uid="FomGQrUnwxU">
+		<categoryOptionCombo type="zone">
+			<option uid="Ap6CvQGCee9" value="1" name="AIRE"/>
+			<option uid="yddwwp7Jet4" value="2" name="HORS AIRE"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement minage="1" maxage="5" unique="encounterdate" uid="gSRmKknjFw7" label="1 à 4 ans"/>
+		</dataelements>
+	</dataset>
+	<dataset label="RMA 1er échelon section 3 - Consultations curatives, nombre total des cas|2" dhis2serverprefix="snis.ml." type="encounter" encountertype="visit" incoming="1" uid="FomGQrUnwxU">
+		<categoryOptionCombo type="zone">
+			<option uid="ojNCI68us2p" value="1" name="AIRE"/>
+			<option uid="TshjJc4JUCA" value="2" name="HORS AIRE"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement minage="5" maxage="15" unique="encounterdate" uid="gSRmKknjFw7" label="5 à 14 ans"/>
+		</dataelements>
+	</dataset>
+	<dataset label="RMA 1er échelon section 3 - Consultations curatives, nombre total des cas|3" dhis2serverprefix="snis.ml." type="encounter" encountertype="visit" incoming="1" uid="FomGQrUnwxU">
+		<categoryOptionCombo type="zone">
+			<option uid="Jb8aCJqgHmz" value="1" name="AIRE"/>
+			<option uid="jGZ3KyV0m5W" value="2" name="HORS AIRE"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement minage="15" maxage="45" unique="encounterdate" uid="gSRmKknjFw7" label="15 à 44 ans"/>
+		</dataelements>
+	</dataset>
+	<dataset label="RMA 1er échelon section 3 - Consultations curatives, nombre total des cas|4" dhis2serverprefix="snis.ml." type="encounter" encountertype="visit" incoming="1" uid="FomGQrUnwxU">
+		<categoryOptionCombo type="zone">
+			<option uid="MJ8ACPtLzFC" value="1" name="AIRE"/>
+			<option uid="tajbucdfsf5" value="2" name="HORS AIRE"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement minage="45" maxage="60" unique="encounterdate" uid="gSRmKknjFw7" label="45 à 59 ans"/>
+		</dataelements>
+	</dataset>
+	<dataset label="RMA 1er échelon section 3 - Consultations curatives, nombre total des cas|5" dhis2serverprefix="snis.ml." type="encounter" encountertype="visit" incoming="1" uid="FomGQrUnwxU">
+		<categoryOptionCombo type="zone">
+			<option uid="fvRfWairfhL" value="1" name="AIRE"/>
+			<option uid="tWgul9pLIdk" value="2" name="HORS AIRE"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement minage="60" maxage="999" unique="encounterdate" uid="gSRmKknjFw7" label="60 ans et plus"/>
+		</dataelements>
+	</dataset>
+	<!-- ***************************** Cas référés ***************************** -->
+	<dataset label="RMA 1er échelon section 3 - Consultations curatives, nombre de cas référés" origin="2" dhis2serverprefix="snis.ml." type="encounter" encountertype="visit" incoming="1" uid="FomGQrUnwxU">
+		<categoryOptionCombo type="zone">
+			<option uid="LnBKxq0I2X3" value="1" name="AIRE"/>
+			<option uid="d0tw06piEVK" value="2" name="HORS AIRE"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement minage="-99" maxage="1" unique="encounterdate" uid="lSEAHQ8BYO3" label="0-11 mois"/>
+		</dataelements>
+	</dataset>
+	<dataset label="RMA 1er échelon section 3 - Consultations curatives, nombre de cas référés|1" origin="2" dhis2serverprefix="snis.ml." type="encounter" encountertype="visit" incoming="1" uid="FomGQrUnwxU">
+		<categoryOptionCombo type="zone">
+			<option uid="Ap6CvQGCee9" value="1" name="AIRE"/>
+			<option uid="yddwwp7Jet4" value="2" name="HORS AIRE"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement minage="1" maxage="5" unique="encounterdate" uid="lSEAHQ8BYO3" label="1 à 4 ans"/>
+		</dataelements>
+	</dataset>
+	<dataset label="RMA 1er échelon section 3 - Consultations curatives, nombre de cas référés|2" origin="2" dhis2serverprefix="snis.ml." type="encounter" encountertype="visit" incoming="1" uid="FomGQrUnwxU">
+		<categoryOptionCombo type="zone">
+			<option uid="ojNCI68us2p" value="1" name="AIRE"/>
+			<option uid="TshjJc4JUCA" value="2" name="HORS AIRE"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement minage="5" maxage="15" unique="encounterdate" uid="lSEAHQ8BYO3" label="5 à 14 ans"/>
+		</dataelements>
+	</dataset>
+	<dataset label="RMA 1er échelon section 3 - Consultations curatives, nombre de cas référés|3" origin="2" dhis2serverprefix="snis.ml." type="encounter" encountertype="visit" incoming="1" uid="FomGQrUnwxU">
+		<categoryOptionCombo type="zone">
+			<option uid="Jb8aCJqgHmz" value="1" name="AIRE"/>
+			<option uid="jGZ3KyV0m5W" value="2" name="HORS AIRE"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement minage="15" maxage="45" unique="encounterdate" uid="lSEAHQ8BYO3" label="15 à 44 ans"/>
+		</dataelements>
+	</dataset>
+	<dataset label="RMA 1er échelon section 3 - Consultations curatives, nombre de cas référés|4" origin="2" dhis2serverprefix="snis.ml." type="encounter" encountertype="visit" incoming="1" uid="FomGQrUnwxU">
+		<categoryOptionCombo type="zone">
+			<option uid="MJ8ACPtLzFC" value="1" name="AIRE"/>
+			<option uid="tajbucdfsf5" value="2" name="HORS AIRE"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement minage="45" maxage="60" unique="encounterdate" uid="lSEAHQ8BYO3" label="45 à 59 ans"/>
+		</dataelements>
+	</dataset>
+	<dataset label="RMA 1er échelon section 3 - Consultations curatives, nombre de cas référés|5" origin="2" dhis2serverprefix="snis.ml." type="encounter" encountertype="visit" incoming="1" uid="FomGQrUnwxU">
+		<categoryOptionCombo type="zone">
+			<option uid="fvRfWairfhL" value="1" name="AIRE"/>
+			<option uid="tWgul9pLIdk" value="2" name="HORS AIRE"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement minage="60" maxage="999" unique="encounterdate" uid="lSEAHQ8BYO3" label="60 ans et plus"/>
+		</dataelements>
+	</dataset>
+	<!-- ***************************** Cas évacués ***************************** -->
+	<dataset label="RMA 1er échelon section 3 - Consultations curatives, nombre de cas évacués" outcome="reference|contrareference" dhis2serverprefix="snis.ml." type="encounter" encountertype="visit" incoming="1" uid="FomGQrUnwxU">
+		<categoryOptionCombo type="zone">
+			<option uid="LnBKxq0I2X3" value="1" name="AIRE"/>
+			<option uid="d0tw06piEVK" value="2" name="HORS AIRE"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement minage="-99" maxage="1" unique="encounterdate" uid="QyeUOg72eTA" label="0-11 mois"/>
+		</dataelements>
+	</dataset>
+	<dataset label="RMA 1er échelon section 3 - Consultations curatives, nombre de cas évacués|1" outcome="reference|contrareference" dhis2serverprefix="snis.ml." type="encounter" encountertype="visit" incoming="1" uid="FomGQrUnwxU">
+		<categoryOptionCombo type="zone">
+			<option uid="Ap6CvQGCee9" value="1" name="AIRE"/>
+			<option uid="yddwwp7Jet4" value="2" name="HORS AIRE"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement minage="1" maxage="5" unique="encounterdate" uid="QyeUOg72eTA" label="1 à 4 ans"/>
+		</dataelements>
+	</dataset>
+	<dataset label="RMA 1er échelon section 3 - Consultations curatives, nombre de cas évacués|2" outcome="reference|contrareference" dhis2serverprefix="snis.ml." type="encounter" encountertype="visit" incoming="1" uid="FomGQrUnwxU">
+		<categoryOptionCombo type="zone">
+			<option uid="ojNCI68us2p" value="1" name="AIRE"/>
+			<option uid="TshjJc4JUCA" value="2" name="HORS AIRE"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement minage="5" maxage="15" unique="encounterdate" uid="QyeUOg72eTA" label="5 à 14 ans"/>
+		</dataelements>
+	</dataset>
+	<dataset label="RMA 1er échelon section 3 - Consultations curatives, nombre de cas évacués|3" outcome="reference|contrareference" dhis2serverprefix="snis.ml." type="encounter" encountertype="visit" incoming="1" uid="FomGQrUnwxU">
+		<categoryOptionCombo type="zone">
+			<option uid="Jb8aCJqgHmz" value="1" name="AIRE"/>
+			<option uid="jGZ3KyV0m5W" value="2" name="HORS AIRE"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement minage="15" maxage="45" unique="encounterdate" uid="QyeUOg72eTA" label="15 à 44 ans"/>
+		</dataelements>
+	</dataset>
+	<dataset label="RMA 1er échelon section 3 - Consultations curatives, nombre de cas évacués|4" outcome="reference|contrareference" dhis2serverprefix="snis.ml." type="encounter" encountertype="visit" incoming="1" uid="FomGQrUnwxU">
+		<categoryOptionCombo type="zone">
+			<option uid="MJ8ACPtLzFC" value="1" name="AIRE"/>
+			<option uid="tajbucdfsf5" value="2" name="HORS AIRE"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement minage="45" maxage="60" unique="encounterdate" uid="QyeUOg72eTA" label="45 à 59 ans"/>
+		</dataelements>
+	</dataset>
+	<dataset label="RMA 1er échelon section 3 - Consultations curatives, nombre de cas évacués|5" outcome="reference|contrareference" dhis2serverprefix="snis.ml." type="encounter" encountertype="visit" incoming="1" uid="FomGQrUnwxU">
+		<categoryOptionCombo type="zone">
+			<option uid="fvRfWairfhL" value="1" name="AIRE"/>
+			<option uid="tWgul9pLIdk" value="2" name="HORS AIRE"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement minage="60" maxage="999" unique="encounterdate" uid="QyeUOg72eTA" label="60 ans et plus"/>
+		</dataelements>
+	</dataset>
+	<!-- ***************************** Planning familial ***************************** -->
+	<!-- ***************************** NC ***************************** -->
+	<dataset color="darkblue" label="RMA 1er échelon section 3 - Planning familial, nouveaux utilisateurs" dhis2serverprefix="snis.ml." type="item" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MSPLS_FAMILY_PLANNING_CONSULTATION" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.otherinformation" itemValue="{like}1{semicolon}" uid="FomGQrUnwxU">
+		<categoryOptionCombo type="default">
+			<option uid="lmXcWMBR1OF" name="default"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="encounters" uid="zIv7HeBf9gZ" label="Nombre de séances de consultation PF dans le mois"/>
+			<dataelement unique="encounters" calculate="itemCount" uid="OHl6DRtHjmS" label="Nombre de nouvelles consultations en centre fixe">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="1{sem}"/>
+			</dataelement>
+			<dataelement unique="encounters" itemsneeded="1" calculate="itemCount" uid="AnLk8vAW83a" label="Nombre de nouvelles consultations en Stratégie avancée ou mobile">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="2{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="3{sem}"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="dzTzBuLldU4" label="Nombre de nouvelles utilisatrices en post-partum">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_POSTPARTUM" itemvalue="1{sem}"/>
+			</dataelement>
+		</dataelements>
+	</dataset>
+	<dataset color="darkblue" label="RMA 1er échelon section 3 - Planning familial, Répartition NC par tranche d'âge, femmes, centre fixe" dhis2serverprefix="snis.ml." type="item" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MSPLS_FAMILY_PLANNING_CONSULTATION" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.otherinformation" itemValue="{like}1{semicolon}" uid="FomGQrUnwxU">
+		<categoryOptionCombo type="agegender">
+			<option uid="G0cSggjBzNw" min="10" max="15" gender="f" name="10 à 15 ans"/>
+			<option uid="UclFnmQKM7V" min="15" max="20" gender="f" name="15 à 19 ans"/>
+			<option uid="dfFmVkEZqaF" min="20" max="25" gender="f" name="20 à 25 ans"/>
+			<option uid="xJZQ1tfr68B" min="25" max="9999" gender="f" name="25 ans et plus"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="encounters" calculate="itemCount" uid="RbOF1io5QLv" label="MAMA">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="1{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="1"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="GefMTLaDjWY" label="Pilule COC">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="1{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="2"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="VEhKm1dS4QP" label="Pilule COP">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="1{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="3"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="Wt0hbrm8aDf" label="Injectable DMPA-IM">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="1{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="4"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="UaPeh7iBLd5" label="Condoms féminins">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="1{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="6"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="BTFfKG1NbFA" label="Implants (jadelle)">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="1{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="7"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="CRpFmuHz2Po" label="Implanon">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="1{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="8"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="XMvOpWKpy2X" label="Collier du cycle">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="1{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="9"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="Eg8iZoGEPMd" label="DIU">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="1{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="10"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="u9d8fEtjmFJ" label="DIUPP">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="1{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="11"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="S1H7BjozWvY" label="Spermicide">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="1{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="12"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="U98ORMWvj51" label="Contraception chirurgicale volontaire">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="1{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="13"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="EilnyR0mXEt" label="Injectable DMPA-S/C">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="1{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="14"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="fyntnR4VNrK" label="Auto injection du DMPA-S/C">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="1{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="15"/>
+			</dataelement>
+		</dataelements>
+	</dataset>
+	<dataset color="darkblue" label="RMA 1er échelon section 3 - Planning familial, Répartition NC par tranche d'âge, hommes, centre fixe" dhis2serverprefix="snis.ml." type="item" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MSPLS_FAMILY_PLANNING_CONSULTATION" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.otherinformation" itemValue="{like}1{semicolon}" uid="FomGQrUnwxU">
+		<categoryOptionCombo type="agegender">
+			<option uid="PKg96jXFrYu" min="10" max="15" gender="m" name="10 à 15 ans"/>
+			<option uid="jBtKYkR8smq" min="15" max="20" gender="m" name="15 à 19 ans"/>
+			<option uid="JqKtS7y7KtA" min="20" max="25" gender="m" name="20 à 25 ans"/>
+			<option uid="z9FNXCQfi6X" min="25" max="9999" gender="m" name="25 ans et plus"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="encounters" calculate="itemCount" uid="DBqGPJyCZJO" label="Condoms masculins">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="1{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="5"/>
+			</dataelement>
+		</dataelements>
+	</dataset>
+	<dataset color="darkblue" label="RMA 1er échelon section 3 - Planning familial, Répartition NC par tranche d'âge, femmes, centre mobile ou stratégie avancée" dhis2serverprefix="snis.ml." type="item" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MSPLS_FAMILY_PLANNING_CONSULTATION" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.otherinformation" itemValue="{like}1{semicolon}" uid="FomGQrUnwxU">
+		<categoryOptionCombo type="agegender">
+			<option uid="Ed3iltPP8a7" min="10" max="15" gender="f" name="10 à 15 ans"/>
+			<option uid="pU6hke1jRFt" min="15" max="20" gender="f" name="15 à 19 ans"/>
+			<option uid="Q2Tkc8jkGHI" min="20" max="25" gender="f" name="20 à 25 ans"/>
+			<option uid="tjIdKbQuQIU" min="25" max="9999" gender="f" name="25 ans et plus"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="encounters" itemsneeded="2" calculate="itemCount" uid="RbOF1io5QLv" label="MAMA">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="2{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="3{sem}"/>
+				<item sametransaction="1" mandatory="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="1"/>
+			</dataelement>
+			<dataelement unique="encounters" itemsneeded="2" calculate="itemCount" uid="GefMTLaDjWY" label="Pilule COC">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="2{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="3{sem}"/>
+				<item sametransaction="1" mandatory="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="2"/>
+			</dataelement>
+			<dataelement unique="encounters" itemsneeded="2" calculate="itemCount" uid="VEhKm1dS4QP" label="Pilule COP">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="2{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="3{sem}"/>
+				<item sametransaction="1" mandatory="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="3"/>
+			</dataelement>
+			<dataelement unique="encounters" itemsneeded="2" calculate="itemCount" uid="Wt0hbrm8aDf" label="Injectable DMPA-IM">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="2{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="3{sem}"/>
+				<item sametransaction="1" mandatory="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="4"/>
+			</dataelement>
+			<dataelement unique="encounters" itemsneeded="2" calculate="itemCount" uid="UaPeh7iBLd5" label="Condoms féminins">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="2{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="3{sem}"/>
+				<item sametransaction="1" mandatory="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="6"/>
+			</dataelement>
+			<dataelement unique="encounters" itemsneeded="2" calculate="itemCount" uid="BTFfKG1NbFA" label="Implants (jadelle)">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="2{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="3{sem}"/>
+				<item sametransaction="1" mandatory="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="7"/>
+			</dataelement>
+			<dataelement unique="encounters" itemsneeded="2" calculate="itemCount" uid="CRpFmuHz2Po" label="Implanon">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="2{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="3{sem}"/>
+				<item sametransaction="1" mandatory="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="8"/>
+			</dataelement>
+			<dataelement unique="encounters" itemsneeded="2" calculate="itemCount" uid="XMvOpWKpy2X" label="Collier du cycle">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="2{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="3{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="9"/>
+			</dataelement>
+			<dataelement unique="encounters" itemsneeded="2" calculate="itemCount" uid="Eg8iZoGEPMd" label="DIU">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="2{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="3{sem}"/>
+				<item sametransaction="1" mandatory="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="10"/>
+			</dataelement>
+			<dataelement unique="encounters" itemsneeded="2" calculate="itemCount" uid="u9d8fEtjmFJ" label="DIUPP">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="2{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="3{sem}"/>
+				<item sametransaction="1" mandatory="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="11"/>
+			</dataelement>
+			<dataelement unique="encounters" itemsneeded="2" calculate="itemCount" uid="S1H7BjozWvY" label="Spermicide">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="2{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="3{sem}"/>
+				<item sametransaction="1" mandatory="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="12"/>
+			</dataelement>
+			<dataelement unique="encounters" itemsneeded="2" calculate="itemCount" uid="U98ORMWvj51" label="Contraception chirurgicale volontaire">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="2{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="3{sem}"/>
+				<item sametransaction="1" mandatory="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="13"/>
+			</dataelement>
+			<dataelement unique="encounters" itemsneeded="2" calculate="itemCount" uid="EilnyR0mXEt" label="Injectable DMPA-S/C">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="2{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="3{sem}"/>
+				<item sametransaction="1" mandatory="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="14"/>
+			</dataelement>
+			<dataelement unique="encounters" itemsneeded="2" calculate="itemCount" uid="fyntnR4VNrK" label="Auto injection du DMPA-S/C">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="2{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="3{sem}"/>
+				<item sametransaction="1" mandatory="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="15"/>
+			</dataelement>
+		</dataelements>
+	</dataset>
+	<dataset color="darkblue" label="RMA 1er échelon section 3 - Planning familial, Répartition NC par tranche d'âge, hommes, centre mobile ou stratégie avancée" dhis2serverprefix="snis.ml." type="item" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MSPLS_FAMILY_PLANNING_CONSULTATION" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.otherinformation" itemValue="{like}1{semicolon}" uid="FomGQrUnwxU">
+		<categoryOptionCombo type="agegender">
+			<option uid="HNb2GLvZt2w" min="10" max="15" gender="m" name="10 à 15 ans"/>
+			<option uid="IWMCMTjxidP" min="15" max="20" gender="m" name="15 à 19 ans"/>
+			<option uid="UXhfy3XEe6a" min="20" max="25" gender="m" name="20 à 25 ans"/>
+			<option uid="pvy5ujIR3iv" min="25" max="9999" gender="m" name="25 ans et plus"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="encounters" itemsneeded="2" calculate="itemCount" uid="DBqGPJyCZJO" label="Condoms masculins">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="2{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="3{sem}"/>
+				<item sametransaction="1" mandatory="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="5"/>
+			</dataelement>
+		</dataelements>
+	</dataset>
+	<!-- ***************************** AC ***************************** -->
+	<dataset color="black" label="RMA 1er échelon section 3 - Planning familial, anciens utilisateurs" dhis2serverprefix="snis.ml." type="item" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MSPLS_FAMILY_PLANNING_CONSULTATION" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.otherinformation" itemValue="{like}2{semicolon}" uid="FomGQrUnwxU">
+		<categoryOptionCombo type="default">
+			<option uid="lmXcWMBR1OF" name="default"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="encounters" calculate="itemCount" uid="hpLh5of7srn" label="Nombre de consultations en centre fixe">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="1{sem}"/>
+			</dataelement>
+			<dataelement unique="encounters" itemsneeded="1" calculate="itemCount" uid="tgapEmdWJb0" label="Nombre de consultations en Stratégie avancée ou mobile">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="2{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="3{sem}"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="WXkiYCvhFY6" label="Nombre d'utilisatrices en post-partum">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_POSTPARTUM" itemvalue="1{sem}"/>
+			</dataelement>
+		</dataelements>
+	</dataset>
+	<dataset color="black" label="RMA 1er échelon section 3 - Planning familial, Répartition AC par tranche d'âge, femmes, centre fixe" dhis2serverprefix="snis.ml." type="item" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MSPLS_FAMILY_PLANNING_CONSULTATION" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.otherinformation" itemValue="{like}2{semicolon}" uid="FomGQrUnwxU">
+		<categoryOptionCombo type="agegender">
+			<option uid="PVpSLe0xL6b" min="10" max="15" gender="f" name="10 à 15 ans"/>
+			<option uid="Squ5cYF3ayF" min="15" max="20" gender="f" name="15 à 19 ans"/>
+			<option uid="q3fMK9aKRm7" min="20" max="25" gender="f" name="20 à 25 ans"/>
+			<option uid="VdTo1AVNp4A" min="25" max="9999" gender="f" name="25 ans et plus"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="encounters" calculate="itemCount" uid="RbOF1io5QLv" label="MAMA">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="1{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="1"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="GefMTLaDjWY" label="Pilule COC">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="1{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="2"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="VEhKm1dS4QP" label="Pilule COP">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="1{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="3"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="Wt0hbrm8aDf" label="Injectable DMPA-IM">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="1{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="4"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="UaPeh7iBLd5" label="Condoms féminins">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="1{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="6"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="BTFfKG1NbFA" label="Implants (jadelle)">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="1{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="7"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="CRpFmuHz2Po" label="Implanon">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="1{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="8"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="XMvOpWKpy2X" label="Collier du cycle">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="1{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="9"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="Eg8iZoGEPMd" label="DIU">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="1{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="10"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="u9d8fEtjmFJ" label="DIUPP">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="1{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="11"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="S1H7BjozWvY" label="Spermicide">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="1{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="12"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="U98ORMWvj51" label="Contraception chirurgicale volontaire">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="1{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="13"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="EilnyR0mXEt" label="Injectable DMPA-S/C">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="1{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="14"/>
+			</dataelement>
+			<dataelement unique="encounters" calculate="itemCount" uid="fyntnR4VNrK" label="Auto injection du DMPA-S/C">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="1{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="15"/>
+			</dataelement>
+		</dataelements>
+	</dataset>
+	<dataset color="black" label="RMA 1er échelon section 3 - Planning familial, Répartition AC par tranche d'âge, hommes, centre fixe" dhis2serverprefix="snis.ml." type="item" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MSPLS_FAMILY_PLANNING_CONSULTATION" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.otherinformation" itemValue="{like}2{semicolon}" uid="FomGQrUnwxU">
+		<categoryOptionCombo type="agegender">
+			<option uid="f8AeBJ9CorA" min="10" max="15" gender="m" name="10 à 15 ans"/>
+			<option uid="sfFQxrKM1Q0" min="15" max="20" gender="m" name="15 à 19 ans"/>
+			<option uid="JPbU0Cmbney" min="20" max="25" gender="m" name="20 à 25 ans"/>
+			<option uid="RO70REp79t1" min="25" max="9999" gender="m" name="25 ans et plus"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="encounters" calculate="itemCount" uid="DBqGPJyCZJO" label="Condoms masculins">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="1{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="5"/>
+			</dataelement>
+		</dataelements>
+	</dataset>
+	<dataset color="black" label="RMA 1er échelon section 3 - Planning familial, Répartition AC par tranche d'âge, femmes, centre mobile ou stratégie avancée" dhis2serverprefix="snis.ml." type="item" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MSPLS_FAMILY_PLANNING_CONSULTATION" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.otherinformation" itemValue="{like}2{semicolon}" uid="FomGQrUnwxU">
+		<categoryOptionCombo type="agegender">
+			<option uid="OaRla93l8Vf" min="10" max="15" gender="f" name="10 à 15 ans"/>
+			<option uid="iwjY9JsLgpI" min="15" max="20" gender="f" name="15 à 19 ans"/>
+			<option uid="oveucc7lhZI" min="20" max="25" gender="f" name="20 à 25 ans"/>
+			<option uid="qmpDWyLE78v" min="25" max="9999" gender="f" name="25 ans et plus"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="encounters" itemsneeded="2" calculate="itemCount" uid="RbOF1io5QLv" label="MAMA">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="2{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="3{sem}"/>
+				<item sametransaction="1" mandatory="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="1"/>
+			</dataelement>
+			<dataelement unique="encounters" itemsneeded="2" calculate="itemCount" uid="GefMTLaDjWY" label="Pilule COC">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="2{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="3{sem}"/>
+				<item sametransaction="1" mandatory="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="2"/>
+			</dataelement>
+			<dataelement unique="encounters" itemsneeded="2" calculate="itemCount" uid="VEhKm1dS4QP" label="Pilule COP">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="2{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="3{sem}"/>
+				<item sametransaction="1" mandatory="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="3"/>
+			</dataelement>
+			<dataelement unique="encounters" itemsneeded="2" calculate="itemCount" uid="Wt0hbrm8aDf" label="Injectable DMPA-IM">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="2{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="3{sem}"/>
+				<item sametransaction="1" mandatory="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="4"/>
+			</dataelement>
+			<dataelement unique="encounters" itemsneeded="2" calculate="itemCount" uid="UaPeh7iBLd5" label="Condoms féminins">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="2{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="3{sem}"/>
+				<item sametransaction="1" mandatory="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="6"/>
+			</dataelement>
+			<dataelement unique="encounters" itemsneeded="2" calculate="itemCount" uid="BTFfKG1NbFA" label="Implants (jadelle)">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="2{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="3{sem}"/>
+				<item sametransaction="1" mandatory="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="7"/>
+			</dataelement>
+			<dataelement unique="encounters" itemsneeded="2" calculate="itemCount" uid="CRpFmuHz2Po" label="Implanon">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="2{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="3{sem}"/>
+				<item sametransaction="1" mandatory="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="8"/>
+			</dataelement>
+			<dataelement unique="encounters" itemsneeded="2" calculate="itemCount" uid="XMvOpWKpy2X" label="Collier du cycle">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="2{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="3{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="9"/>
+			</dataelement>
+			<dataelement unique="encounters" itemsneeded="2" calculate="itemCount" uid="Eg8iZoGEPMd" label="DIU">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="2{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="3{sem}"/>
+				<item sametransaction="1" mandatory="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="10"/>
+			</dataelement>
+			<dataelement unique="encounters" itemsneeded="2" calculate="itemCount" uid="u9d8fEtjmFJ" label="DIUPP">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="2{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="3{sem}"/>
+				<item sametransaction="1" mandatory="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="11"/>
+			</dataelement>
+			<dataelement unique="encounters" itemsneeded="2" calculate="itemCount" uid="S1H7BjozWvY" label="Spermicide">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="2{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="3{sem}"/>
+				<item sametransaction="1" mandatory="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="12"/>
+			</dataelement>
+			<dataelement unique="encounters" itemsneeded="2" calculate="itemCount" uid="U98ORMWvj51" label="Contraception chirurgicale volontaire">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="2{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="3{sem}"/>
+				<item sametransaction="1" mandatory="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="13"/>
+			</dataelement>
+			<dataelement unique="encounters" itemsneeded="2" calculate="itemCount" uid="EilnyR0mXEt" label="Injectable DMPA-S/C">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="2{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="3{sem}"/>
+				<item sametransaction="1" mandatory="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="14"/>
+			</dataelement>
+			<dataelement unique="encounters" itemsneeded="2" calculate="itemCount" uid="fyntnR4VNrK" label="Auto injection du DMPA-S/C">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="2{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="3{sem}"/>
+				<item sametransaction="1" mandatory="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="15"/>
+			</dataelement>
+		</dataelements>
+	</dataset>
+	<dataset color="black" label="RMA 1er échelon section 3 - Planning familial, Répartition AC par tranche d'âge, hommes, centre mobile ou stratégie avancée" dhis2serverprefix="snis.ml." type="item" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MSPLS_FAMILY_PLANNING_CONSULTATION" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.otherinformation" itemValue="{like}2{semicolon}" uid="FomGQrUnwxU">
+		<categoryOptionCombo type="agegender">
+			<option uid="NfoN6gvEsQo" min="10" max="15" gender="m" name="10 à 15 ans"/>
+			<option uid="RxtT0xq7XMe" min="15" max="20" gender="m" name="15 à 19 ans"/>
+			<option uid="mH5lkc71yHu" min="20" max="25" gender="m" name="20 à 25 ans"/>
+			<option uid="d9OqT6md8e4" min="25" max="9999" gender="m" name="25 ans et plus"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="encounters" itemsneeded="2" calculate="itemCount" uid="DBqGPJyCZJO" label="Condoms masculins">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="2{sem}"/>
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CENTERTYPE" itemvalue="3{sem}"/>
+				<item sametransaction="1" mandatory="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.selectedmethod" itemvalue="5"/>
+			</dataelement>
+		</dataelements>
+	</dataset>
+	<!-- ***************************** Counseling & sources d'information ***************************** -->
+	<dataset color="darkred" label="RMA 1er échelon section 3 - Planning familial, Counseling" dhis2serverprefix="snis.ml." type="item" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MSPLS_FAMILY_PLANNING_CONSULTATION" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_PF_COUNSELING" itemValue="1{semicolon}" uid="FomGQrUnwxU">
+		<categoryOptionCombo type="agegender">
+			<option uid="LsXMYDyhEON" min="10" max="15" gender="f" name="Femmes 10 à 15 ans"/>
+			<option uid="A70rghzsClV" min="15" max="20" gender="f" name="Femmes 15 à 19 ans"/>
+			<option uid="EDFRKOuAhfH" min="20" max="25" gender="f" name="Femmes 20 à 25 ans"/>
+			<option uid="VAfYZ051Orr" min="25" max="9999" gender="f" name="Femmes 25 ans et plus"/>
+			<option uid="PnCNZgHzAvC" min="10" max="15" gender="m" name="Hommes 10 à 15 ans"/>
+			<option uid="CTT7s2OVeE3" min="15" max="20" gender="m" name="Hommes 15 à 19 ans"/>
+			<option uid="ZbuHttb4ONE" min="20" max="25" gender="m" name="Hommes 20 à 25 ans"/>
+			<option uid="vrGWuifYwRI" min="25" max="9999" gender="m" name="Hommes 25 ans et plus"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="patients" uid="vKXqyFuQnN5" label="Nombre d'utilisateurs ayant bénéficiéle counseling sur la PF"/>
+		</dataelements>
+	</dataset>
+	<dataset color="darkred" label="RMA 1er échelon section 3 - Planning familial, Sources d'information" dhis2serverprefix="snis.ml." type="item" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MSPLS_FAMILY_PLANNING_CONSULTATION" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_PF_INFORMATIONSOURCES" uid="FomGQrUnwxU">
+		<categoryOptionCombo type="agegender">
+			<option uid="LsXMYDyhEON" min="10" max="15" gender="f" name="Femmes 10 à 15 ans"/>
+			<option uid="A70rghzsClV" min="15" max="20" gender="f" name="Femmes 15 à 19 ans"/>
+			<option uid="EDFRKOuAhfH" min="20" max="25" gender="f" name="Femmes 20 à 25 ans"/>
+			<option uid="VAfYZ051Orr" min="25" max="9999" gender="f" name="Femmes 25 ans et plus"/>
+			<option uid="PnCNZgHzAvC" min="10" max="15" gender="m" name="Hommes 10 à 15 ans"/>
+			<option uid="CTT7s2OVeE3" min="15" max="20" gender="m" name="Hommes 15 à 19 ans"/>
+			<option uid="ZbuHttb4ONE" min="20" max="25" gender="m" name="Hommes 20 à 25 ans"/>
+			<option uid="vrGWuifYwRI" min="25" max="9999" gender="m" name="Hommes 25 ans et plus"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement unique="patients" calculate="itemCount" uid="TgtGRIoV1jj" label="Radio">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_PF_INFORMATIONSOURCES" itemvalue="{like}1{sem}"/>
+			</dataelement>
+			<dataelement unique="patients" calculate="itemCount" uid="w1JYvuuucsY" label="Télévision">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_PF_INFORMATIONSOURCES" itemvalue="{like}2{sem}"/>
+			</dataelement>
+			<dataelement unique="patients" calculate="itemCount" uid="SsEebHyPuYV" label="Causerie au centre de santé">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_PF_INFORMATIONSOURCES" itemvalue="{like}3{sem}"/>
+			</dataelement>
+			<dataelement unique="patients" calculate="itemCount" uid="m7SMbsoUSYU" label="Ami / Connaissance">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_PF_INFORMATIONSOURCES" itemvalue="{like}4{sem}"/>
+			</dataelement>
+			<dataelement unique="patients" calculate="itemCount" uid="EvrL2srbFJ4" label="ASC / Relai">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_PF_INFORMATIONSOURCES" itemvalue="{like}5{sem}"/>
+			</dataelement>
+			<dataelement unique="patients" calculate="itemCount" uid="fPbJ7zWqEVL" label="Réseaux sociaux">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_PF_INFORMATIONSOURCES" itemvalue="{like}6{sem}"/>
+			</dataelement>
+			<dataelement unique="patients" calculate="itemCount" uid="kFuRVuNpfro" label="Autres">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_PF_INFORMATIONSOURCES" itemvalue="{like}7{sem}"/>
+			</dataelement>
+		</dataelements>
+	</dataset>
+</dhis2> 

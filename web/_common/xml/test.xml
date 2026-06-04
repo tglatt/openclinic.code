@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dhis2>
+	<dataset label="25 DSNIS Morbidité 2020" type="title" uid="gTDnrKkMAf7"/>
+	<dataset label="25 DSNIS Morbidité 2020 - Pathologies sous surveillance" type="item" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MSPLS_REGISTRY_CARE_ADULTS,be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MSPLS_REGISTRY_CARE_CHILDREN" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_NEWCASE" itemValue="1{semicolon}" uid="gTDnrKkMAf7">
+		<categoryOptionCombo type="agegender">
+			<option uid="Nmm3IAG4HDC" min="-99" max="0.083" gender="m" name="0-28 jours M"/>
+			<option uid="jDG999Rp4o0" min="-99" max="0.083" gender="f" name="0-28 jours F"/>
+			<option uid="SW73FNltKGU" min="0.083" max="1" gender="m" name="29 jours-11 mois M"/>
+			<option uid="BYuSu7NCi34" min="0.083" max="1" gender="f" name="29 jours-11 mois F"/>
+			<option uid="PlTdJYtk9mS" min="1" max="5" gender="m" name="12-59 mois M"/>
+			<option uid="Iausicu6pk0" min="1" max="5" gender="f" name="12-59 mois F"/>
+			<option uid="vMR1S7Xf8A6" min="5" max="10" gender="m" name="5-9 ans M"/>
+			<option uid="TbspwAXR3OD" min="5" max="10" gender="f" name="5-9 ans F"/>
+			<option uid="N1Zr3qfbsCL" min="10" max="15" gender="m" name="10-14 ans M"/>
+			<option uid="hoNLYwhYjTL" min="10" max="15" gender="f" name="10-14 ans F"/>
+			<option uid="ClExFiVUbKY" min="15" max="18" gender="m" name="15-17 ans M"/>
+			<option uid="a9RRXmh74rf" min="15" max="18" gender="f" name="15-17 ans F"/>
+			<option uid="MWA7cljWHkD" min="18" max="20" gender="m" name="18-19 ans M"/>
+			<option uid="TJCwsDj03uZ" min="18" max="20" gender="f" name="18-19 ans F"/>
+			<option uid="Hug5t6xZVoh" min="20" max="25" gender="m" name="20-24 ans M"/>
+			<option uid="cKXZcdLiGn5" min="20" max="25" gender="f" name="20-24 ans F"/>
+			<option uid="fz2nTLdb2PJ" min="25" max="30" gender="m" name="25-29 ans M"/>
+			<option uid="Ofxid5wo6xe" min="25" max="30" gender="f" name="25-29 ans F"/>
+			<option uid="Sxn0D250lCS" min="30" max="35" gender="m" name="30-34 ans M"/>
+			<option uid="jZEPKiOdkVA" min="30" max="35" gender="f" name="30-34 ans F"/>
+			<option uid="BXplpwIpqbT" min="35" max="40" gender="m" name="35-39 ans M"/>
+			<option uid="tUTbzZl9ptF" min="35" max="40" gender="f" name="35-39 ans F"/>
+			<option uid="DHSRF6zTUCB" min="40" max="45" gender="m" name="40-44 ans M"/>
+			<option uid="dXWIMexqn99" min="40" max="45" gender="f" name="40-44 ans F"/>
+			<option uid="hS6Tv3YxNfR" min="45" max="50" gender="m" name="45-49 ans M"/>
+			<option uid="KhOEQgU1NFl" min="45" max="50" gender="f" name="45-49 ans F"/>
+			<option uid="IrsjbhMvmaQ" min="50" max="55" gender="m" name="50-54 ans M"/>
+			<option uid="NTXrYZVCbcI" min="50" max="55" gender="f" name="50-54 ans F"/>
+			<option uid="OauDHEsoSv9" min="55" max="60" gender="m" name="55-59 ans M"/>
+			<option uid="F0FWJVUewyG" min="55" max="60" gender="f" name="55-59 ans F"/>
+			<option uid="pxjNacHLEpo" min="60" max="65" gender="m" name="60-64 ans M"/>
+			<option uid="CALUBibJn2e" min="60" max="65" gender="f" name="60-64 ans F"/>
+			<option uid="fKgFRM7Mwye" min="65" max="71" gender="m" name="65-70 ans M"/>
+			<option uid="pKGbFmt8aNQ" min="65" max="71" gender="f" name="65-70 ans F"/>
+			<option uid="MdDbhv34Jnd" min="71" max="999" gender="m" name="71 ans et plus M"/>
+			<option uid="hNfCkdib7nr" min="71" max="999" gender="f" name="71 ans et plus F"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement calculate="itemCount" unique="encounters" uid="dT1tXhXfHE5" label="Choléra">
+				<item sametransaction="1" itemtype="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_LAB_DIAGNOSISDHIS1;be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_LAB_DIAGNOSISDHIS2" itemvalue="s.1"/>
+			</dataelement>
+		</dataelements>
+	</dataset>
+</dhis2>

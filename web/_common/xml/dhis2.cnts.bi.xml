@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dhis2>
+	<dataset label="CNTS - Rapportage mensuel" type="title" uid="zZKQduNJ28r"/>
+	<dataset label="CNTS - Rapportage mensuel - TABLEAU I : REPARTITION DES POCHES COLLECTEES,TESTEES,DISTRIBUEES ET POCHES DE PLAQUETTES PRODUITS" type="genericplugin" module="ocdhis2.plugins.CNTSBloodBagsCollected" uid="zZKQduNJ28r">
+		<attributeOptionCombo type="genericplugin">
+			<option uid="GKkUPluq2QJ" value="1" name="Default"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="genericplugin">
+			<option uid="GKkUPluq2QJ" value="1" name="Nombre"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement uid="qI0yzgLv2LZ" nolink="1" label="Poches collectées"/>
+		</dataelements>
+	</dataset>
+	<dataset label="CNTS - Rapportage mensuel - TABLEAU I : REPARTITION DES POCHES COLLECTEES,TESTEES,DISTRIBUEES ET POCHES DE PLAQUETTES PRODUITS|1" type="genericplugin" module="ocdhis2.plugins.CNTSBloodBagsTested" uid="zZKQduNJ28r">
+		<attributeOptionCombo type="genericplugin">
+			<option uid="GKkUPluq2QJ" value="1" name="Default"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="genericplugin">
+			<option uid="GKkUPluq2QJ" value="1" name="Nombre"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement uid="yzExuT4Rw2e" nolink="1" label="Poches testées"/>
+		</dataelements>
+	</dataset>
+	<dataset label="CNTS - Rapportage mensuel - TABLEAU I : REPARTITION DES POCHES COLLECTEES,TESTEES,DISTRIBUEES ET POCHES DE PLAQUETTES PRODUITS|2" type="genericplugin" module="ocdhis2.plugins.CNTSBloodBagsDistributed" uid="zZKQduNJ28r">
+		<attributeOptionCombo type="genericplugin">
+			<option uid="GKkUPluq2QJ" value="1" name="Default"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="genericplugin">
+			<option uid="GKkUPluq2QJ" value="1" name="Nombre"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement uid="gegd4u6g4pe" nolink="1" label="Poches distribuées"/>
+		</dataelements>
+	</dataset>
+	<dataset label="CNTS - Rapportage mensuel - TABLEAU I : REPARTITION DES POCHES COLLECTEES,TESTEES,DISTRIBUEES ET POCHES DE PLAQUETTES PRODUITS|3" type="genericplugin" module="ocdhis2.plugins.CNTSBloodBagsPlateletsProduced" uid="zZKQduNJ28r">
+		<attributeOptionCombo type="genericplugin">
+			<option uid="GKkUPluq2QJ" value="1" name="Default"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="genericplugin">
+			<option uid="GKkUPluq2QJ" value="1" name="Nombre"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement uid="oDNYRpXU1XQ" nolink="1" label="Poches de plaquettes produites"/>
+		</dataelements>
+	</dataset>
+	<dataset label="CNTS - Rapportage mensuel - TABLEAU II : DONNEES POUR CALCUL DE LA SEROPREVALENCE DU VIH CHEZ LES DONNEURS SELON LE SEXE - Anciens cas" type="plugin" module="ocdhis2.plugins.CNTSSeroprevalence" parameters="newcase=0;labcode=HIV" uid="zZKQduNJ28r">
+		<attributeOptionCombo type="default">
+			<option uid="GKkUPluq2QJ" name="Default"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="agegender">
+			<option uid="Coq5DrwbVY5" min="15" max="20" gender="m" name="15-19 ans M"/>
+			<option uid="fpz6tsHoyK5" min="15" max="20" gender="f" name="15-19 ans F"/>
+			<option uid="mjCID1wXoBN" min="20" max="25" gender="m" name="20-24 ans M"/>
+			<option uid="sk7RcZyWL9E" min="20" max="25" gender="f" name="20-24 ans F"/>
+			<option uid="fqnPKUBqL6I" min="25" max="30" gender="m" name="25-29 ans M"/>
+			<option uid="SGN9a0pmRa3" min="25" max="30" gender="f" name="25-29 ans F"/>
+			<option uid="cUe556kBa8x" min="30" max="35" gender="m" name="30-34 ans M"/>
+			<option uid="TyQpDk354k3" min="30" max="35" gender="f" name="30-34 ans F"/>
+			<option uid="VvjS7ZNlYnZ" min="35" max="40" gender="m" name="35-39 ans M"/>
+			<option uid="gwht2dXaL8d" min="35" max="40" gender="f" name="35-39 ans F"/>
+			<option uid="Zc8XvMkmYFb" min="40" max="45" gender="m" name="40-44 ans M"/>
+			<option uid="GK0Po4C8eQf" min="40" max="45" gender="f" name="40-44 ans F"/>
+			<option uid="EJS1YRFWtzq" min="45" max="50" gender="m" name="45-49 ans M"/>
+			<option uid="cq0jjHkdGr9" min="45" max="50" gender="f" name="45-49 ans F"/>
+			<option uid="iicD8mxZd0d" min="50" max="999" gender="m" name="&gt;=50 ans M"/>
+			<option uid="Z6jyapRHajY" min="50" max="999" gender="f" name="&gt;=50 ans F"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement uid="KiYpjLxCeny" itemvalue="+" label="Anciens cas positifs"/>
+		</dataelements>
+	</dataset>
+	<dataset label="CNTS - Rapportage mensuel - TABLEAU II : DONNEES POUR CALCUL DE LA SEROPREVALENCE DU VIH CHEZ LES DONNEURS SELON LE SEXE - Anciens cas|1" type="plugin" module="ocdhis2.plugins.CNTSSeroprevalence" parameters="newcase=0;labcode=HIV" uid="zZKQduNJ28r">
+		<attributeOptionCombo type="default">
+			<option uid="GKkUPluq2QJ" name="Default"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="agegender">
+			<option uid="jWfxoeeewJA" min="15" max="20" gender="m" name="15-19 ans M"/>
+			<option uid="Xzq6uuyKWIo" min="15" max="20" gender="f" name="15-19 ans F"/>
+			<option uid="vyhFMbOZETa" min="20" max="25" gender="m" name="20-24 ans M"/>
+			<option uid="PboRNNYG5nT" min="20" max="25" gender="f" name="20-24 ans F"/>
+			<option uid="uHNQKQPg91x" min="25" max="30" gender="m" name="25-29 ans M"/>
+			<option uid="jv20c1jpQyl" min="25" max="30" gender="f" name="25-29 ans F"/>
+			<option uid="H8CccLLCnNN" min="30" max="35" gender="m" name="30-34 ans M"/>
+			<option uid="ewBZi0Cr6Oh" min="30" max="35" gender="f" name="30-34 ans F"/>
+			<option uid="koGgsjSOFgb" min="35" max="40" gender="m" name="35-39 ans M"/>
+			<option uid="apZ1ODtgn8b" min="35" max="40" gender="f" name="35-39 ans F"/>
+			<option uid="KvSGWPFRxvx" min="40" max="45" gender="m" name="40-44 ans M"/>
+			<option uid="xTDAE2oX8mq" min="40" max="45" gender="f" name="40-44 ans F"/>
+			<option uid="ci9uLMaPHP3" min="45" max="50" gender="m" name="45-49 ans M"/>
+			<option uid="DkJ1TAAk9YG" min="45" max="50" gender="f" name="45-49 ans F"/>
+			<option uid="oFNdzM7juve" min="50" max="999" gender="m" name="&gt;=50 ans M"/>
+			<option uid="oOzVYx9oVVv" min="50" max="999" gender="f" name="&gt;=50 ans F"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement uid="KiYpjLxCeny" itemvalue="-" label="Anciens cas négatifs"/>
+		</dataelements>
+	</dataset>
+	<dataset label="CNTS - Rapportage mensuel - TABLEAU II : DONNEES POUR CALCUL DE LA SEROPREVALENCE DU VIH CHEZ LES DONNEURS SELON LE SEXE - Nouveaux cas" type="plugin" module="ocdhis2.plugins.CNTSSeroprevalence" parameters="newcase=1;labcode=HIV" uid="zZKQduNJ28r">
+		<attributeOptionCombo type="default">
+			<option uid="GKkUPluq2QJ" name="Default"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="agegender">
+			<option uid="poaFN3MXmRz" min="15" max="20" gender="m" name="15-19 ans M"/>
+			<option uid="r5CcOrIDGFt" min="15" max="20" gender="f" name="15-19 ans F"/>
+			<option uid="SPbikYsRjjF" min="20" max="25" gender="m" name="20-24 ans M"/>
+			<option uid="KBhFoSHdMlf" min="20" max="25" gender="f" name="20-24 ans F"/>
+			<option uid="QYaBCmCAAFn" min="25" max="30" gender="m" name="25-29 ans M"/>
+			<option uid="hXjXx6pelDs" min="25" max="30" gender="f" name="25-29 ans F"/>
+			<option uid="VBsz7GjEDRn" min="30" max="35" gender="m" name="30-34 ans M"/>
+			<option uid="ckC5REjnS3c" min="30" max="35" gender="f" name="30-34 ans F"/>
+			<option uid="NWJajESSK1J" min="35" max="40" gender="m" name="35-39 ans M"/>
+			<option uid="q50DlflXZGJ" min="35" max="40" gender="f" name="35-39 ans F"/>
+			<option uid="fRe1dOuGTZV" min="40" max="45" gender="m" name="40-44 ans M"/>
+			<option uid="UzRcCCqTTa0" min="40" max="45" gender="f" name="40-44 ans F"/>
+			<option uid="MkKJOqw95Ar" min="45" max="50" gender="m" name="45-49 ans M"/>
+			<option uid="puFS00enOVC" min="45" max="50" gender="f" name="45-49 ans F"/>
+			<option uid="umYHliwvXXo" min="50" max="999" gender="m" name="&gt;=50 ans M"/>
+			<option uid="NVVvKVrm5EO" min="50" max="999" gender="f" name="&gt;=50 ans F"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement uid="KiYpjLxCeny" itemvalue="+" label="Nouveaux cas positifs"/>
+		</dataelements>
+	</dataset>
+	<dataset label="CNTS - Rapportage mensuel - TABLEAU II : DONNEES POUR CALCUL DE LA SEROPREVALENCE DU VIH CHEZ LES DONNEURS SELON LE SEXE - Nouveaux cas|1" type="plugin" module="ocdhis2.plugins.CNTSSeroprevalence" parameters="newcase=1;labcode=HIV" uid="zZKQduNJ28r">
+		<attributeOptionCombo type="default">
+			<option uid="GKkUPluq2QJ" name="Default"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="agegender">
+			<option uid="DhVlo4d8ErN" min="15" max="20" gender="m" name="15-19 ans M"/>
+			<option uid="awGUPYEWuh8" min="15" max="20" gender="f" name="15-19 ans F"/>
+			<option uid="DhVlo4d8ErN" min="20" max="25" gender="m" name="20-24 ans M"/>
+			<option uid="C3eM4MhQ3KS" min="20" max="25" gender="f" name="20-24 ans F"/>
+			<option uid="yUIY7VAxXJB" min="25" max="30" gender="m" name="25-29 ans M"/>
+			<option uid="OUJS3AAu3WS" min="25" max="30" gender="f" name="25-29 ans F"/>
+			<option uid="Mblx5N6PwIr" min="30" max="35" gender="m" name="30-34 ans M"/>
+			<option uid="y6at427nV7b" min="30" max="35" gender="f" name="30-34 ans F"/>
+			<option uid="xQerUMOPloR" min="35" max="40" gender="m" name="35-39 ans M"/>
+			<option uid="zIgMUexiBWn" min="35" max="40" gender="f" name="35-39 ans F"/>
+			<option uid="RxntcxuT5UF" min="40" max="45" gender="m" name="40-44 ans M"/>
+			<option uid="WCn1PEay2eJ" min="40" max="45" gender="f" name="40-44 ans F"/>
+			<option uid="AR2gqxqfEVr" min="45" max="50" gender="m" name="45-49 ans M"/>
+			<option uid="NgaA0XNhCTc" min="45" max="50" gender="f" name="45-49 ans F"/>
+			<option uid="vnDqFIl1H4F" min="50" max="999" gender="m" name="&gt;=50 ans M"/>
+			<option uid="tZoVxPqx0hZ" min="50" max="999" gender="f" name="&gt;=50 ans F"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement uid="KiYpjLxCeny" itemvalue="-" label="Nouveaux cas négatifs"/>
+		</dataelements>
+	</dataset>
+
+	<dataset label="CNTS - Rapportage mensuel - TABLEAU III : DONNEES POUR CALCUL DE LA SEROPREVALENCE DU VHB CHEZ LES DONNEURS SELON LE SEXE - Anciens cas" type="plugin" module="ocdhis2.plugins.CNTSSeroprevalence" parameters="newcase=0;labcode=HBS" uid="zZKQduNJ28r">
+		<attributeOptionCombo type="default">
+			<option uid="GKkUPluq2QJ" name="Default"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="agegender">
+			<option uid="Coq5DrwbVY5" min="15" max="20" gender="m" name="15-19 ans M"/>
+			<option uid="fpz6tsHoyK5" min="15" max="20" gender="f" name="15-19 ans F"/>
+			<option uid="mjCID1wXoBN" min="20" max="25" gender="m" name="20-24 ans M"/>
+			<option uid="sk7RcZyWL9E" min="20" max="25" gender="f" name="20-24 ans F"/>
+			<option uid="fqnPKUBqL6I" min="25" max="30" gender="m" name="25-29 ans M"/>
+			<option uid="SGN9a0pmRa3" min="25" max="30" gender="f" name="25-29 ans F"/>
+			<option uid="cUe556kBa8x" min="30" max="35" gender="m" name="30-34 ans M"/>
+			<option uid="TyQpDk354k3" min="30" max="35" gender="f" name="30-34 ans F"/>
+			<option uid="VvjS7ZNlYnZ" min="35" max="40" gender="m" name="35-39 ans M"/>
+			<option uid="gwht2dXaL8d" min="35" max="40" gender="f" name="35-39 ans F"/>
+			<option uid="Zc8XvMkmYFb" min="40" max="45" gender="m" name="40-44 ans M"/>
+			<option uid="GK0Po4C8eQf" min="40" max="45" gender="f" name="40-44 ans F"/>
+			<option uid="EJS1YRFWtzq" min="45" max="50" gender="m" name="45-49 ans M"/>
+			<option uid="cq0jjHkdGr9" min="45" max="50" gender="f" name="45-49 ans F"/>
+			<option uid="iicD8mxZd0d" min="50" max="999" gender="m" name="&gt;=50 ans M"/>
+			<option uid="Z6jyapRHajY" min="50" max="999" gender="f" name="&gt;=50 ans F"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement uid="EiyxSwRVqsO" itemvalue="+" label="Anciens cas positifs"/>
+		</dataelements>
+	</dataset>
+	<dataset label="CNTS - Rapportage mensuel - TABLEAU III : DONNEES POUR CALCUL DE LA SEROPREVALENCE DU VHB CHEZ LES DONNEURS SELON LE SEXE - Anciens cas|1" type="plugin" module="ocdhis2.plugins.CNTSSeroprevalence" parameters="newcase=0;labcode=HBS" uid="zZKQduNJ28r">
+		<attributeOptionCombo type="default">
+			<option uid="GKkUPluq2QJ" name="Default"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="agegender">
+			<option uid="jWfxoeeewJA" min="15" max="20" gender="m" name="15-19 ans M"/>
+			<option uid="Xzq6uuyKWIo" min="15" max="20" gender="f" name="15-19 ans F"/>
+			<option uid="vyhFMbOZETa" min="20" max="25" gender="m" name="20-24 ans M"/>
+			<option uid="PboRNNYG5nT" min="20" max="25" gender="f" name="20-24 ans F"/>
+			<option uid="uHNQKQPg91x" min="25" max="30" gender="m" name="25-29 ans M"/>
+			<option uid="jv20c1jpQyl" min="25" max="30" gender="f" name="25-29 ans F"/>
+			<option uid="H8CccLLCnNN" min="30" max="35" gender="m" name="30-34 ans M"/>
+			<option uid="ewBZi0Cr6Oh" min="30" max="35" gender="f" name="30-34 ans F"/>
+			<option uid="koGgsjSOFgb" min="35" max="40" gender="m" name="35-39 ans M"/>
+			<option uid="apZ1ODtgn8b" min="35" max="40" gender="f" name="35-39 ans F"/>
+			<option uid="KvSGWPFRxvx" min="40" max="45" gender="m" name="40-44 ans M"/>
+			<option uid="xTDAE2oX8mq" min="40" max="45" gender="f" name="40-44 ans F"/>
+			<option uid="ci9uLMaPHP3" min="45" max="50" gender="m" name="45-49 ans M"/>
+			<option uid="DkJ1TAAk9YG" min="45" max="50" gender="f" name="45-49 ans F"/>
+			<option uid="oFNdzM7juve" min="50" max="999" gender="m" name="&gt;=50 ans M"/>
+			<option uid="oOzVYx9oVVv" min="50" max="999" gender="f" name="&gt;=50 ans F"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement uid="EiyxSwRVqsO" itemvalue="-" label="Anciens cas négatifs"/>
+		</dataelements>
+	</dataset>
+	<dataset label="CNTS - Rapportage mensuel - TABLEAU III : DONNEES POUR CALCUL DE LA SEROPREVALENCE DU VHB CHEZ LES DONNEURS SELON LE SEXE - Nouveaux cas" type="plugin" module="ocdhis2.plugins.CNTSSeroprevalence" parameters="newcase=1;labcode=HBS" uid="zZKQduNJ28r">
+		<attributeOptionCombo type="default">
+			<option uid="GKkUPluq2QJ" name="Default"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="agegender">
+			<option uid="poaFN3MXmRz" min="15" max="20" gender="m" name="15-19 ans M"/>
+			<option uid="r5CcOrIDGFt" min="15" max="20" gender="f" name="15-19 ans F"/>
+			<option uid="SPbikYsRjjF" min="20" max="25" gender="m" name="20-24 ans M"/>
+			<option uid="KBhFoSHdMlf" min="20" max="25" gender="f" name="20-24 ans F"/>
+			<option uid="QYaBCmCAAFn" min="25" max="30" gender="m" name="25-29 ans M"/>
+			<option uid="hXjXx6pelDs" min="25" max="30" gender="f" name="25-29 ans F"/>
+			<option uid="VBsz7GjEDRn" min="30" max="35" gender="m" name="30-34 ans M"/>
+			<option uid="ckC5REjnS3c" min="30" max="35" gender="f" name="30-34 ans F"/>
+			<option uid="NWJajESSK1J" min="35" max="40" gender="m" name="35-39 ans M"/>
+			<option uid="q50DlflXZGJ" min="35" max="40" gender="f" name="35-39 ans F"/>
+			<option uid="fRe1dOuGTZV" min="40" max="45" gender="m" name="40-44 ans M"/>
+			<option uid="UzRcCCqTTa0" min="40" max="45" gender="f" name="40-44 ans F"/>
+			<option uid="MkKJOqw95Ar" min="45" max="50" gender="m" name="45-49 ans M"/>
+			<option uid="puFS00enOVC" min="45" max="50" gender="f" name="45-49 ans F"/>
+			<option uid="umYHliwvXXo" min="50" max="999" gender="m" name="&gt;=50 ans M"/>
+			<option uid="NVVvKVrm5EO" min="50" max="999" gender="f" name="&gt;=50 ans F"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement uid="EiyxSwRVqsO" itemvalue="+" label="Nouveaux cas positifs"/>
+		</dataelements>
+	</dataset>
+	<dataset label="CNTS - Rapportage mensuel - TABLEAU III : DONNEES POUR CALCUL DE LA SEROPREVALENCE DU VHB CHEZ LES DONNEURS SELON LE SEXE - Nouveaux cas|1" type="plugin" module="ocdhis2.plugins.CNTSSeroprevalence" parameters="newcase=1;labcode=HBS" uid="zZKQduNJ28r">
+		<attributeOptionCombo type="default">
+			<option uid="GKkUPluq2QJ" name="Default"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="agegender">
+			<option uid="DhVlo4d8ErN" min="15" max="20" gender="m" name="15-19 ans M"/>
+			<option uid="awGUPYEWuh8" min="15" max="20" gender="f" name="15-19 ans F"/>
+			<option uid="DhVlo4d8ErN" min="20" max="25" gender="m" name="20-24 ans M"/>
+			<option uid="C3eM4MhQ3KS" min="20" max="25" gender="f" name="20-24 ans F"/>
+			<option uid="yUIY7VAxXJB" min="25" max="30" gender="m" name="25-29 ans M"/>
+			<option uid="OUJS3AAu3WS" min="25" max="30" gender="f" name="25-29 ans F"/>
+			<option uid="Mblx5N6PwIr" min="30" max="35" gender="m" name="30-34 ans M"/>
+			<option uid="y6at427nV7b" min="30" max="35" gender="f" name="30-34 ans F"/>
+			<option uid="xQerUMOPloR" min="35" max="40" gender="m" name="35-39 ans M"/>
+			<option uid="zIgMUexiBWn" min="35" max="40" gender="f" name="35-39 ans F"/>
+			<option uid="RxntcxuT5UF" min="40" max="45" gender="m" name="40-44 ans M"/>
+			<option uid="WCn1PEay2eJ" min="40" max="45" gender="f" name="40-44 ans F"/>
+			<option uid="AR2gqxqfEVr" min="45" max="50" gender="m" name="45-49 ans M"/>
+			<option uid="NgaA0XNhCTc" min="45" max="50" gender="f" name="45-49 ans F"/>
+			<option uid="vnDqFIl1H4F" min="50" max="999" gender="m" name="&gt;=50 ans M"/>
+			<option uid="tZoVxPqx0hZ" min="50" max="999" gender="f" name="&gt;=50 ans F"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement uid="EiyxSwRVqsO" itemvalue="-" label="Nouveaux cas négatifs"/>
+		</dataelements>
+	</dataset>
+
+	<dataset label="CNTS - Rapportage mensuel - TABLEAU IV : DONNEES POUR CALCUL DE LA SEROPREVALENCE DU VHC CHEZ LES DONNEURS SELON LE SEXE - Anciens cas" type="plugin" module="ocdhis2.plugins.CNTSSeroprevalence" parameters="newcase=0;labcode=HCV" uid="zZKQduNJ28r">
+		<attributeOptionCombo type="default">
+			<option uid="GKkUPluq2QJ" name="Default"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="agegender">
+			<option uid="Coq5DrwbVY5" min="15" max="20" gender="m" name="15-19 ans M"/>
+			<option uid="fpz6tsHoyK5" min="15" max="20" gender="f" name="15-19 ans F"/>
+			<option uid="mjCID1wXoBN" min="20" max="25" gender="m" name="20-24 ans M"/>
+			<option uid="sk7RcZyWL9E" min="20" max="25" gender="f" name="20-24 ans F"/>
+			<option uid="fqnPKUBqL6I" min="25" max="30" gender="m" name="25-29 ans M"/>
+			<option uid="SGN9a0pmRa3" min="25" max="30" gender="f" name="25-29 ans F"/>
+			<option uid="cUe556kBa8x" min="30" max="35" gender="m" name="30-34 ans M"/>
+			<option uid="TyQpDk354k3" min="30" max="35" gender="f" name="30-34 ans F"/>
+			<option uid="VvjS7ZNlYnZ" min="35" max="40" gender="m" name="35-39 ans M"/>
+			<option uid="gwht2dXaL8d" min="35" max="40" gender="f" name="35-39 ans F"/>
+			<option uid="Zc8XvMkmYFb" min="40" max="45" gender="m" name="40-44 ans M"/>
+			<option uid="GK0Po4C8eQf" min="40" max="45" gender="f" name="40-44 ans F"/>
+			<option uid="EJS1YRFWtzq" min="45" max="50" gender="m" name="45-49 ans M"/>
+			<option uid="cq0jjHkdGr9" min="45" max="50" gender="f" name="45-49 ans F"/>
+			<option uid="iicD8mxZd0d" min="50" max="999" gender="m" name="&gt;=50 ans M"/>
+			<option uid="Z6jyapRHajY" min="50" max="999" gender="f" name="&gt;=50 ans F"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement uid="pQrHHBDxXuz" itemvalue="+" label="Anciens cas positifs"/>
+		</dataelements>
+	</dataset>
+	<dataset label="CNTS - Rapportage mensuel - TABLEAU IV : DONNEES POUR CALCUL DE LA SEROPREVALENCE DU VHC CHEZ LES DONNEURS SELON LE SEXE - Anciens cas|1" type="plugin" module="ocdhis2.plugins.CNTSSeroprevalence" parameters="newcase=0;labcode=HCV" uid="zZKQduNJ28r">
+		<attributeOptionCombo type="default">
+			<option uid="GKkUPluq2QJ" name="Default"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="agegender">
+			<option uid="jWfxoeeewJA" min="15" max="20" gender="m" name="15-19 ans M"/>
+			<option uid="Xzq6uuyKWIo" min="15" max="20" gender="f" name="15-19 ans F"/>
+			<option uid="vyhFMbOZETa" min="20" max="25" gender="m" name="20-24 ans M"/>
+			<option uid="PboRNNYG5nT" min="20" max="25" gender="f" name="20-24 ans F"/>
+			<option uid="uHNQKQPg91x" min="25" max="30" gender="m" name="25-29 ans M"/>
+			<option uid="jv20c1jpQyl" min="25" max="30" gender="f" name="25-29 ans F"/>
+			<option uid="H8CccLLCnNN" min="30" max="35" gender="m" name="30-34 ans M"/>
+			<option uid="ewBZi0Cr6Oh" min="30" max="35" gender="f" name="30-34 ans F"/>
+			<option uid="koGgsjSOFgb" min="35" max="40" gender="m" name="35-39 ans M"/>
+			<option uid="apZ1ODtgn8b" min="35" max="40" gender="f" name="35-39 ans F"/>
+			<option uid="KvSGWPFRxvx" min="40" max="45" gender="m" name="40-44 ans M"/>
+			<option uid="xTDAE2oX8mq" min="40" max="45" gender="f" name="40-44 ans F"/>
+			<option uid="ci9uLMaPHP3" min="45" max="50" gender="m" name="45-49 ans M"/>
+			<option uid="DkJ1TAAk9YG" min="45" max="50" gender="f" name="45-49 ans F"/>
+			<option uid="oFNdzM7juve" min="50" max="999" gender="m" name="&gt;=50 ans M"/>
+			<option uid="oOzVYx9oVVv" min="50" max="999" gender="f" name="&gt;=50 ans F"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement uid="pQrHHBDxXuz" itemvalue="-" label="Anciens cas négatifs"/>
+		</dataelements>
+	</dataset>
+	<dataset label="CNTS - Rapportage mensuel - TABLEAU IV : DONNEES POUR CALCUL DE LA SEROPREVALENCE DU VHC CHEZ LES DONNEURS SELON LE SEXE - Nouveaux cas" type="plugin" module="ocdhis2.plugins.CNTSSeroprevalence" parameters="newcase=1;labcode=HCV" uid="zZKQduNJ28r">
+		<attributeOptionCombo type="default">
+			<option uid="GKkUPluq2QJ" name="Default"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="agegender">
+			<option uid="poaFN3MXmRz" min="15" max="20" gender="m" name="15-19 ans M"/>
+			<option uid="r5CcOrIDGFt" min="15" max="20" gender="f" name="15-19 ans F"/>
+			<option uid="SPbikYsRjjF" min="20" max="25" gender="m" name="20-24 ans M"/>
+			<option uid="KBhFoSHdMlf" min="20" max="25" gender="f" name="20-24 ans F"/>
+			<option uid="QYaBCmCAAFn" min="25" max="30" gender="m" name="25-29 ans M"/>
+			<option uid="hXjXx6pelDs" min="25" max="30" gender="f" name="25-29 ans F"/>
+			<option uid="VBsz7GjEDRn" min="30" max="35" gender="m" name="30-34 ans M"/>
+			<option uid="ckC5REjnS3c" min="30" max="35" gender="f" name="30-34 ans F"/>
+			<option uid="NWJajESSK1J" min="35" max="40" gender="m" name="35-39 ans M"/>
+			<option uid="q50DlflXZGJ" min="35" max="40" gender="f" name="35-39 ans F"/>
+			<option uid="fRe1dOuGTZV" min="40" max="45" gender="m" name="40-44 ans M"/>
+			<option uid="UzRcCCqTTa0" min="40" max="45" gender="f" name="40-44 ans F"/>
+			<option uid="MkKJOqw95Ar" min="45" max="50" gender="m" name="45-49 ans M"/>
+			<option uid="puFS00enOVC" min="45" max="50" gender="f" name="45-49 ans F"/>
+			<option uid="umYHliwvXXo" min="50" max="999" gender="m" name="&gt;=50 ans M"/>
+			<option uid="NVVvKVrm5EO" min="50" max="999" gender="f" name="&gt;=50 ans F"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement uid="pQrHHBDxXuz" itemvalue="+" label="Nouveaux cas positifs"/>
+		</dataelements>
+	</dataset>
+	<dataset label="CNTS - Rapportage mensuel - TABLEAU IV : DONNEES POUR CALCUL DE LA SEROPREVALENCE DU VHC CHEZ LES DONNEURS SELON LE SEXE - Nouveaux cas|1" type="plugin" module="ocdhis2.plugins.CNTSSeroprevalence" parameters="newcase=1;labcode=HCV" uid="zZKQduNJ28r">
+		<attributeOptionCombo type="default">
+			<option uid="GKkUPluq2QJ" name="Default"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="agegender">
+			<option uid="DhVlo4d8ErN" min="15" max="20" gender="m" name="15-19 ans M"/>
+			<option uid="awGUPYEWuh8" min="15" max="20" gender="f" name="15-19 ans F"/>
+			<option uid="DhVlo4d8ErN" min="20" max="25" gender="m" name="20-24 ans M"/>
+			<option uid="C3eM4MhQ3KS" min="20" max="25" gender="f" name="20-24 ans F"/>
+			<option uid="yUIY7VAxXJB" min="25" max="30" gender="m" name="25-29 ans M"/>
+			<option uid="OUJS3AAu3WS" min="25" max="30" gender="f" name="25-29 ans F"/>
+			<option uid="Mblx5N6PwIr" min="30" max="35" gender="m" name="30-34 ans M"/>
+			<option uid="y6at427nV7b" min="30" max="35" gender="f" name="30-34 ans F"/>
+			<option uid="xQerUMOPloR" min="35" max="40" gender="m" name="35-39 ans M"/>
+			<option uid="zIgMUexiBWn" min="35" max="40" gender="f" name="35-39 ans F"/>
+			<option uid="RxntcxuT5UF" min="40" max="45" gender="m" name="40-44 ans M"/>
+			<option uid="WCn1PEay2eJ" min="40" max="45" gender="f" name="40-44 ans F"/>
+			<option uid="AR2gqxqfEVr" min="45" max="50" gender="m" name="45-49 ans M"/>
+			<option uid="NgaA0XNhCTc" min="45" max="50" gender="f" name="45-49 ans F"/>
+			<option uid="vnDqFIl1H4F" min="50" max="999" gender="m" name="&gt;=50 ans M"/>
+			<option uid="tZoVxPqx0hZ" min="50" max="999" gender="f" name="&gt;=50 ans F"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement uid="pQrHHBDxXuz" itemvalue="-" label="Nouveaux cas négatifs"/>
+		</dataelements>
+	</dataset>
+
+	<dataset label="CNTS - Rapportage mensuel - TABLEAU V : DONNEES POUR CALCUL DE LA SEROPREVALENCE DE LA SYPHILIS CHEZ LES DONNEURS SELON LE SEXE - Anciens cas" type="plugin" module="ocdhis2.plugins.CNTSSeroprevalence" parameters="newcase=0;labcode=BW" uid="zZKQduNJ28r">
+		<attributeOptionCombo type="default">
+			<option uid="GKkUPluq2QJ" name="Default"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="agegender">
+			<option uid="Coq5DrwbVY5" min="15" max="20" gender="m" name="15-19 ans M"/>
+			<option uid="fpz6tsHoyK5" min="15" max="20" gender="f" name="15-19 ans F"/>
+			<option uid="mjCID1wXoBN" min="20" max="25" gender="m" name="20-24 ans M"/>
+			<option uid="sk7RcZyWL9E" min="20" max="25" gender="f" name="20-24 ans F"/>
+			<option uid="fqnPKUBqL6I" min="25" max="30" gender="m" name="25-29 ans M"/>
+			<option uid="SGN9a0pmRa3" min="25" max="30" gender="f" name="25-29 ans F"/>
+			<option uid="cUe556kBa8x" min="30" max="35" gender="m" name="30-34 ans M"/>
+			<option uid="TyQpDk354k3" min="30" max="35" gender="f" name="30-34 ans F"/>
+			<option uid="VvjS7ZNlYnZ" min="35" max="40" gender="m" name="35-39 ans M"/>
+			<option uid="gwht2dXaL8d" min="35" max="40" gender="f" name="35-39 ans F"/>
+			<option uid="Zc8XvMkmYFb" min="40" max="45" gender="m" name="40-44 ans M"/>
+			<option uid="GK0Po4C8eQf" min="40" max="45" gender="f" name="40-44 ans F"/>
+			<option uid="EJS1YRFWtzq" min="45" max="50" gender="m" name="45-49 ans M"/>
+			<option uid="cq0jjHkdGr9" min="45" max="50" gender="f" name="45-49 ans F"/>
+			<option uid="iicD8mxZd0d" min="50" max="999" gender="m" name="&gt;=50 ans M"/>
+			<option uid="Z6jyapRHajY" min="50" max="999" gender="f" name="&gt;=50 ans F"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement uid="flxdmVhLQJx" itemvalue="+" label="Anciens cas positifs"/>
+		</dataelements>
+	</dataset>
+	<dataset label="CNTS - Rapportage mensuel - TABLEAU V : DONNEES POUR CALCUL DE LA SEROPREVALENCE DE LA SYPHILIS CHEZ LES DONNEURS SELON LE SEXE - Anciens cas|1" type="plugin" module="ocdhis2.plugins.CNTSSeroprevalence" parameters="newcase=0;labcode=BW" uid="zZKQduNJ28r">
+		<attributeOptionCombo type="default">
+			<option uid="GKkUPluq2QJ" name="Default"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="agegender">
+			<option uid="jWfxoeeewJA" min="15" max="20" gender="m" name="15-19 ans M"/>
+			<option uid="Xzq6uuyKWIo" min="15" max="20" gender="f" name="15-19 ans F"/>
+			<option uid="vyhFMbOZETa" min="20" max="25" gender="m" name="20-24 ans M"/>
+			<option uid="PboRNNYG5nT" min="20" max="25" gender="f" name="20-24 ans F"/>
+			<option uid="uHNQKQPg91x" min="25" max="30" gender="m" name="25-29 ans M"/>
+			<option uid="jv20c1jpQyl" min="25" max="30" gender="f" name="25-29 ans F"/>
+			<option uid="H8CccLLCnNN" min="30" max="35" gender="m" name="30-34 ans M"/>
+			<option uid="ewBZi0Cr6Oh" min="30" max="35" gender="f" name="30-34 ans F"/>
+			<option uid="koGgsjSOFgb" min="35" max="40" gender="m" name="35-39 ans M"/>
+			<option uid="apZ1ODtgn8b" min="35" max="40" gender="f" name="35-39 ans F"/>
+			<option uid="KvSGWPFRxvx" min="40" max="45" gender="m" name="40-44 ans M"/>
+			<option uid="xTDAE2oX8mq" min="40" max="45" gender="f" name="40-44 ans F"/>
+			<option uid="ci9uLMaPHP3" min="45" max="50" gender="m" name="45-49 ans M"/>
+			<option uid="DkJ1TAAk9YG" min="45" max="50" gender="f" name="45-49 ans F"/>
+			<option uid="oFNdzM7juve" min="50" max="999" gender="m" name="&gt;=50 ans M"/>
+			<option uid="oOzVYx9oVVv" min="50" max="999" gender="f" name="&gt;=50 ans F"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement uid="flxdmVhLQJx" itemvalue="-" label="Anciens cas négatifs"/>
+		</dataelements>
+	</dataset>
+	<dataset label="CNTS - Rapportage mensuel - TABLEAU V : DONNEES POUR CALCUL DE LA SEROPREVALENCE DE LA SYPHILIS CHEZ LES DONNEURS SELON LE SEXE - Nouveaux cas" type="plugin" module="ocdhis2.plugins.CNTSSeroprevalence" parameters="newcase=1;labcode=BW" uid="zZKQduNJ28r">
+		<attributeOptionCombo type="default">
+			<option uid="GKkUPluq2QJ" name="Default"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="agegender">
+			<option uid="poaFN3MXmRz" min="15" max="20" gender="m" name="15-19 ans M"/>
+			<option uid="r5CcOrIDGFt" min="15" max="20" gender="f" name="15-19 ans F"/>
+			<option uid="SPbikYsRjjF" min="20" max="25" gender="m" name="20-24 ans M"/>
+			<option uid="KBhFoSHdMlf" min="20" max="25" gender="f" name="20-24 ans F"/>
+			<option uid="QYaBCmCAAFn" min="25" max="30" gender="m" name="25-29 ans M"/>
+			<option uid="hXjXx6pelDs" min="25" max="30" gender="f" name="25-29 ans F"/>
+			<option uid="VBsz7GjEDRn" min="30" max="35" gender="m" name="30-34 ans M"/>
+			<option uid="ckC5REjnS3c" min="30" max="35" gender="f" name="30-34 ans F"/>
+			<option uid="NWJajESSK1J" min="35" max="40" gender="m" name="35-39 ans M"/>
+			<option uid="q50DlflXZGJ" min="35" max="40" gender="f" name="35-39 ans F"/>
+			<option uid="fRe1dOuGTZV" min="40" max="45" gender="m" name="40-44 ans M"/>
+			<option uid="UzRcCCqTTa0" min="40" max="45" gender="f" name="40-44 ans F"/>
+			<option uid="MkKJOqw95Ar" min="45" max="50" gender="m" name="45-49 ans M"/>
+			<option uid="puFS00enOVC" min="45" max="50" gender="f" name="45-49 ans F"/>
+			<option uid="umYHliwvXXo" min="50" max="999" gender="m" name="&gt;=50 ans M"/>
+			<option uid="NVVvKVrm5EO" min="50" max="999" gender="f" name="&gt;=50 ans F"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement uid="flxdmVhLQJx" itemvalue="+" label="Nouveaux cas positifs"/>
+		</dataelements>
+	</dataset>
+	<dataset label="CNTS - Rapportage mensuel - TABLEAU V : DONNEES POUR CALCUL DE LA SEROPREVALENCE DE LA SYPHILIS CHEZ LES DONNEURS SELON LE SEXE - Nouveaux cas|1" type="plugin" module="ocdhis2.plugins.CNTSSeroprevalence" parameters="newcase=1;labcode=BW" uid="zZKQduNJ28r">
+		<attributeOptionCombo type="default">
+			<option uid="GKkUPluq2QJ" name="Default"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="agegender">
+			<option uid="DhVlo4d8ErN" min="15" max="20" gender="m" name="15-19 ans M"/>
+			<option uid="awGUPYEWuh8" min="15" max="20" gender="f" name="15-19 ans F"/>
+			<option uid="DhVlo4d8ErN" min="20" max="25" gender="m" name="20-24 ans M"/>
+			<option uid="C3eM4MhQ3KS" min="20" max="25" gender="f" name="20-24 ans F"/>
+			<option uid="yUIY7VAxXJB" min="25" max="30" gender="m" name="25-29 ans M"/>
+			<option uid="OUJS3AAu3WS" min="25" max="30" gender="f" name="25-29 ans F"/>
+			<option uid="Mblx5N6PwIr" min="30" max="35" gender="m" name="30-34 ans M"/>
+			<option uid="y6at427nV7b" min="30" max="35" gender="f" name="30-34 ans F"/>
+			<option uid="xQerUMOPloR" min="35" max="40" gender="m" name="35-39 ans M"/>
+			<option uid="zIgMUexiBWn" min="35" max="40" gender="f" name="35-39 ans F"/>
+			<option uid="RxntcxuT5UF" min="40" max="45" gender="m" name="40-44 ans M"/>
+			<option uid="WCn1PEay2eJ" min="40" max="45" gender="f" name="40-44 ans F"/>
+			<option uid="AR2gqxqfEVr" min="45" max="50" gender="m" name="45-49 ans M"/>
+			<option uid="NgaA0XNhCTc" min="45" max="50" gender="f" name="45-49 ans F"/>
+			<option uid="vnDqFIl1H4F" min="50" max="999" gender="m" name="&gt;=50 ans M"/>
+			<option uid="tZoVxPqx0hZ" min="50" max="999" gender="f" name="&gt;=50 ans F"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement uid="flxdmVhLQJx" itemvalue="-" label="Nouveaux cas négatifs"/>
+		</dataelements>
+	</dataset>
+</dhis2>

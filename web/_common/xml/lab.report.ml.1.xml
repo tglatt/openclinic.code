@@ -1,0 +1,8 @@
+<report title="Tableau de rapport mensuel d'acivité">
+	<group ids="hematology;formule;electrophorese;sedimentation;numeration;hemostase">Hématologie</group>
+	<group ids="immunology">Immunologie</group>
+	<group ids="parasitology">Parasitologie/mycologie</group>
+	<group ids="abctpus;bacteriology;ecbu;pus;vaginal">Bactériologie</group>
+	<group ids="biochemy">Biochimie</group>
+	<group ids="virology">Virologie</group>
+</report>

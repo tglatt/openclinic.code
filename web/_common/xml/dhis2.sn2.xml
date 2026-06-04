@@ -1,0 +1,16 @@
+<dhis2>
+	<dataset label="Administration des vaccins - Fixe|1" type="plugin" module="ocdhis2.plugins.HepBSenegal" uid="jMafzX3zJar">
+		<attributeOptionCombo type="default">
+			<option uid="HoIsxzhEmia" name="Default"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="agegenderinmonths">
+			<option uid="Chlxb5FXg6N" min="0" max="12" gender="m" name="0-11 mois M"/>
+			<option uid="e8Oio9zBgVK" min="0" max="12" gender="f" name="0-11 mois F"/>
+			<option uid="zDGxphlfvv5" min="12" max="24" gender="m" name="12-23 mois M"/>
+			<option uid="TA3G3WRgmSQ" min="12" max="24" gender="f" name="12-23 mois F"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement label="Hép B &lt;=24 heures" uid="pfizTPXbXZg"/>
+		</dataelements>
+	</dataset>
+</dhis2>

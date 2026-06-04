@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dhis2>
+	<dataset label="GMAO - Suivi des infrastructures dans les CDS" type="title" uid="XEdJ1NiDeUS"/>
+	<dataset label="GMAO - Suivi des infrastructures dans les CDS|1"  type="genericplugin" module="ocdhis2.plugins.GMAOInfrastructureNorms2" uid="XEdJ1NiDeUS">
+		<attributeOptionCombo type="default">
+			<option uid="GKkUPluq2QJ" value="0" name="Item"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="genericplugin">
+			<option uid="pmByK4buBvm" value="1" name="Neuf"/>
+			<option uid="zI5WlPtSRzR" value="2" name="Satisfaisant"/>
+			<option uid="q4lFaYfTUzF" value="3" name="Insatisfaisant"/>
+			<option uid="F9nSWxeSgMg" value="4" name="Mauvais état"/>
+			<option uid="P5Nae8BEmDs" value="5" name="A remplacer"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement uid="v1DDPtYtKZk" nolink="1" code="I.CDS.C.2" label="I.CDS.C.2 Soins Ambulatoire"/>
+			<dataelement uid="kpRH6mMchSJ" nolink="1" code="I.CDS.C.3" label="I.CDS.C.3 Maternite"/>
+			<dataelement uid="yJbJdHzEKKX" nolink="1" code="I.CDS.C.4" label="I.CDS.C.4 Hébergement"/>
+			<dataelement uid="A0TG9VJ3axI" nolink="1" code="I.CDS.C.5" label="I.CDS.C.5 Promotion de la Santé"/>
+			<dataelement uid="qIdfMGNFfHb" nolink="1" code="I.CDS.X.9" label="I.CDS.X.9 Fosse à déchet biodégradable"/>
+			<dataelement uid="MxlDqTn02ge" nolink="1" code="I.CDS.X.10" label="I.CDS.X.10 Fosse à placenta"/>
+			<dataelement uid="M0uwJzTfm7X" nolink="1" code="I.CDS.X.11" label="I.CDS.X.11 Fosse à aiguille"/>
+			<dataelement uid="iksMgjZ49d8" nolink="1" code="I.CDS.X.12" label="I.CDS.X.12 Fosse à ordures ménagères"/>
+			<dataelement uid="s77UeQja07V" nolink="1" code="I.CDS.X.15" label="I.CDS.X.15 Buanderie"/>
+			<dataelement uid="u9iUMpZgjOj" nolink="1" code="I.CDS.X.21" label="I.CDS.X.21 Logement du responsable"/>
+			<dataelement uid="e6O9KoMBT7g" nolink="1" code="I.CDS.X.22" label="I.CDS.X.22 Logement du staff"/>
+			<dataelement uid="WduKrzNAEB8" nolink="1" code="I.CDS.X.5" label="I.CDS.X.5 Latrine extérieure"/>
+			<dataelement uid="mL0LBHUX7tq" nolink="1" code="I.CDS.X.6" label="I.CDS.X.6 Morgue"/>
+			<dataelement uid="x9U4WrgUzvT" nolink="1" code="I.CDS.X.8" label="I.CDS.X.8 Incinérateur"/>
+			<dataelement uid="K3Z0cCfzwrf" nolink="1" code="I.CDS.999.1" label="I.CDS.999.1 Alimentation eau potable"/>
+			<dataelement uid="iyfHPDPV19f" nolink="1" code="I.CDS.999.2" label="I.CDS.999.2 Raccordement électrique"/>
+		</dataelements>
+	</dataset>
+	<dataset label="GMAO - Suivi des infrastructures dans les hôpitaux de deuxième référence" type="title" uid="NzkcukzS20o"/>
+	<dataset label="GMAO - Suivi des infrastructures dans les hôpitaux de deuxième référence|1"  type="genericplugin" module="ocdhis2.plugins.GMAOInfrastructureNorms2" uid="NzkcukzS20o">
+		<attributeOptionCombo type="default">
+			<option uid="GKkUPluq2QJ" value="0" name="Item"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="genericplugin">
+			<option uid="pmByK4buBvm" value="1" name="Neuf"/>
+			<option uid="zI5WlPtSRzR" value="2" name="Satisfaisant"/>
+			<option uid="q4lFaYfTUzF" value="3" name="Insatisfaisant"/>
+			<option uid="F9nSWxeSgMg" value="4" name="Mauvais état"/>
+			<option uid="P5Nae8BEmDs" value="5" name="A remplacer"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement uid="dtXKZnRtDly" nolink="1" code="I.H2R.A.1" label="I.H2R.A.1 Accueil du Public"/>
+			<dataelement uid="VX1DktKd0LW" nolink="1" code="I.H2R.A.2" label="I.H2R.A.2 Administration"/>
+			<dataelement uid="amL3VzAwS70" nolink="1" code="I.H2R.C.10" label="I.H2R.C.10 Bloc gyneco-obstetrique/maternité"/>
+			<dataelement uid="l6yuXM3sgZz" nolink="1" code="I.H2R.C.11.1" label="I.H2R.C.11.1 Médecine Interne"/>
+			<dataelement uid="Xn5uQVWdyl7" nolink="1" code="I.H2R.C.11.2" label="I.H2R.C.11.2 Chirurgie"/>
+			<dataelement uid="iAoWveJHBZb" nolink="1" code="I.H2R.C.11.3" label="I.H2R.C.11.3 Pédiatrie"/>
+			<dataelement uid="HJGSOSfL3zG" nolink="1" code="I.H2R.C.11.4" label="I.H2R.C.11.4 Hospitalisation Gyneco-obstetrique"/>
+			<dataelement uid="bAJEDy55YqZ" nolink="1" code="I.H2R.C.11.5" label="I.H2R.C.11.5 Bloc VIP"/>
+			<dataelement uid="i10lC0strsW" nolink="1" code="I.H2R.LT.41" label="I.H2R.LT.41 Abris groupe électrogène"/>
+			<dataelement uid="ty5p2y2Yho0" nolink="1" code="I.H2R.LT.42" label="I.H2R.LT.42 Stock carburant"/>
+			<dataelement uid="UqHuCVVda16" nolink="1" code="I.H2R.LT.43" label="I.H2R.LT.43 Garage des véhicules"/>
+			<dataelement uid="whX7fqQmxJT" nolink="1" code="I.H2R.LT.45" label="I.H2R.LT.45 Usine de production d’oxygène"/>
+			<dataelement uid="jsB2MxOsmz3" nolink="1" code="I.H2R.LT.46" label="I.H2R.LT.46 Local de Maintenance"/>
+			<dataelement uid="wKVOBt4T0Pd" nolink="1" code="I.H2R.N.30" label="I.H2R.N.30 Salle de soins"/>
+			<dataelement uid="ebuMYzxTeTn" nolink="1" code="I.H2R.N.31" label="I.H2R.N.31 Bureau du responsable"/>
+			<dataelement uid="niuIUB0FIc1" nolink="1" code="I.H2R.N.32" label="I.H2R.N.32 Hospitalisation"/>
+			<dataelement uid="L7Vbu2iYL5C" nolink="1" code="I.H2R.T.0.1" label="I.H2R.T.0.1 Fosse à placenta"/>
+			<dataelement uid="NnD8LCCJsk7" nolink="1" code="I.H2R.T.0.3" label="I.H2R.T.0.3 Fosse à déchets biodégradables"/>
+			<dataelement uid="ypYViF2splG" nolink="1" code="I.H2R.X.11" label="I.H2R.X.11 Stérilisation"/>
+			<dataelement uid="Z0RSIWMadH0" nolink="1" code="I.H2R.X.16" label="I.H2R.X.16 Cuisine"/>
+			<dataelement uid="mSyYQGs5HQz" nolink="1" code="I.H2R.X.17" label="I.H2R.X.17 Cafétaria"/>
+			<dataelement uid="vxlAkYXVWHY" nolink="1" code="I.H2R.X.18" label="I.H2R.X.18 Buanderie"/>
+			<dataelement uid="oAm19SShSfd" nolink="1" code="I.H2R.X.19" label="I.H2R.X.19 Morgue"/>
+			<dataelement uid="uwkECFyTi1Y" nolink="1" code="I.H2R.X.26" label="I.H2R.X.26 Logement"/>
+			<dataelement uid="mTNES70967x" nolink="1" code="I.H2R.X.27" label="I.H2R.X.27 Logements-annexes"/>
+			<dataelement uid="WxR5TDHyk9N" nolink="1" code="I.H2R.X.31" label="I.H2R.X.31 Latrine"/>
+			<dataelement uid="bbupHjX0hXO" nolink="1" code="I.H2R.X.32" label="I.H2R.X.32 Incinérateur"/>
+			<dataelement uid="Hr5SEjtXxXK" nolink="1" code="I.H2R.X.34" label="I.H2R.X.34 Clôture"/>
+			<dataelement uid="uK53kW3TesW" nolink="1" code="I.H2R.X.36" label="I.H2R.X.36 Réseau d’évacuation des eaux"/>
+		</dataelements>
+	</dataset>
+	<dataset label="GMAO - Suivi des infrastructures dans les hôpitaux de district" type="title" uid="wJOjsQDXwdb"/>
+	<dataset label="GMAO - Suivi des infrastructures dans les hôpitaux de district|1"  type="genericplugin" module="ocdhis2.plugins.GMAOInfrastructureNorms2" uid="wJOjsQDXwdb">
+		<attributeOptionCombo type="default">
+			<option uid="GKkUPluq2QJ" value="0" name="Item"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="genericplugin">
+			<option uid="pmByK4buBvm" value="1" name="Neuf"/>
+			<option uid="zI5WlPtSRzR" value="2" name="Satisfaisant"/>
+			<option uid="q4lFaYfTUzF" value="3" name="Insatisfaisant"/>
+			<option uid="F9nSWxeSgMg" value="4" name="Mauvais état"/>
+			<option uid="P5Nae8BEmDs" value="5" name="A remplacer"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement uid="QLeBm9e81sm" nolink="1" code="I.HD.A.1" label="I.HD.A.1 Accueil du Public"/>
+			<dataelement uid="quXupgplt4P" nolink="1" code="I.HD.A.3" label="I.HD.A.3 Administration"/>
+			<dataelement uid="DmrBRuCKOSv" nolink="1" code="I.HD.A.30" label="I.HD.A.30 BPS/BDS"/>
+			<dataelement uid="XteTzpurKnt" nolink="1" code="I.HD.A.33" label="I.HD.A.33 Centre de Santé incorporé"/>
+			<dataelement uid="WsXMAOpFk0q" nolink="1" code="I.HD.A.34" label="I.HD.A.34 Service Recouvrement"/>
+			<dataelement uid="Kg3xLpUvEow" nolink="1" code="I.HD.C.10" label="I.HD.C.10 Ophtalmologie"/>
+			<dataelement uid="mNJ5OYBDR5r" nolink="1" code="I.HD.C.11.1" label="I.HD.C.11.1 Hospitalisation Médecine interne"/>
+			<dataelement uid="j8WRsraTVGM" nolink="1" code="I.HD.C.11.2" label="I.HD.C.11.2 Hospitalisation Chirurgie"/>
+			<dataelement uid="KpQuF3SSGy8" nolink="1" code="I.HD.C.11.3" label="I.HD.C.11.3 Hospitalisation Pédiatrie"/>
+			<dataelement uid="Ak3LZ4cPz7p" nolink="1" code="I.HD.C.11.4" label="I.HD.C.11.4 Gyneco-Obstetrique"/>
+			<dataelement uid="xuIUQoublax" nolink="1" code="I.HD.C.12" label="I.HD.C.12 Stomatologie"/>
+			<dataelement uid="I7btdusOOzP" nolink="1" code="I.HD.C.13" label="I.HD.C.13 Accueil et triage"/>
+			<dataelement uid="B4zGVy4eIsH" nolink="1" code="I.HD.C.14" label="I.HD.C.14 Attente"/>
+			<dataelement uid="s7CQg5Ck5I8" nolink="1" code="I.HD.C.15" label="I.HD.C.15 Recouvrement"/>
+			<dataelement uid="JFFtOONt3Ou" nolink="1" code="I.HD.C.2" label="I.HD.C.2 Consultation externe et CDV"/>
+			<dataelement uid="jP65jvgXAKU" nolink="1" code="I.HD.C.3" label="I.HD.C.3 Isolement"/>
+			<dataelement uid="JHvZoaF6rN3" nolink="1" code="I.HD.C.4" label="I.HD.C.4 Radiographie"/>
+			<dataelement uid="i8zlXqIsowR" nolink="1" code="I.HD.C.5" label="I.HD.C.5 Laboratoire"/>
+			<dataelement uid="jRKJobbrKl5" nolink="1" code="I.HD.C.6" label="I.HD.C.6 Pharmacie"/>
+			<dataelement uid="a7qM695QbKs" nolink="1" code="I.HD.C.7" label="I.HD.C.7 Echographie"/>
+			<dataelement uid="ZYdGCGmsXqP" nolink="1" code="I.HD.C.8" label="I.HD.C.8 Urgences"/>
+			<dataelement uid="G3QPrlmolTc" nolink="1" code="I.HD.C.9" label="I.HD.C.9 Bloc opératoire"/>
+			<dataelement uid="pDBrjywJjdQ" nolink="1" code="I.HD.N.22" label="I.HD.N.22 Salle de soins"/>
+			<dataelement uid="lkLHcH9jMHi" nolink="1" code="I.HD.N.23" label="I.HD.N.23 Bureau Responsable"/>
+			<dataelement uid="k0DdPzOPay4" nolink="1" code="I.HD.N.24" label="I.HD.N.24 Hospitalisation nutrition"/>
+			<dataelement uid="kGMOPWh5nWd" nolink="1" code="I.HD.N.25" label="I.HD.N.25 Cuisine et nutrition"/>
+			<dataelement uid="Odc93I5TX84" nolink="1" code="I.HD.0.1" label="I.HD.0.1 Fosse à placenta"/>
+			<dataelement uid="VBPLQ3jd3gk" nolink="1" code="I.HD.0.2" label="I.HD.0.2 Fosse à cendre"/>
+			<dataelement uid="cDuV6PrtT0x" nolink="1" code="I.HD.0.3" label="I.HD.0.3 Fosse à déchets biodégradable/compost"/>
+			<dataelement uid="tRWyQ3H235X" nolink="1" code="I.HD.T.21" label="I.HD.T.21 Abri groupe électrogène"/>
+			<dataelement uid="TvzGgWl81N2" nolink="1" code="I.HD.T.34" label="I.HD.T.34 Stock Carburant"/>
+			<dataelement uid="J5tKcZNDU3b" nolink="1" code="I.HD.T.35" label="I.HD.T.35 Stock materiel divers"/>
+			<dataelement uid="rqxdOE3MHnc" nolink="1" code="I.HD.T.36" label="I.HD.T.36 Garage des véhicules ambulances"/>
+			<dataelement uid="SMdkFBH2NM0" nolink="1" code="I.HD.T.37" label="I.HD.T.37 Salle des réunions techniques"/>
+			<dataelement uid="LPZmVGDrXiS" nolink="1" code="I.HD.T.38" label="I.HD.T.38 Local de maintenance technique"/>
+			<dataelement uid="tH2TSguuvAC" nolink="1" code="I.HD.999.1" label="I.HD.999.1 Autres"/>
+		</dataelements>
+	</dataset>
+	<dataset label="GMAO - Suivi des infrastructures dans les hôpitaux de troisième référence" type="title" uid="y3XLxmEoHxR"/>
+	<dataset label="GMAO - Suivi des infrastructures dans les hôpitaux de troisième référence|1"  type="genericplugin" module="ocdhis2.plugins.GMAOInfrastructureNorms2" uid="y3XLxmEoHxR">
+		<attributeOptionCombo type="default">
+			<option uid="GKkUPluq2QJ" value="0" name="Item"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="genericplugin">
+			<option uid="pmByK4buBvm" value="1" name="Neuf"/>
+			<option uid="zI5WlPtSRzR" value="2" name="Satisfaisant"/>
+			<option uid="q4lFaYfTUzF" value="3" name="Insatisfaisant"/>
+			<option uid="F9nSWxeSgMg" value="4" name="Mauvais état"/>
+			<option uid="P5Nae8BEmDs" value="5" name="A remplacer"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement uid="QHS9hGF4PQH" nolink="1" code="I.H3R.A.1" label="I.H3R.A.1 Accueil du Public"/>
+			<dataelement uid="ugg4qMYcLmb" nolink="1" code="I.H3R.A.2" label="I.H3R.A.2 Administration"/>
+			<dataelement uid="tuPf7YpX2Fq" nolink="1" code="I.H3R.A.3" label="I.H3R.A.3 Salle de réunion"/>
+			<dataelement uid="Hudd9LGEfjC" nolink="1" code="I.H3R.C.10" label="I.H3R.C.10 Bloc gyneco-obstetrique/maternité"/>
+			<dataelement uid="u7SO5XqMBLb" nolink="1" code="I.H3R.C.11.1" label="I.H3R.C.11.1 Médecine Interne"/>
+			<dataelement uid="Da5NePh5F8G" nolink="1" code="I.H3R.C.11.2" label="I.H3R.C.11.2 Chirurgie"/>
+			<dataelement uid="F2gBt6qtowN" nolink="1" code="I.H3R.C.11.3" label="I.H3R.C.11.3 Pédiatrie"/>
+			<dataelement uid="nQjFxESvBOz" nolink="1" code="I.H3R.C.11.4" label="I.H2R.C.11.4 Hospitalisation Gyneco-obstetrique"/>
+			<dataelement uid="VQyqFSXgii2" nolink="1" code="I.H3R.C.11.5" label="I.H3R.C.11.5 Bloc VIP"/>
+			<dataelement uid="umufaWFL2Nq" nolink="1" code="I.H3R.LT.41" label="I.H3R.LT.41 Abris groupe électrogène"/>
+			<dataelement uid="JdoU09veNC0" nolink="1" code="I.H3R.LT.42" label="I.H3R.LT.42 Stock carburant"/>
+			<dataelement uid="G615dqMGSSp" nolink="1" code="I.H3R.LT.43" label="I.H3R.LT.43 Garage des véhicules"/>
+			<dataelement uid="r4xAVIqEhxh" nolink="1" code="I.H3R.LT.45" label="I.H3R.LT.45 Salle des réunions techniques"/>
+			<dataelement uid="RG9QFstXutL" nolink="1" code="I.H3R.N" label="I.H3R.N Nutrition"/>
+			<dataelement uid="Oag1idyTx1q" nolink="1" code="I.H3R.T" label="I.H3R.T Ouvrages techniques"/>
+			<dataelement uid="epZe46XlSUa" nolink="1" code="I.H3R.X" label="I.H3R.X Structures d'appui"/>
+		</dataelements>
+	</dataset>
+	<dataset label="GMAO - Suivi des infrastructures dans les hôpitaux nationaux" type="title" uid="gITSi0J9RWT"/>
+	<dataset label="GMAO - Suivi des infrastructures dans les hôpitaux nationaux|1"  type="genericplugin" module="ocdhis2.plugins.GMAOInfrastructureNorms2" uid="gITSi0J9RWT">
+		<attributeOptionCombo type="default">
+			<option uid="GKkUPluq2QJ" value="0" name="Item"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="genericplugin">
+			<option uid="pmByK4buBvm" value="1" name="Neuf"/>
+			<option uid="zI5WlPtSRzR" value="2" name="Satisfaisant"/>
+			<option uid="q4lFaYfTUzF" value="3" name="Insatisfaisant"/>
+			<option uid="F9nSWxeSgMg" value="4" name="Mauvais état"/>
+			<option uid="P5Nae8BEmDs" value="5" name="A remplacer"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement uid="r09Cw5M3f3c" nolink="1" code="I.HN.A.1" label="I.HN.A.1 Accueil du Public"/>
+			<dataelement uid="D6Jz8Cr9ImA" nolink="1" code="I.HN.A.3" label="I.HN.A.3 Administration"/>
+			<dataelement uid="VtarbgfboKz" nolink="1" code="I.HN.A.3" label="I.HN.A.3 Salle de réunion"/>
+			<dataelement uid="DLCeHy2SNI0" nolink="1" code="I.HN.LC.14" label="I.HN.LC.14 Service mixte"/>
+			<dataelement uid="OhDuKNQKwj9" nolink="1" code="I.HN.LC.10" label="I.HN.LC.10 Ophtalmologie"/>
+			<dataelement uid="swtiXJom318" nolink="1" code="I.HN.LC.11" label="I.HN.LC.11 Hospitalisation"/>
+			<dataelement uid="OUidHa0WAUz" nolink="1" code="I.HN.LC.13" label="I.HN.LC.13 Accueil et triage"/>
+			<dataelement uid="YjAMK49Im6i" nolink="1" code="I.HN.LC.14" label="I.HN.LC.14 Attente"/>
+			<dataelement uid="POCmOcrANrb" nolink="1" code="I.HN.LC.15" label="I.HN.LC.15 Recouvrement"/>
+			<dataelement uid="J11ia5v6vPQ" nolink="1" code="I.HN.LC.2" label="I.HN.LC.2 Consultation externe et CDV"/>
+			<dataelement uid="Sw3oyC3qmta" nolink="1" code="I.HN.LC.3" label="I.HN.LC.3 Isolement"/>
+			<dataelement uid="Ej4LyziX0Hl" nolink="1" code="I.HN.LC.4" label="I.HN.LC.4 Radiologie"/>
+			<dataelement uid="qYWzGDnQNtJ" nolink="1" code="I.HN.LC.5" label="I.HN.LC.5 Laboratoire"/>
+			<dataelement uid="Tc0vXm8qT2v" nolink="1" code="I.HN.LC.6" label="I.HN.LC.6 Pharmacie"/>
+			<dataelement uid="WmfGXhGJOhF" nolink="1" code="I.HN.LC.7" label="I.HN.LC.7 Echographie"/>
+			<dataelement uid="NLWMDgPZC6r" nolink="1" code="I.HN.LC.8" label="I.HN.LC.8 Urgence"/>
+			<dataelement uid="BAAq2k3wv2r" nolink="1" code="I.HN.LC.9" label="I.HN.LC.9 Bloc opératoire"/>
+			<dataelement uid="AYeMdrACx1T" nolink="1" code="I.HN.LT.0.35" label="I.HN.LT.0.35 Stock des materiaux divers"/>
+			<dataelement uid="i4NhWipFf9q" nolink="1" code="I.HN.LT.21" label="I.HN.LT.21 Abris groupe électrogène"/>
+			<dataelement uid="k19RHO2kjRc" nolink="1" code="I.HN.LT.34" label="I.HN.LT.34 Stock carburant"/>
+			<dataelement uid="Mx5c7gG6rPx" nolink="1" code="I.HN.LT.36" label="I.HN.LT.36 Garage des véhicules et ambulance"/>
+			<dataelement uid="d2kgjucJDWE" nolink="1" code="I.HN.LT.37" label="I.HN.LT.37 Salle de réunion"/>
+			<dataelement uid="cCxfVz0JxjK" nolink="1" code="I.HN.LT.38" label="I.HN.LT.38 Local de maintenance"/>
+			<dataelement uid="NkbVby3372s" nolink="1" code="I.HN.N.22" label="I.HN.N.22 Salle des réunions"/>
+			<dataelement uid="dHfuz24uMGf" nolink="1" code="I.HN.N.23" label="I.HN.N.23 Bureau du responsable"/>
+			<dataelement uid="O1Ki1qSXDPZ" nolink="1" code="I.HN.N24" label="I.HN.N.24 Hospitalisation nutrition"/>
+			<dataelement uid="weqwlEn2nsO" nolink="1" code="I.HN.N.25" label="I.HN.N.25 Cuisine nutrition"/>
+			<dataelement uid="V26tsmGlRWK" nolink="1" code="I.HN.OT.0.1" label="I.HN.OT.0.1 Fosse à placenta"/>
+			<dataelement uid="wqbXMDbLvCJ" nolink="1" code="I.HN.OT.0.2" label="I.HN.OT.0.2 Fosse à cendre"/>
+			<dataelement uid="IdnzJezlLid" nolink="1" code="I.HN.OT.0.3" label="I.HN.OT.0.3 Fosse à déchet biodégradable"/>
+			<dataelement uid="AJMJ086OIdP" nolink="1" code="I.HN.X.11" label="I.HN.X.11 Stérilisation"/>
+		</dataelements>
+	</dataset>
+	<dataset label="GMAO - Interventions préventives et correctives dans les FOSA" type="title" uid="J6aPi7MUd7t" period="quarterly"/>
+	<dataset label="GMAO - Interventions sur les infrastructures" type="genericplugin" module="ocdhis2.plugins.GMAOInfrastructurePreventativeInterventions" uid="J6aPi7MUd7t">
+		<attributeOptionCombo type="default">
+			<option uid="GKkUPluq2QJ" value="0" name="Activité"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="default">
+			<option uid="GKkUPluq2QJ" name="Nombre"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement uid="pLOIGfSO7ro" code="1" nolink="1" label="Interventions préventives programmées"/>
+			<dataelement uid="GXONYLIs2xZ" code="2" nolink="1" label="Interventions préventives réalisées"/>
+			<dataelement uid="Ynlfm3SuGwF" code="3" nolink="1" label="Interventions préventives programmées et expirées"/>
+		</dataelements>
+	</dataset>
+	<dataset label="GMAO - Interventions sur les infrastructures|1" type="genericplugin" module="ocdhis2.plugins.GMAOInfrastructureCorrectiveInterventions" uid="J6aPi7MUd7t">
+		<attributeOptionCombo type="default">
+			<option uid="GKkUPluq2QJ" value="0" name="Activité"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="default">
+			<option uid="GKkUPluq2QJ" name="Nombre"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement uid="EswPXX7UVkV" code="1" nolink="1" label="Interventions correctives réalisées"/>
+			<dataelement uid="u6a5sHGS2Hb" code="2" nolink="1" label="Interventions correctives réalisées avec succès"/>
+		</dataelements>
+	</dataset>
+	<dataset label="GMAO - Interventions sur les équipements" type="genericplugin" module="ocdhis2.plugins.GMAOEquipmentPreventativeInterventions" uid="J6aPi7MUd7t">
+		<attributeOptionCombo type="default">
+			<option uid="GKkUPluq2QJ" value="0" name="Activité"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="default">
+			<option uid="GKkUPluq2QJ" name="Nombre"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement uid="q8Ng9i9QK4H" code="1" nolink="1" label="Interventions préventives programmées"/>
+			<dataelement uid="MlVwypiJ3XR" code="2" nolink="1" label="Interventions préventives réalisées"/>
+			<dataelement uid="HVtJRgLmbqC" code="3" nolink="1" label="Interventions préventives programmées et expirées"/>
+		</dataelements>
+	</dataset>
+	<dataset label="GMAO - Interventions sur les équipements|1" type="genericplugin" module="ocdhis2.plugins.GMAOEquipmentCorrectiveInterventions" uid="J6aPi7MUd7t">
+		<attributeOptionCombo type="default">
+			<option uid="GKkUPluq2QJ" value="0" name="Activité"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="default">
+			<option uid="GKkUPluq2QJ" name="Nombre"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement uid="qefaPSoYNQO" code="1" nolink="1" label="Interventions correctives réalisées"/>
+			<dataelement uid="vjiVRzNxD16" code="2" nolink="1" label="Interventions correctives réalisées avec succès"/>
+		</dataelements>
+	</dataset>
+	<dataset label="GMAO - Conformité des infrastructures et équipements" type="genericplugin" module="ocdhis2.plugins.GMAOInfrastructureNorms" uid="J6aPi7MUd7t">
+		<attributeOptionCombo type="default">
+			<option uid="GKkUPluq2QJ" value="0" name="Item"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="default">
+			<option uid="GKkUPluq2QJ" name="%"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement uid="zKphZTFzLWq" code="1" nolink="1" label="% de conformité des infrastructures"/>
+		</dataelements>
+	</dataset>
+	<dataset label="GMAO - Conformité des infrastructures et équipements|1" type="genericplugin" module="ocdhis2.plugins.GMAOEquipmentNorms" uid="J6aPi7MUd7t">
+		<attributeOptionCombo type="default">
+			<option uid="GKkUPluq2QJ" value="0" name="Item"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="default">
+			<option uid="GKkUPluq2QJ" name="%"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement uid="IBcoyHr9UAq" code="1" nolink="1" label="% de conformité des équipements"/>
+		</dataelements>
+	</dataset>
+	<dataset label="GMAO - Nouvelles constructions, équipements et budget consommé" type="title" uid="AOQw15D1332" period="yearly"/>
+	<dataset label="GMAO - Nouvelles constructions et budget consommé" type="genericplugin" module="ocdhis2.plugins.GMAOInfrastructureWorks" uid="AOQw15D1332">
+		<attributeOptionCombo type="default">
+			<option uid="GKkUPluq2QJ" value="0" name="Item"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="default">
+			<option uid="GKkUPluq2QJ" name="Nombre"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement uid="YysjacIfJ0e" code="1" nolink="1" label="Nombre de nouvelles constructions"/>
+			<dataelement uid="LJg0nabktVV" code="2" nolink="1" label="Budget en BIF consomme pour les nouvelles constructions"/>
+			<dataelement uid="q4Wpz6DFsFC" code="3" nolink="1" label="Nombre des Réhabilitations"/>
+			<dataelement uid="NNZaG6GhHm2" code="4" nolink="1" label="Budget en BIF consomme pour les réhabilitations"/>
+		</dataelements>
+	</dataset>
+	<dataset label="GMAO - Nouveaux équipements et budget consommé" type="genericplugin" module="ocdhis2.plugins.GMAOEquipmentPurchase" uid="AOQw15D1332">
+		<attributeOptionCombo type="default">
+			<option uid="GKkUPluq2QJ" value="0" name="Item"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="default">
+			<option uid="GKkUPluq2QJ" name="Nombre"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement uid="SXJqhE0Kr71" code="1" nolink="1" label="Nombre d'équipements mis en service"/>
+			<dataelement uid="wst9gl6HKkR" code="2" nolink="1" label="Budget des équipements mis en service"/>
+		</dataelements>
+	</dataset>
+	<dataset label="GMAO - Suivi des équipements dans les hôpitaux" type="title" uid="cDvn5IKUGBz"/>
+	<dataset label="GMAO - Suivi des équipements dans les hôpitaux|1" type="genericplugin" module="ocdhis2.plugins.GMAOEquipmentFollowUp" uid="cDvn5IKUGBz">
+		<attributeOptionCombo type="default">
+			<option uid="GKkUPluq2QJ" value="0" name="Item"/>
+		</attributeOptionCombo>
+		<categoryOptionCombo type="genericplugin">
+			<option uid="MEpChJUoWmB" value="1" name="Fonctionnel en service"/>
+			<option uid="CSeyXE6U55H" value="2" name="Fonctionnel hors service"/>
+			<option uid="Pmf2uT0LfKo" value="3" name="Maintenance requise"/>
+			<option uid="ovr7q6JYjeT" value="4" name="Non réparable"/>
+		</categoryOptionCombo>
+		<dataelements>
+			<dataelement uid="xfthchGlx6U" code="CH.1" nolink="1" label="CH.1 Véhicules"/>
+			<dataelement uid="yArXdqBVZOn" code="CH.2" nolink="1" label="CH.2 Moto"/>
+			<dataelement uid="lZaQrkuGiBJ" code="EE.1" nolink="1" label="EE.1 Cellule MT/BT"/>
+			<dataelement uid="R5erG3Idnx5" code="EE.2" nolink="1" label="EE.2 Chargeur de batterie"/>
+			<dataelement uid="c3pz02BKLuc" code="EE.3" nolink="1" label="EE.3 Groupe electrogene"/>
+			<dataelement uid="NPVjJnOPy69" code="EE.4" nolink="1" label="EE.4 Onduleur"/>
+			<dataelement uid="amFNEWVsmN5" code="EE.5" nolink="1" label="EE.5 Stabilisateur"/>
+			<dataelement uid="oiTXIj8RMb4" code="EE.6" nolink="1" label="EE.6 Systeme de backup electrique"/>
+			<dataelement uid="mX0jyH2Qeat" code="EE.7" nolink="1" label="EE.7 Systeme solaire photovoltaique"/>
+			<dataelement uid="Lga2rMMyTyZ" code="EE.8" nolink="1" label="EE.8 Transformateur de tension"/>
+			<dataelement uid="B6ohVibp16S" code="EI.1" nolink="1" label="EI.1 Retroprojecteur"/>
+			<dataelement uid="FaiI4r1N21i" code="EI.10" nolink="1" label="EI.10 Imprimantes"/>
+			<dataelement uid="ZJN6igpWk6z" code="EI.2" nolink="1" label="EI.2 Ordinateur de Bureau"/>
+			<dataelement uid="DGC8iiOxCfM" code="EI.3" nolink="1" label="EI.3 Ordinateur Portable"/>
+			<dataelement uid="OXdXbPM8qaJ" code="EI.4" nolink="1" label="EI.4 Photocopieurs"/>
+			<dataelement uid="KsR7wDTTE78" code="EI.5" nolink="1" label="EI.5 Scanners"/>
+			<dataelement uid="MjBTYoxnDPQ" code="EI.6" nolink="1" label="EI.6 Serveurs"/>
+			<dataelement uid="jTWeD9duHnN" code="EI.7" nolink="1" label="EI.7 Routeurs"/>
+			<dataelement uid="NUZNswdQZrG" code="EI.8" nolink="1" label="EI.8 Tablette"/>
+			<dataelement uid="eBZvguYmOqo" code="EM.EB.1" nolink="1" label="EM.EB.1 Amalgamateur"/>
+			<dataelement uid="atFyP0k2oUd" code="EM.EB.10" nolink="1" label="EM.EB.10 Autre"/>
+			<dataelement uid="NSJUF6rD6Xt" code="EM.EB.11" nolink="1" label="EM.EB.11 Bistouri électrique"/>
+			<dataelement uid="kJcY4xR0CbO" code="EM.EB.12" nolink="1" label="EM.EB.12 Bouteille d´oxygène"/>
+			<dataelement uid="H2TL6tbSlRv" code="EM.EB.13" nolink="1" label="EM.EB.13 Cloche de Hood"/>
+			<dataelement uid="gZPdMeKbMcE" code="EM.EB.14" nolink="1" label="EM.EB.14 Concentrateur d´oxygene"/>
+			<dataelement uid="jtyuREAmhUL" code="EM.EB.15" nolink="1" label="EM.EB.15 CT Scanner"/>
+			<dataelement uid="KcBO3vvag90" code="EM.EB.16" nolink="1" label="EM.EB.16 Defibrilateur"/>
+			<dataelement uid="jfI0Fbg9yzC" code="EM.EB.17" nolink="1" label="EM.EB.17 Développeuse automatique pour radiologie"/>
+			<dataelement uid="mFs5KOEPv9D" code="EM.EB.18" nolink="1" label="EM.EB.18 Doppler foetal"/>
+			<dataelement uid="mFs5KOEPv9D" code="EM.EB.19" nolink="1" label="EM.EB.19 Echelle de Schilmen"/>
+			<dataelement uid="fnolNcIG40n" code="EM.EB.2" nolink="1" label="EM.EB.2 Appareil d´anesthésie"/>
+			<dataelement uid="EEke8iOCEWw" code="EM.EB.20" nolink="1" label="EM.EB.20 Echographe"/>
+			<dataelement uid="ipitGkBQkIN" code="EM.EB.21" nolink="1" label="EM.EB.21 Electrocardiographe"/>
+			<dataelement uid="bHH986eXOGB" code="EM.EB.22" nolink="1" label="EM.EB.22 Endoscope"/>
+			<dataelement uid="OgX23SGd48E" code="EM.EB.23" nolink="1" label="EM.EB.23 Foreuse électrique médicale"/>
+			<dataelement uid="lzmCCePTE8A" code="EM.EB.24" nolink="1" label="EM.EB.24 Imprimante QBC"/>
+			<dataelement uid="emiRCIGikeE" code="EM.EB.25" nolink="1" label="EM.EB.25 Lampe a fente"/>
+			<dataelement uid="YG2hvgJD1wi" code="EM.EB.26" nolink="1" label="EM.EB.26 Lampe d´examen"/>
+			<dataelement uid="swMDy6mDQAz" code="EM.EB.27" nolink="1" label="EM.EB.27 Lampe de Wood"/>
+			<dataelement uid="CClPGZH1EJJ" code="EM.EB.28" nolink="1" label="EM.EB.28 Lampe inactinique"/>
+			<dataelement uid="iI6MxRFmg5C" code="EM.EB.29" nolink="1" label="EM.EB.29 Lampe scialytique mobile"/>
+			<dataelement uid="buIv22EzVLa" code="EM.EB.3" nolink="1" label="EM.EB.3 Appareil d´électrophorèse"/>
+			<dataelement uid="iI6MxRFmg5C" code="EM.EB.30" nolink="1" label="EM.EB.30 Lampe scialytique plafonniere"/>
+			<dataelement uid="DuppJtKB0Hi" code="EM.EB.31" nolink="1" label="EM.EB.31 laryngoscopes"/>
+			<dataelement uid="nOPgx98TWLW" code="EM.EB.32" nolink="1" label="EM.EB.32 Lavabo aseptique"/>
+			<dataelement uid="JX1r9RkHEnG" code="EM.EB.33" nolink="1" label="EM.EB.33 Microscope operatoire"/>
+			<dataelement uid="lJfH1TfUiGf" code="EM.EB.34" nolink="1" label="EM.EB.34 Moniteur multiparametre"/>
+			<dataelement uid="x6QJARVHbuz" code="EM.EB.35" nolink="1" label="EM.EB.35 moniteur respiratoire"/>
+			<dataelement uid="xdImcdurR2v" code="EM.EB.36" nolink="1" label="EM.EB.36 Nebuliseur"/>
+			<dataelement uid="l1Lg1o5Xpc0" code="EM.EB.37" nolink="1" label="EM.EB.37 Negatoscope"/>
+			<dataelement uid="gKwXPsB4vT5" code="EM.EB.38" nolink="1" label="EM.EB.38 Ophtalmoscope"/>
+			<dataelement uid="VpALr3SoGx4" code="EM.EB.38.1" nolink="1" label="EM.EB.38.1 Ophtalmoscope Indirect"/>
+			<dataelement uid="zKxS5OKS0qT" code="EM.EB.39" nolink="1" label="EM.EB.39 Otoscope"/>
+			<dataelement uid="OiIn9Xc131Z" code="EM.EB.4" nolink="1" label="EM.EB.4 Appareil d´electrotherapie"/>
+			<dataelement uid="kF2PNwtDaSD" code="EM.EB.40" nolink="1" label="EM.EB.40 Oxymetre de pouls"/>
+			<dataelement uid="oCmnWT8bueU" code="EM.EB.41" nolink="1" label="EM.EB.41 Pese-bebe"/>
+			<dataelement uid="SEGUemg4C36" code="EM.EB.42" nolink="1" label="EM.EB.42 Pese-personne"/>
+			<dataelement uid="g3QW7dgaXQi" code="EM.EB.43" nolink="1" label="EM.EB.43 Phototherapie"/>
+			<dataelement uid="Yv0UPDQsU8Q" code="EM.EB.44" nolink="1" label="EM.EB.44 Pompe a Nutrition"/>
+			<dataelement uid="zp2xLaXb9kX" code="EM.EB.45" nolink="1" label="EM.EB.45 Pousse seringue électrique"/>
+			<dataelement uid="W3z3AW8xTaH" code="EM.EB.46" nolink="1" label="EM.EB.46 Seche films electrique"/>
+			<dataelement uid="TzyBmU8E8NH" code="EM.EB.47" nolink="1" label="EM.EB.47 Source de lumiere froide"/>
+			<dataelement uid="wSz4sgLpryR" code="EM.EB.48" nolink="1" label="EM.EB.48 Sterilisateur a chaleur seche"/>
+			<dataelement uid="F6LjaZbY5PU" code="EM.EB.49" nolink="1" label="EM.EB.49 Sterilisateur a rayons ultraviolets"/>
+			<dataelement uid="AhcwP3UV1ql" code="EM.EB.5" nolink="1" label="EM.EB.5 Appareil de phototherapie"/>
+			<dataelement uid="d1HVW7PAdDp" code="EM.EB.50" nolink="1" label="EM.EB.50 Sterilisateur a vapeur d´eau"/>
+			<dataelement uid="P0q4pC50Ozw" code="EM.EB.51" nolink="1" label="EM.EB.51 Table d´accouchement"/>
+			<dataelement uid="JtYdpyx94Uv" code="EM.EB.52" nolink="1" label="EM.EB.52 Table d´opération"/>
+			<dataelement uid="nCksEMzfKFb" code="EM.EB.53" nolink="1" label="EM.EB.53 Table de réanimation néonatale"/>
+			<dataelement uid="PzlTCVxYnpi" code="EM.EB.54" nolink="1" label="EM.EB.54 Table de réanimation néonatale avec lampe de photothérapie"/>
+			<dataelement uid="veDrMT8ePMA" code="EM.EB.55" nolink="1" label="EM.EB.55 Tailleuse à plâtre"/>
+			<dataelement uid="nwWF9wPbiqy" code="EM.EB.56" nolink="1" label="EM.EB.56 Tensiomètre médical"/>
+			<dataelement uid="rkO52NrGEeb" code="EM.EB.57" nolink="1" label="EM.EB.57 Unité d´examen ophtalmologique"/>
+			<dataelement uid="XelUXvgveQr" code="EM.EB.58" nolink="1" label="EM.EB.58 Unité d´examen ORL"/>
+			<dataelement uid="xYZsHkxV9IF" code="EM.EB.59" nolink="1" label="EM.EB.59 Unité de chirurgie dentaire"/>
+			<dataelement uid="s62WGcftuFL" code="EM.EB.6" nolink="1" label="EM.EB.6 Appareil de radiologie dentaire"/>
+			<dataelement uid="IN6vwVTXA2w" code="EM.EB.60" nolink="1" label="EM.EB.60 Unité de radiologie"/>
+			<dataelement uid="mIWheKP57eQ" code="EM.EB.61" nolink="1" label="EM.EB.61 Ventilateur CPAP"/>
+			<dataelement uid="EGa06Je0gTY" code="EM.EB.62" nolink="1" label="EM.EB.62 Ventouse obstétricale électrique"/>
+			<dataelement uid="WA0Ge9fAVU5" code="EM.EB.63" nolink="1" label="EM.EB.63 Vibreur à plâtre"/>
+			<dataelement uid="t4dJWPV5hyY" code="EM.EB.64" nolink="1" label="EM.EB.64 Fauteuil dentaire"/>
+			<dataelement uid="n3jEBfmQ4pp" code="EM.EB.65" nolink="1" label="EM.EB.65 Unité de chirurgie dentaire mobile"/>
+			<dataelement uid="uFbqUDWc0AK" code="EM.EB.66" nolink="1" label="EM.EB.66 Retinoscope"/>
+			<dataelement uid="vcDvQZaGoAN" code="EM.EB.67" nolink="1" label="EM.EB.67 Auto refractomètre"/>
+			<dataelement uid="r3JDfcsj3Fu" code="EM.EB.68" nolink="1" label="EM.EB.68 Appareil de radiologie mobile"/>
+			<dataelement uid="zEUvFijCR0K" code="EM.EB.7" nolink="1" label="EM.EB.7 Lampe chauffante"/>
+			<dataelement uid="zgpQiHbdIiW" code="EM.EB.7.1" nolink="1" label="EM.EB.7.1 Aspirateur de mucosités"/>
+			<dataelement uid="pFuQrl5VrDe" code="EM.EB.8" nolink="1" label="EM.EB.8 Aspirateur médico-chirurgical"/>
+			<dataelement uid="yNGOTz778Mn" code="EM.EB.9" nolink="1" label="EM.EB.9 Incubateur néonatal"/>
+			<dataelement uid="AvCApHbL58c" code="EM.LAB.16" nolink="1" label="EM.LAB.16 IRM"/>
+			<dataelement uid="pQwFfX7LfRf" code="EM.EFM.1" nolink="1" label="EM.EFM.1 Banque de sang"/>
+			<dataelement uid="UcW1h1VtctB" code="EM.LAB.1" nolink="1" label="EM.LAB.1 Agitateur de labo"/>
+			<dataelement uid="K6BMg9Arin4" code="EM.LAB.11" nolink="1" label="EM.LAB.11 Distillateur"/>
+			<dataelement uid="WPe8Sg1rMAd" code="EM.LAB.12" nolink="1" label="EM.LAB.12 Glucomètre"/>
+			<dataelement uid="uUdIU7z6Hu4" code="EM.LAB.13" nolink="1" label="EM.LAB.13 Hémoglobinomètre"/>
+			<dataelement uid="X8q5md6eG7Z" code="EM.LAB.130" nolink="1" label="EM.LAB.130 Hemocue"/>
+			<dataelement uid="X8q5md6eG7Z" code="EM.LAB.14" nolink="1" label="EM.LAB.14 Hotte à flux laminaire"/>
+			<dataelement uid="h567iFoda7c" code="EM.LAB.15" nolink="1" label="EM.LAB.15 Incubateur bactériologique"/>
+			<dataelement uid="d45GLDDZpj1" code="EM.LAB.17" nolink="1" label="EM.LAB.17 Mélangeur de labo"/>
+			<dataelement uid="nvJ4j2L3TK9" code="EM.LAB.18" nolink="1" label="EM.LAB.18 Microscope de labo"/>
+			<dataelement uid="uJCUXOD76pf" code="EM.LAB.19" nolink="1" label="EM.LAB.19 PH mètre"/>
+			<dataelement uid="oNiWsxFSqR9" code="EM.LAB.2" nolink="1" label="EM.LAB.2 Analyseur d´hématologie"/>
+			<dataelement uid="Pibqx2Sr2M1" code="EM.LAB.20" nolink="1" label="EM.LAB.20 Pipette Automatique"/>
+			<dataelement uid="UPn3QR1Uq3Q" code="EM.LAB.21" nolink="1" label="EM.LAB.21 Projecteur de test"/>
+			<dataelement uid="eTPLNP9IRar" code="EM.LAB.22" nolink="1" label="EM.LAB.22 Rhésuscope"/>
+			<dataelement uid="etGGKbDZ4Nb" code="EM.LAB.23" nolink="1" label="EM.LAB.23 Spectrophotomètre"/>
+			<dataelement uid="NV5MEbeO47k" code="EM.LAB.24" nolink="1" label="EM.LAB.24 Autres"/>
+			<dataelement uid="CguOBcnrASP" code="EM.LAB.3" nolink="1" label="EM.LAB.3 Bain-marie"/>
+			<dataelement uid="BK6anOGWZZM" code="EM.LAB.4" nolink="1" label="EM.LAB.4 Balance de précision"/>
+			<dataelement uid="iByIu7DYuNm" code="EM.LAB.5" nolink="1" label="EM.LAB.5 Boite de verre à essai"/>
+			<dataelement uid="tcPoLvWc7j7" code="EM.LAB.6" nolink="1" label="EM.LAB.6 Bouilleur"/>
+			<dataelement uid="QgQjjOjVn4G" code="EM.LAB.7" nolink="1" label="EM.LAB.7 Centrifugeuse hématocrite"/>
+			<dataelement uid="ZBfw8BP0wEN" code="EM.LAB.8" nolink="1" label="EM.LAB.8 Centrifugeuse standard électrique"/>
+			<dataelement uid="T5pMXewVEoz" code="EM.LAB.9" nolink="1" label="EM.LAB.9 Chaîne ELISA"/>
+			<dataelement uid="qp7QYnb7G4d" code="ES.1" nolink="1" label="ES.1 Extincteur à poudre"/>
+			<dataelement uid="yiaVJ5PzhgY" code="ES.2" nolink="1" label="ES.2 Autre"/>
+			<dataelement uid="fhScpHNnMcd" code="ETH.10" nolink="1" label="ETH.10 Lave linge"/>
+			<dataelement uid="IhWTmwS5Kc4" code="ETH.11" nolink="1" label="ETH.11 Motopompe"/>
+			<dataelement uid="Q20wq1l3z0N" code="ETH.12" nolink="1" label="ETH.12 Réchaud électrique"/>
+			<dataelement uid="zBda84cOL8m" code="ETH.13" nolink="1" label="ETH.13 Réfrigérateur"/>
+			<dataelement uid="sJ4sB6qARek" code="ETH.14" nolink="1" label="ETH.14 Repasseuse"/>
+			<dataelement uid="K6ATiz2hoGA" code="ETH.15" nolink="1" label="ETH.15 Sèche linge"/>
+			<dataelement uid="eeVwIugPPQC" code="ETH.16" nolink="1" label="ETH.16 Soudeuse"/>
+			<dataelement uid="KBnzHpa3vmA" code="ETH.17" nolink="1" label="ETH.17 Téléviseur"/>
+			<dataelement uid="mp2C9lheuN5" code="ETH.18" nolink="1" label="ETH.18 Autre"/>
+			<dataelement uid="qjNfR56zbCi" code="ETH.2" nolink="1" label="ETH.2 Appareil radio de communication"/>
+			<dataelement uid="emaxHDqwroT" code="ETH.3" nolink="1" label="ETH.3 Climatiseur"/>
+			<dataelement uid="WNqfMUdzDwb" code="ETH.4" nolink="1" label="ETH.4 Compresseur d´air"/>
+			<dataelement uid="didIHI0eI1a" code="ETH.5" nolink="1" label="ETH.5 Congélateur"/>
+			<dataelement uid="A8CoRuaQEKq" code="ETH.7" nolink="1" label="ETH.7 Filtre à eau"/>
+			<dataelement uid="WFjodmcH6zo" code="ETH.8" nolink="1" label="ETH.8 Frigo mortuaire"/>
+			<dataelement uid="HrySB2DZtNT" code="ETH.9" nolink="1" label="ETH.9 Incinérateur électrique"/>
+			<dataelement uid="nFnoDmcAKf1" code="ETH.6" nolink="1" label="ETH.6 Fer à repasser"/>
+			<dataelement uid="N7j70RcDeqE" code="MM.3" nolink="1" label="MM.3 Table d´examen"/>
+			<dataelement uid="qCvewQEnKvJ" code="MM.5" nolink="1" label="MM.5 Toise"/>
+			<dataelement uid="GyrpWpu9Tkd" code="MM.6" nolink="1" label="MM.6 Autre"/>
+		</dataelements>
+	</dataset>
+</dhis2>

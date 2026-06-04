@@ -1,0 +1,2 @@
+nmcli dev wifi list
+nmcli dev wifi connect "Hotspot FF" password "hotspotff#1234"

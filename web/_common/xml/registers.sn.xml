@@ -1,0 +1,984 @@
+<registers>
+	<register pagesize="A3" id="1" splittransaction="icd10diagnosis" accessright="msas.registry.report.consultations.select" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MSAS_REGISTRY_CONSULTATIONS">
+		<columns>
+			<column colspan="10" labelid="register;ordernr" source="system" name="id"/>
+			<column colspan="10" labelid="register;date" source="transaction" name="updatetime"/>
+			<column colspan="10" labelid="register;patientid" source="patient" name="personid"/>
+			<column colspan="30" labelid="register;patientfullname" source="patient" name="fullname"/>
+			<column colspan="10" labelid="register;patientage" source="patient" name="ageinyears"/>
+			<column colspan="10" labelid="register;patientgender" source="patient" name="gender"/>
+			<column colspan="10" labelid="register;pregnantwomen" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_PREGNANTWOMEN" translateresult="registre"/>
+			<column colspan="30" labelid="register;patientaddress" source="patient" name="address"/>
+			<column colspan="30" labelid="register;complaints.and.symptoms" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_COMPLAINTS" translateresult=""/>
+			<column colspan="8" labelid="register;weight" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_BIOMETRY_WEIGHT" translateresult=""/>
+			<column colspan="8" labelid="register;height" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_BIOMETRY_HEIGHT" translateresult=""/>
+			<column colspan="8" labelid="register;Temp" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.[GENERAL.ANAMNESE]ITEM_TYPE_TEMPERATURE" translateresult=""/>
+			<column colspan="10" labelid="register;TA" concatenate="1" separator=" / " source="transaction;transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CARDIAL_CLINICAL_EXAMINATION_SYSTOLIC_PRESSURE_RIGHT;be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CARDIAL_CLINICAL_EXAMINATION_DIASTOLIC_PRESSURE_RIGHT" translateresult=";"/>
+			<column colspan="10" labelid="web.occup;medwan.healthrecord.cardial.frequence-cardiaque" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CARDIAL_CLINICAL_EXAMINATION_HEARTH_FREQUENCY" translateresult=""/>
+			<column colspan="10" labelid="web;capillarglycemia" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_BIOMETRY_GLYCEMIA" translateresult=""/>
+			<column colspan="10" labelid="openclinic.chuk;respiratory.frequency" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.[GENERAL.ANAMNESE]ITEM_TYPE_RESPIRATORY_FRENQUENCY" translateresult=""/>
+			<column colspan="10" labelid="openclinic.chuk;sao2" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.[GENERAL.ANAMNESE]ITEM_TYPE_SATURATION" translateresult=""/>
+			<column colspan="10" labelid="register;tdr" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_TDR" translateresult="msas.tdr"/>
+			<column colspan="10" labelid=";GenXpert" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_OTHEREXAMS2" contains="6" output="X" translateresult=""/>
+			<column colspan="30" labelid="register;other.paraclinical.exams" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_OTHEREXAMS" translateresult=""/>
+			<column colspan="30" labelid="register;diagnosis" source="diagnosis" name="icd10withlocalcodes"/>
+			<column colspan="20" labelid="register;reference" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_REFERENCE" translateresult="msas.reference"/>
+			<column colspan="30" labelid="register;treatment" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_TREATMENT" translateresult=""/>
+			<column colspan="20" labelid="register;familyplanningsearch" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_FAMILYPLANNING" translateresult="registre"/>
+			<column colspan="20" labelid="register;familyplanningaction" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_FAMILYPLANNINGACTION" translateresult=""/>
+			<column colspan="20" labelid="web;ivaivl" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS__CONS_IVA_IVL" translateresult="ivaivl"/>
+			<column colspan="20" labelid="web;consultation.msas.evacuation" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_EVACUATION" translateresult="msas.evacuation"/>
+			<column colspan="30" labelid="register;observations" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_OBSERVATIONS" translateresult=""/>
+		</columns>
+	</register>
+	<register pagesize="A3" id="1.2" accessright="msas.registry.report.consultations.select" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MSAS_REGISTRY_CONSULTATIONS_TRI">
+		<columns>
+			<column colspan="10" labelid="register;ordernr" source="system" name="id"/>
+			<column colspan="10" labelid="register;date" source="transaction" name="updatetime"/>
+			<column colspan="10" labelid="register;patientid" source="patient" name="personid"/>
+			<column colspan="30" labelid="register;patientfullname" source="patient" name="fullname"/>
+			<column colspan="10" labelid="register;patientage" source="patient" name="ageinyears"/>
+			<column colspan="10" labelid="register;patientgender" source="patient" name="gender"/>
+			<column colspan="10" labelid="register;pregnantwomen" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_PREGNANTWOMEN" translateresult="registre"/>
+			<column colspan="30" labelid="register;patientaddress" source="patient" name="address"/>
+			<column colspan="30" labelid="register;complaints.and.symptoms" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_COMPLAINTS" translateresult=""/>
+			<column colspan="8" labelid="register;weight" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_BIOMETRY_WEIGHT" translateresult=""/>
+			<column colspan="8" labelid="register;height" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_BIOMETRY_HEIGHT" translateresult=""/>
+			<column colspan="8" labelid="register;Temp" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.[GENERAL.ANAMNESE]ITEM_TYPE_TEMPERATURE" translateresult=""/>
+			<column colspan="10" labelid="register;TA" concatenate="1" separator=" / " source="transaction;transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CARDIAL_CLINICAL_EXAMINATION_SYSTOLIC_PRESSURE_RIGHT;be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CARDIAL_CLINICAL_EXAMINATION_DIASTOLIC_PRESSURE_RIGHT" translateresult=";"/>
+			<column colspan="10" labelid="web.occup;medwan.healthrecord.cardial.frequence-cardiaque" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CARDIAL_CLINICAL_EXAMINATION_HEARTH_FREQUENCY" translateresult=""/>
+			<column colspan="10" labelid="web;capillarglycemia" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_BIOMETRY_GLYCEMIA" translateresult=""/>
+			<column colspan="10" labelid="openclinic.chuk;respiratory.frequency" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.[GENERAL.ANAMNESE]ITEM_TYPE_RESPIRATORY_FRENQUENCY" translateresult=""/>
+			<column colspan="10" labelid="openclinic.chuk;sao2" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.[GENERAL.ANAMNESE]ITEM_TYPE_SATURATION" translateresult=""/>
+			<column colspan="10" labelid="register;tdr" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_TDR" translateresult="msas.tdr"/>
+			<column colspan="10" labelid=";GenXpert" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_OTHEREXAMS2" contains="6" output="X" translateresult=""/>
+			<column colspan="30" labelid="register;other.paraclinical.exams" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_OTHEREXAMS" translateresult=""/>
+			<column colspan="30" labelid="register;diagnosis" source="diagnosis" name="icd10withlocalcodes"/>
+			<column colspan="20" labelid="register;reference" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_REFERENCE" translateresult="msas.reference"/>
+			<column colspan="30" labelid="register;treatment" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_TREATMENT" translateresult=""/>
+			<column colspan="20" labelid="register;familyplanningsearch" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_FAMILYPLANNING" translateresult="registre"/>
+			<column colspan="20" labelid="register;familyplanningaction" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_FAMILYPLANNINGACTION" translateresult=""/>
+			<column colspan="20" labelid="web;ivaivl" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS__CONS_IVA_IVL" translateresult="ivaivl"/>
+			<column colspan="20" labelid="web;consultation.msas.evacuation" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_EVACUATION" translateresult="msas.evacuation"/>
+			<column colspan="30" labelid="register;observations" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_OBSERVATIONS" translateresult=""/>
+		</columns>
+	</register>
+	<register pagesize="A3" id="1.3" accessright="msas.registry.report.consultations.select" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MSAS_REGISTRY_CONSULTATIONS_MATERNITY">
+		<columns>
+			<column colspan="10" labelid="register;ordernr" source="system" name="id"/>
+			<column colspan="10" labelid="register;date" source="transaction" name="updatetime"/>
+			<column colspan="10" labelid="register;patientid" source="patient" name="personid"/>
+			<column colspan="30" labelid="register;patientfullname" source="patient" name="fullname"/>
+			<column colspan="10" labelid="register;patientage" source="patient" name="ageinyears"/>
+			<column colspan="10" labelid="register;patientgender" source="patient" name="gender"/>
+			<column colspan="10" labelid="register;pregnantwomen" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_PREGNANTWOMEN" translateresult="registre"/>
+			<column colspan="30" labelid="register;patientaddress" source="patient" name="address"/>
+			<column colspan="30" labelid="register;complaints.and.symptoms" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_COMPLAINTS" translateresult=""/>
+			<column colspan="8" labelid="register;weight" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_BIOMETRY_WEIGHT" translateresult=""/>
+			<column colspan="8" labelid="register;height" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_BIOMETRY_HEIGHT" translateresult=""/>
+			<column colspan="8" labelid="register;Temp" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.[GENERAL.ANAMNESE]ITEM_TYPE_TEMPERATURE" translateresult=""/>
+			<column colspan="10" labelid="register;TA" concatenate="1" separator=" / " source="transaction;transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CARDIAL_CLINICAL_EXAMINATION_SYSTOLIC_PRESSURE_RIGHT;be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CARDIAL_CLINICAL_EXAMINATION_DIASTOLIC_PRESSURE_RIGHT" translateresult=";"/>
+			<column colspan="10" labelid="web.occup;medwan.healthrecord.cardial.frequence-cardiaque" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CARDIAL_CLINICAL_EXAMINATION_HEARTH_FREQUENCY" translateresult=""/>
+			<column colspan="10" labelid="web;capillarglycemia" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_BIOMETRY_GLYCEMIA" translateresult=""/>
+			<column colspan="10" labelid="openclinic.chuk;respiratory.frequency" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.[GENERAL.ANAMNESE]ITEM_TYPE_RESPIRATORY_FRENQUENCY" translateresult=""/>
+			<column colspan="10" labelid="openclinic.chuk;sao2" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.[GENERAL.ANAMNESE]ITEM_TYPE_SATURATION" translateresult=""/>
+			<column colspan="10" labelid="register;tdr" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_TDR" translateresult="msas.tdr"/>
+			<column colspan="10" labelid=";GenXpert" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_OTHEREXAMS2" contains="6" output="X" translateresult=""/>
+			<column colspan="30" labelid="register;other.paraclinical.exams" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_OTHEREXAMS" translateresult=""/>
+			<column colspan="30" labelid="register;diagnosis" source="diagnosis" name="icd10withlocalcodes"/>
+			<column colspan="20" labelid="register;reference" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_REFERENCE" translateresult="msas.reference"/>
+			<column colspan="30" labelid="register;treatment" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_TREATMENT" translateresult=""/>
+			<column colspan="20" labelid="register;familyplanningsearch" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_FAMILYPLANNING" translateresult="registre"/>
+			<column colspan="20" labelid="register;familyplanningaction" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_FAMILYPLANNINGACTION" translateresult=""/>
+			<column colspan="20" labelid="web;ivaivl" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS__CONS_IVA_IVL" translateresult="ivaivl"/>
+			<column colspan="20" labelid="web;consultation.msas.evacuation" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_EVACUATION" translateresult="msas.evacuation"/>
+			<column colspan="30" labelid="register;observations" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_OBSERVATIONS" translateresult=""/>
+		</columns>
+	</register>
+	<register pagesize="A3" id="1.4" accessright="msas.registry.report.consultations.select" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MSAS_REGISTRY_CONSULTATIONS_EMERGENCY">
+		<columns>
+			<column colspan="10" labelid="register;ordernr" source="system" name="id"/>
+			<column colspan="10" labelid="register;date" source="transaction" name="updatetime"/>
+			<column colspan="10" labelid="register;patientid" source="patient" name="personid"/>
+			<column colspan="30" labelid="register;patientfullname" source="patient" name="fullname"/>
+			<column colspan="10" labelid="register;patientage" source="patient" name="ageinyears"/>
+			<column colspan="10" labelid="register;patientgender" source="patient" name="gender"/>
+			<column colspan="10" labelid="register;pregnantwomen" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_PREGNANTWOMEN" translateresult="registre"/>
+			<column colspan="30" labelid="register;patientaddress" source="patient" name="address"/>
+			<column colspan="30" labelid="register;complaints.and.symptoms" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_COMPLAINTS" translateresult=""/>
+			<column colspan="8" labelid="register;weight" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_BIOMETRY_WEIGHT" translateresult=""/>
+			<column colspan="8" labelid="register;height" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_BIOMETRY_HEIGHT" translateresult=""/>
+			<column colspan="8" labelid="register;Temp" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.[GENERAL.ANAMNESE]ITEM_TYPE_TEMPERATURE" translateresult=""/>
+			<column colspan="10" labelid="register;TA" concatenate="1" separator=" / " source="transaction;transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CARDIAL_CLINICAL_EXAMINATION_SYSTOLIC_PRESSURE_RIGHT;be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CARDIAL_CLINICAL_EXAMINATION_DIASTOLIC_PRESSURE_RIGHT" translateresult=";"/>
+			<column colspan="10" labelid="web.occup;medwan.healthrecord.cardial.frequence-cardiaque" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CARDIAL_CLINICAL_EXAMINATION_HEARTH_FREQUENCY" translateresult=""/>
+			<column colspan="10" labelid="web;capillarglycemia" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_BIOMETRY_GLYCEMIA" translateresult=""/>
+			<column colspan="10" labelid="openclinic.chuk;respiratory.frequency" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.[GENERAL.ANAMNESE]ITEM_TYPE_RESPIRATORY_FRENQUENCY" translateresult=""/>
+			<column colspan="10" labelid="openclinic.chuk;sao2" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.[GENERAL.ANAMNESE]ITEM_TYPE_SATURATION" translateresult=""/>
+			<column colspan="10" labelid="register;tdr" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_TDR" translateresult="msas.tdr"/>
+			<column colspan="10" labelid=";GenXpert" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_OTHEREXAMS2" contains="6" output="X" translateresult=""/>
+			<column colspan="30" labelid="register;other.paraclinical.exams" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_OTHEREXAMS" translateresult=""/>
+			<column colspan="30" labelid="register;diagnosis" source="diagnosis" name="icd10withlocalcodes"/>
+			<column colspan="20" labelid="register;reference" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_REFERENCE" translateresult="msas.reference"/>
+			<column colspan="30" labelid="register;treatment" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_TREATMENT" translateresult=""/>
+			<column colspan="20" labelid="register;familyplanningsearch" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_FAMILYPLANNING" translateresult="registre"/>
+			<column colspan="20" labelid="register;familyplanningaction" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_FAMILYPLANNINGACTION" translateresult=""/>
+			<column colspan="20" labelid="web;ivaivl" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS__CONS_IVA_IVL" translateresult="ivaivl"/>
+			<column colspan="20" labelid="web;consultation.msas.evacuation" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_EVACUATION" translateresult="msas.evacuation"/>
+			<column colspan="30" labelid="register;observations" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_OBSERVATIONS" translateresult=""/>
+		</columns>
+	</register>
+<register pagesize="A3" id="2" accessright="msas.registry.report.healthychildren.select" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MSAS_REGISTRY_HEALTHYCHILDREN">
+		<columns>
+			<column colspan="10" labelid="register;ordernr" source="system" name="id"/>
+			<column colspan="10" labelid="register;date" source="transaction" name="updatetime"/>
+			<column colspan="20" labelid="register;Num_Etat_Civil" source="patient" name="natreg"/>
+			<column colspan="10" labelid="register;patientid" source="patient" name="personid"/>
+			<column colspan="30" labelid="register;patientfullname" source="patient" name="fullname"/>
+			<column colspan="10" labelid="register;patientbirth" source="patient" name="dateofbirth"/>
+			<column colspan="10" labelid="register;patientgender" source="patient" name="gender"/>
+			<column colspan="30" labelid="web;personresponsable" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_HEALTHYCHILDREN_PERSON_RESPONSABLE" translateresult=""/>
+			<column colspan="30" labelid="web;addressphone" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_HEALTHYCHILDREN_ADDRESS_PHONE"/>
+			<column colspan="20" labelid="web;mothermethodepf" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_HEALTHYCHILDREN_METHODE_PF" translateresult="yesno"/>
+			<column colspan="20" labelid="web;conduitetenir" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_HEALTHYCHILDREN_CONDUITE_TENIR" translateresult="conduitetenir"/>
+			<column colspan="15" labelid="register;HepB" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_VACCINE_HEPB" translateresult="msas.vaccination.hepb"/>
+			<column colspan="15" labelid="register;BCG" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_VACCINE_BCG" translateresult="msas.vaccination.bcg"/>
+			<column colspan="15" labelid="register;VPO" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_VACCINE_VPO" translateresult="msas.vaccination.vpo"/>
+			<column colspan="15" labelid="register;VPI" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_VACCINE_VPI" translateresult="msas.vaccination.vpi"/>
+			<column colspan="15" labelid="register;PENTA" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_VACCINE_PENTA" translateresult="msas.vaccination.penta"/>
+			<column colspan="15" labelid="register;PNEUMO" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_VACCINE_PNEUMO" translateresult="msas.vaccination.pneumo"/>
+			<column colspan="15" labelid="register;ROTA" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_VACCINE_ROTA" translateresult="msas.vaccination.rota"/>
+			<column colspan="15" labelid="register;RR" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_VACCINE_RR" translateresult="msas.vaccination.rr"/>
+			<column colspan="15" labelid="register;VAA" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_VACCINE_VAA" translateresult="msas.vaccination.vaa"/>
+			<column colspan="15" labelid="register;oedema" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_OEDEMA" translateresult="yesno"/>
+			<column colspan="10" labelid="register;weight" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_BIOMETRY_WEIGHT" translateresult="$$ kg"/>
+			<column colspan="10" labelid="register;height" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_BIOMETRY_HEIGHT" translateresult="$$ cm"/>
+			<column colspan="10" labelid="web;armcircumferenceshort" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_ARM_CIRCUMFERENCE" translateresult="$$ cm"/>
+			<column colspan="10" labelid="register;vitaminea" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_HEALTHYCHILDREN_OTHER" contains="1" output="X" translateresult=""/>
+			<column colspan="10" labelid="register;worming" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_HEALTHYCHILDREN_OTHER" contains="2" output="X" translateresult=""/>
+			<column colspan="10" labelid="register;milda" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_HEALTHYCHILDREN_OTHER" contains="3" output="X" translateresult=""/>
+			<column colspan="10" labelid="register;ame" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_HEALTHYCHILDREN_NUTRITION" contains="1" output="X" translateresult=""/>
+			<column colspan="10" labelid="register;ac" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_HEALTHYCHILDREN_NUTRITION" contains="2" output="X" translateresult=""/>
+			<column colspan="10" labelid="web.occup;medwan.healthrecord.weightforlength"  source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_WEIGHT4HEIGHT_ZSCORE;" translateresult="$$ Zcore"/>
+			<column colspan="10" labelid="web.occup;medwan.healthrecord.weightforage" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_WEIGHT4AGE_ZSCORE" translateresult="$$ Zcore"/>
+			<column colspan="10" labelid="web.occup;medwan.healthrecord.heightforage"  source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_HEIGHT4AGE_ZSCORE" translateresult="$$ Zcore"/>
+			<column colspan="10" labelid="web;nutritionstatuschild" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_HEALTHYCHILDREN_NUTRITITION" translateresult="nutritionstatuschild"/>
+			<column colspan="30" labelid="register;observations" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONSPED_OBSERVATIONS" translateresult=""/>
+		</columns>
+	</register>
+
+	<register pagesize="A3" id="3" accessright="msas.registry.report.postnatal.select" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MSAS_REGISTRY_POSTNATAL">
+		<columns>
+			<column colspan="15" labelid="register;ordernr" source="system" name="id"/>
+			<column colspan="10" labelid="web;yearnum" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_POSTNATAL_YEARNUM"/>
+			<column colspan="20" labelid="register;date" source="transaction" name="updatetime"/>
+			<column colspan="20" labelid="register;patientid" source="patient" name="personid"/>
+			<column colspan="30" labelid="register;patientfullname" source="patient" name="fullname"/>
+			<column colspan="15" labelid="register;motherage" source="patient" name="ageinyears"/>
+			<column colspan="30" labelid="register;patientaddress" source="patient" name="address"/>
+			<column colspan="15" labelid="web;parity" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_POSTNATAL_PARITY" translateresult=""/>
+			<column colspan="30" labelid="register;deliverydate" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_POSTNATAL_DELIVERYDATE" translateresult=""/>
+			<column colspan="30" labelid="register;deliverylocation" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_POSTNATAL_DELIVERYLOCATION" translateresult="msas.deliverylocation"/>
+			<column colspan="30" labelid="register;deliverytype" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_POSTNATAL_DELIVERYTYPE" translateresult="msas.deliverytype"/>
+			<column colspan="30" labelid="register;cponrank" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CPONORDER" translateresult=""/>
+			<column colspan="15" labelid="register;weight" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_BIOMETRY_WEIGHT" translateresult=""/>
+			<column colspan="15" labelid="register;height" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_BIOMETRY_HEIGHT" translateresult=""/>
+			<column colspan="10" labelid="register;temperature" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TEMPERATURE" translateresult=""/>
+			<column colspan="20" labelid="register;child.status" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_POSTNATAL_CHILDSTATUS" translateresult="msas.childstatus"/>
+			<column colspan="20" labelid="register;umbilicus.status" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_POSTNATAL_UMBILICUSSTATUS" translateresult="msas.umbilicusstatus"/>
+			<column colspan="20" labelid="register;infection" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_INFECTIONTREATMENT" translateresult=""/>
+			<column colspan="10" labelid="web;sousmethodkangorou" source="transaction"  name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_SOUS_DELIVERIES_SOUS_METHOD_KANGOROU" translateresult="yesno" />
+			<column colspan="20" labelid="register;bcg" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_POSTNATAL_BCG" translateresult=""/>
+			<column colspan="20" labelid="register;polio0" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_POSTNATAL_POLIO" translateresult=""/>
+			<column colspan="20" labelid="register;HepB" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_POSTNATAL_HEPATITISB" translateresult=""/>
+			<column colspan="20" labelid="register;milda" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_POSTNATAL_MILDA" translateresult="registre"/>
+			<column colspan="20" labelid="register;motherweight" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_BIOMETRY_MOTHERWEIGHT" translateresult=""/>
+			<column colspan="20" labelid="register;motherheight" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_BIOMETRY_MOTHERHEIGHT" translateresult=""/>
+			<column colspan="20" labelid="register;mothertemperature" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MOTHERTEMPERATURE" translateresult=""/>
+			<column colspan="20" labelid=";PB" source="transaction"   	name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_MOTHER_ARM_CIRCUMFERENCE" 	translateresult="$$ cm" />
+			<column colspan="20" labelid="register;motherpuls" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MOTHERPULSE" translateresult=""/>
+			<column colspan="20" labelid="register;mothersystolicbp" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MOTHERSYSTOLICBP" translateresult=""/>
+			<column colspan="20" labelid="register;motherdiastolicbp" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MOTHERDIASTOLICBP" translateresult=""/>
+			<column colspan="30" labelid="web;mothercondition" source="transaction;transaction" concatenate="1" separator=" / " name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_POSTNATAL_MOTHERCONDITION;be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_POSTNATAL_MOTHER_CONDITION_OTHER" translateresult="msas.mothercondition"/>
+			<column colspan="20" labelid="register;mothergeneralstatus" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_MOTHERGENERALSTATUS" translateresult=""/>
+			<column colspan="20" labelid="register;mothermucosa" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_MOTHERMUCOSA" translateresult=""/>
+			<column colspan="20" labelid="register;motheroedema" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_MOTHEROEDEMA" translateresult=""/>
+			<column colspan="20" labelid="register;motherbreasts" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_MOTHERBREASTS" translateresult=""/>
+			<column colspan="20" labelid="register;motheruterusinversion" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_MOTHERUTERUSINVERSION" translateresult=""/>
+			<column colspan="20" labelid="register;mothertv" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_MOTHERTV" translateresult=""/>
+			<column colspan="20" labelid="register;mothervat" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MOTHERVAT" translateresult="msas.vatrank"/>
+			<column colspan="15" labelid="register;motheriron" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_POSTNATAL_IRON" translateresult="registre"/>
+			<column colspan="20" labelid="register;motherhivtest" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_POSTNATAL_HIV" translateresult="web.occup"/>
+			<column colspan="20" labelid="web;motherptme" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_POSTNATAL_MOTHER_PTME" translateresult="motherptme"/>
+			<column colspan="30" labelid="register;breastfeeding" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_POSTNATAL_BREASTFEEDING" translateresult="msas.breastfeeding"/>
+			<column colspan="20" labelid="register;contraception" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_POSTNATAL_CONTRACEPTION" translateresult="msas.contraception"/>
+			<column colspan="20" labelid="web;conseelingananje" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_POSTNATAL_MOTHER_CONSEELIN_AN_ANJE" translateresult="conseelingananje"/>
+			<column colspan="20" labelid="register;pfneeds" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_POSTNATAL_PFANALYSIS" translateresult="registre"/>
+			<column colspan="20" labelid="web;pf.timing" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_POSTNATAL_PFTIMING" translateresult="msas.pftiming"/>
+			<column colspan="20" labelid="register;pffollowup" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_POSTNATAL_PFFOLLOWUP" translateresult="msas.pf"/>
+			<column colspan="30" labelid="register;observations" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_POSTNATAL_OBSERVATIONS" translateresult=""/>
+		</columns>
+	</register>
+	
+    <register pagesize="A3" id="4" accessright="msas.registry.report.deliveries.select" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MSAS_REGISTRY_DELIVERIES">
+		<columns>
+			<column colspan="10" labelid="register;ordernr" source="system" name="id"/>
+			<column colspan="10" labelid="register;partogrammenumber" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DELIVERIES_PARTOGRAMNUMBER" translateresult=""/>
+			<column colspan="10" labelid="register;entrydate" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DELIVERIES_ARRIVALDATE" translateresult=""/>
+			<column colspan="10" labelid="register;entryhour" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DELIVERIES_ARRIVALHOUR" translateresult=""/>
+			<column colspan="10" labelid="register;patientid" source="patient" name="personid"/>
+			<column colspan="30" labelid="register;patientfullname" source="patient" name="fullname"/>
+			<column colspan="10" labelid="register;patientage" source="patient" name="ageinyears"/>
+			<column colspan="30" labelid="register;patientaddress" source="patient" name="address"/>
+			<column colspan="10" labelid="register;gestity" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DELIVERIES_GESTITY" translateresult=""/>
+			<column colspan="10" labelid="register;parity" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DELIVERIES_PARITY" translateresult=""/>
+			<column colspan="10" labelid="register;deliverydate" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DELIVERIES_DELIVERYDATE" translateresult=""/>
+			<column colspan="10" labelid="register;deliveryhour" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DELIVERIES_DELIVERYHOUR" translateresult=""/>
+			<column colspan="20" labelid="register;deliverylocation" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DELIVERIES_DELIVERYLOCATION" translateresult="msas.deliverylocation"/>
+			<column colspan="30" labelid="register;deliverytype" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DELIVERIES_DELIVERYTYPE" translateresult="msas.deliverytype.cs"/>
+			<column colspan="30" labelid="register;childbirthtype" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DELIVERIES_CHILDBIRTHTYPE" translateresult="msas.childbirthtype"/>
+			<column colspan="20" labelid="register;presentation" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DELIVERIES_PRESENTATION" translateresult="msas.presentation"/>
+			<column colspan="30" labelid="register;qualification" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DELIVERIES_QUALIFICATION" translateresult="msas.qualification"/>
+			<column colspan="10" labelid="register;lastchildstatus" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DELIVERIES_LASTCHILDSTATUS" translateresult="msas.lastchildstatus"/>
+			<column colspan="10" labelid="register;cried" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DELIVERIES_CRIED" translateresult="yesno"/>
+			<column colspan="20" labelid="register;child.status" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DELIVERIES_CHILDSTATUS" translateresult="msas.delivery.childstatus"/>
+			<column colspan="15" labelid="register;Infect." source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DELIVERIES_INFECTIONRISK" translateresult="yesno"/>
+			<column colspan="10" labelid="web;newbornreferral" source="transaction"  name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DELIVERIES_NEWBORNREFERRAL" translateresult="yesno" />
+			<column colspan="10" labelid="register;patientgender" source="patient" name="gender"/>
+			<column colspan="10" labelid="register;childweight" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_BIOMETRY_CHILDWEIGHT" translateresult="$$ Kg" />
+			<column colspan="20" labelid="web;newbornweightkangoroomethod" source="transaction"  name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DELIVERIES_KANGOROO_NEWBORN" translateresult="yesno" />
+			<column colspan="20" labelid="web;kangoroomethod" source="transaction"  name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DELIVERIES_KANGOROO" translateresult="yesno" />
+			<column colspan="10" labelid="web;careimmediats"  source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DELIVERIES_CARE_IMMEDIAT"  translateresult="delivery.child.immediats" />
+			<column colspan="10" labelid="web;careoffered"  source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DELIVERIES_CARE_OFFERED"  translateresult="delivery.child.care" />
+			<column colspan="10" labelid="web;newbornantibiotic" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DELIVERIES_NEWBORNANTIBIOTIC" translateresult="yesno" />
+			<column colspan="10" labelid="web;newbornrevived" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DELIVERIES_NEWBORNREVIVED" translateresult="yesno" />
+			<column colspan="20" labelid="register;motherstatus" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DELIVERIES_MOTHERSTATUS" translateresult="msas.motherstatus"/>
+			<column colspan="20" labelid="web;complications" source="transaction;transaction;transaction" concatenate="1" separator=" / " name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DELIVERIES_DIRECTCOMPLICATIONS;be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DELIVERIES_INDIRECTCOMPLICATIONS;be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DELIVERIES_COMPLICATIONS" translateresult="msas.delivery.directcomplications;msas.delivery.indirectcomplications" />			<column colspan="10" labelid="register;vat" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DELIVERIES_PREVENTION_VAT" translateresult="registre" />
+			<column colspan="10" labelid="register;iron" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DELIVERIES_PREVENTION_IRON" translateresult="registre" />
+			<column colspan="10" labelid="register;hivtest" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DELIVERIES_PREVENTION_HIV" translateresult="registre" />
+			<column colspan="10" labelid="register;ptmeproposed" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DELIVERIES_PTME_PROPOSED" translateresult="registre" />
+			<column colspan="10" labelid="register;ptmeaccepted" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DELIVERIES_PTME_ACCEPTED" translateresult="registre" />
+			<column colspan="10" labelid="register;ptmedone" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DELIVERIES_PTME_DONE" translateresult="registre"/>
+			<column colspan="20" labelid="web;breastfeedingcounseling" source="transaction"  name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DELIVERIES_BREASTFEEDING_COUNSELING" translateresult="yesno" />
+			<column colspan="10" labelid="web;counseling" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DELIVERIES_FPCOUNSELING" translateresult="yesno" />
+			<column colspan="10" labelid="web;method" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DELIVERIES_FPMETHOD" translateresult=""/>
+			<column colspan="10" labelid="register;exitdate" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DELIVERIES_DISCHARGEDATE" translateresult="" />
+			<column colspan="10" labelid="register;exithour" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DELIVERIES_DISCHARGEHOUR" translateresult="" />
+			<column colspan="10" labelid="register;admissionduration" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DELIVERIES_ADMISSIONDURATION" translateresult=""/>
+			<column colspan="30" labelid="register;observations" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DELIVERIES_OBSERVATIONS" translateresult=""/>
+		</columns>
+	</register>
+
+	<register pagesize="A3" id="5" accessright="msas.registry.report.prenatal.select"  transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MSAS_REGISTRY_PRENATAL">
+		<columns>
+			<column colspan="10" labelid="register;ordernr" source="system" name="id"/>
+			<column colspan="10" labelid="web;yearnum" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_YEARNUM"/>
+			<column colspan="10" labelid="register;date" source="transaction" name="updatetime"/>
+			<column colspan="10" labelid="register;patientid" source="patient" name="personid"/>
+			<column colspan="30" labelid="register;patientfullname" source="patient" name="fullname"/>
+			<column colspan="10" labelid="register;patientage" source="patient" name="ageinyears"/>
+			<column colspan="30" labelid="register;patientaddress" source="patient" name="address"/>
+			<column colspan="10" labelid="register;gestity" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_GESTITY" translateresult=""/>
+			<column colspan="10" labelid="register;parity" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_PARITY" translateresult=""/>
+			<column colspan="30" labelid="register;cpnrank" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_CPNORDER" translateresult="msas.cpnorder"/>
+			<column colspan="10" labelid="register;weight" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_BIOMETRY_WEIGHT" translateresult=""/>
+			<column colspan="10" labelid="register;height" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_BIOMETRY_HEIGHT" translateresult=""/>
+			<column colspan="10" labelid="register;pb" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_BIOMETRY_BRACHIALPERIMETER" translateresult=""/>
+			<column colspan="10" labelid="register;mothersystolicbp" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MOTHERSYSTOLICBP" translateresult=""/>
+			<column colspan="10" labelid="register;motherdiastolicbp" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MOTHERDIASTOLICBP" translateresult=""/>
+			<column colspan="20" labelid="register;mucosa" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_MUCOSA" translateresult=""/>
+			<column colspan="20" labelid="register;mucosa" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_MUCOSA" translateresult=""/>
+			<column colspan="20" labelid="web;breastexamination" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_BREASTEXAMINATION" />
+			<column colspan="20" labelid="register;oedema" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_OEDEMA" translateresult="yesno"/>
+			<column colspan="10" labelid="register;uterusheight" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_UTERUSHEIGHT" translateresult=""/>
+			<column colspan="10" labelid="register;heartsounds" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_HEARTSOUNDS" translateresult="yesno"/>
+			<column colspan="10" labelid="register;mgf" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_MGF" translateresult="msas.mgf"/>
+			<column colspan="10" labelid="web;iva" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_IVA" translateresult="msas.iva"/>
+			<column colspan="20" labelid="register;vaginaltoucher" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_VAGINALTOUCHER" translateresult=""/>
+			<column colspan="10" labelid="register;rpr" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_RPR" translateresult="posneg"/>
+			<column colspan="10" labelid="register;tpha" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_TPHA" translateresult="posneg"/>
+			<column colspan="10" labelid="register;abo" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_ABO" translateresult="msas.bloodgroup"/>
+			<column colspan="10" labelid="register;rhesus" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_RHESUS" translateresult="posneg"/>
+			<column colspan="10" labelid="web;emmel" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_EMMEL" translateresult="posneg"/>
+			<column colspan="20" labelid=";Tx Hgb mg/dl" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_HB" translateresult=""/>
+			<column colspan="10" labelid="register;albumin" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_ALBUMIN" translateresult="msas.albumin"/>
+			<column colspan="10" labelid="register;sugar" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_SUGAR" translateresult="msas.sugar"/>
+			<column colspan="10" labelid="register;glycemia" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_GLYCEMIA" translateresult=""/>
+			<column colspan="10" labelid=";Hép B" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_HEPB" translateresult="posneg"/>
+			<column colspan="10" labelid="register;tpi" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_TPI" translateresult="msas.tpi"/>
+			<column colspan="10" labelid="register;tdo" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_TDO" translateresult="registre"/>
+			<column colspan="10" labelid="register;vat" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_VATDATE" translateresult=""/>
+			<column colspan="10" labelid="register;VAT#" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_VATRANK" translateresult="msas.vatrank"/>
+			<column colspan="20" labelid=";Conseils AM/ANJE" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_AME" translateresult="cpn.nutritioninformation"/>
+			<column colspan="20" labelid=";Counseling PFPP" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_PF" translateresult="yesno"/>
+			<column colspan="10" labelid="register;iron" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_IRON" translateresult="registre"/>
+			<column colspan="10" labelid="register;milda" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_MILDA" translateresult="registre"/>
+			<column colspan="10" labelid="register;ptmeproposed" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_PTME_PROPOSED" translateresult="registre"/>
+			<column colspan="10" labelid="register;ptmeaccepted" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_PTME_ACCEPTED" translateresult="registre"/>
+			<column colspan="10" labelid="register;ptmedone" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_PTME_DONE" translateresult="registre"/>
+			<column colspan="10" labelid="register;ptmeretrieved" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_PTME_RETRIEVED" translateresult="registre"/>
+			<column colspan="30" labelid="register;qualification" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_QUALIFICATION" translateresult="msas.qualification"/>
+			<column colspan="30" labelid="register;observations" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_OBSERVATIONS" translateresult=""/>
+		</columns>
+	</register>
+
+	<register pagesize="A4" id="6" accessright="msas.registry.report.deceased.select"  transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MSAS_REGISTRY_DECEASED">
+		<columns>
+			<column colspan="10" labelid="register;ordernr" source="system" name="id"/>
+			<column colspan="10" labelid="register;patientid" source="patient" name="personid"/>
+			<column colspan="30" labelid="register;patientfullname" source="patient" name="fullname"/>
+			<column colspan="10" labelid="register;patientage" source="patient" name="ageinyears"/>
+			<column colspan="30" labelid="register;patientgender" source="patient" name="gender"/>
+			<column colspan="10" labelid="register;pregnantwomen" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DECEASED_PREGNANTWOMEN" translateresult="registre"/>
+			<column colspan="30" labelid="register;patientaddress" source="patient" name="address"/>
+			<column colspan="30" labelid="register;profession" source="patient" name="profession"/>
+			<column colspan="10" labelid="register;dateofdeath" source="transaction" name="updatetime"/>
+			<column colspan="20" labelid="register;deathlocation" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DECEASED_LOCATION" translateresult="msas.deathlocation"/>
+			<column colspan="20" labelid="register;causeofdeath" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DECEASED_CAUSE" translateresult=""/>
+			<column colspan="30" labelid="register;observations" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DECEASED_OBSERVATIONS" translateresult=""/>
+		</columns>
+	</register>
+
+	<register pagesize="A3" id="7" accessright="msas.registry.report.abortion.select"  transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MSAS_REGISTRY_ABORTION">
+		<columns>
+			<column colspan="10" labelid="register;ordernr" source="system" name="id"/>
+			<column colspan="10" labelid="register;date" source="transaction" name="updatetime"/>
+			<column colspan="10" labelid="register;patientid" source="patient" name="personid"/>
+			<column colspan="30" labelid="register;patientfullname" source="patient" name="fullname"/>
+			<column colspan="30" labelid="register;patientpartner" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_ABORTION_PARTNERNAME" translateresult=""/>
+			<column colspan="30" labelid="register;patientaddress" source="patient" name="address"/>
+			<column colspan="10" labelid="register;patientage" source="patient" name="ageinyears"/>
+			<column colspan="10" labelid="register;gestity" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_ABORTION_GESTITY" translateresult=""/>
+			<column colspan="10" labelid="register;parity" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_ABORTION_PARITY" translateresult=""/>
+			<column colspan="10" labelid="register;evacuation" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_EVACUATION" translateresult=""/>
+			<column colspan="10" labelid="register;origin" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_ORIGIN" translateresult=""/>
+			<column colspan="10" labelid="register;pregnancyage" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_ABORTION_PREGNANCYAGE" translateresult=""/>
+			<column colspan="10" labelid="register;abortiontype" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_ABORTION_TYPE" translateresult="msas.abortiontype"/>
+			<column colspan="10" labelid="register;uterusevacuationtype" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_ABORTION_UTERUSEVACUATIONTYPE" translateresult="msas.uterusevacuationtype"/>
+			<column colspan="20" labelid="register;complications" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_ABORTION_COMPLICATIONS" translateresult=""/>
+			<column colspan="20" labelid="register;operator" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_ABORTION_OPERATOR" translateresult="msas.qualification"/>
+			<column colspan="20" labelid="register;pfcounceling" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_ABORTION_COUNCELING_FP" translateresult="yesno"/>
+			<column colspan="20" labelid="register;pfmethod" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_ABORTION_METHOD_FP" translateresult=""/>
+			<column colspan="20" labelid="register;othercare"  concatenate="1" separator=" / " source="transaction;transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_ABORTION_OTHERCARE_STRUCT;be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_ABORTION_OTHERCARE" translateresult="msas.abortion.othercare"/>
+			<column colspan="10" labelid="register;exitdate" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_ABORTION_DEPARTUREDATE" translateresult=""/>
+			<column colspan="10" labelid="register;exithour" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_ABORTION_DEPARTUREHOUR" translateresult=""/>
+			<column colspan="30" labelid="register;observations" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_ABORTION_OBSERVATIONS" translateresult=""/>
+		</columns>
+	</register>
+	
+
+	<register pagesize="A3" id="8" accessright="msas.registry.report.sickchildren.select"  transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MSAS_REGISTRY_SICKCHILDREN">
+		<columns>
+			<column colspan="10" labelid="register;ordernr" source="system" name="id"/>
+			<column colspan="10" labelid="register;date" source="transaction" name="updatetime"/>
+			<column colspan="10" labelid="register;patientid" source="patient" name="personid"/>
+			<column colspan="20" labelid="register;Num_Etat_Civil" source="patient" name="natreg"/>
+			<column colspan="20" labelid="web;volet1" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_SICKPED_VOLET1" translateresult="yesno"/>
+			<column colspan="30" labelid="register;patientfullname" source="patient" name="fullname"/>
+			<column colspan="10" labelid="register;patientage" source="patient" name="childage"/>
+			<column colspan="10" labelid="register;patientgender" source="patient" name="gender"/>
+			<column colspan="10" labelid="register;newcase" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_NEWCASE" translateresult="yesno"/>
+			<column colspan="30" labelid="register;responsibleperson" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_SICKPED_RESPONSIBLE" translateresult=""/>
+			<column colspan="10" labelid="register;temperature" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.[GENERAL.ANAMNESE]ITEM_TYPE_TEMPERATURE" translateresult="$$ °C"/>
+			<column colspan="10" labelid="web.occup;medwan.healthrecord.cardial.pression-arterielle" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CARDIAL_CLINICAL_EXAMINATION_SYSTOLIC_PRESSURE_RIGHT" translateresult="$$ /min"/>
+			<column colspan="10" labelid="web.occup;medwan.healthrecord.cardial.frequence-cardiaque" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CARDIAL_CLINICAL_EXAMINATION_HEARTH_FREQUENCY" translateresult="$$ /min"/>
+			<column colspan="10" labelid="web;capillarglycemia" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_BIOMETRY_GLYCEMIA" translateresult="$$ g/dl"/>
+			<column colspan="10" labelid="openclinic.chuk;respiratory.frequency" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.[GENERAL.ANAMNESE]ITEM_TYPE_RESPIRATORY_FRENQUENCY" translateresult="$$ /min"/>
+			<column colspan="10" labelid="openclinic.chuk;sao2" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.[GENERAL.ANAMNESE]ITEM_TYPE_SATURATION" translateresult="$$ g/dl"/>
+			<column colspan="10" labelid="register;oedema" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_SICKPED_OEDEMA" translateresult="registre"/>
+			<column colspan="10" labelid="register;pb" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_ARM_CIRCUMFERENCE" translateresult=""/>
+			<column colspan="10" labelid="register;weight" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_BIOMETRY_WEIGHT" translateresult=""/>
+			<column colspan="10" labelid="register;height" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_BIOMETRY_HEIGHT" translateresult=""/>
+			<column colspan="10" labelid="web.occup;medwan.healthrecord.weightforlength"  source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_WEIGHT4HEIGHT_ZSCORE;" translateresult=""/>
+			<column colspan="10" labelid="web.occup;medwan.healthrecord.weightforage" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_WEIGHT4AGE_ZSCORE" translateresult=""/>
+			<column colspan="10" labelid="web.occup;medwan.healthrecord.heightforage"  source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_HEIGHT4AGE_ZSCORE" translateresult=""/>
+			<column colspan="10" labelid="web;nutritionstatus" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_SICKPED_NUTRITION" translateresult="msas.nutrition"/>
+			<column colspan="10" labelid="register;respiratorymovements" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_SICKPED_RESPIRATORYMOVEMENTS" translateresult=""/>		
+			<column colspan="30" labelid="register;dangersigns" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DANGERSIGNS" translateresult="msas.dangersigns"/>
+			<column colspan="30" labelid="register;signsandsymptoms" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_SICKPED_SIGNSANDSYMPTOMS" translateresult=""/>
+			<column colspan="10" labelid="register;tdrmalaria" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_TDR_MALARIA" translateresult="msas.tdr.malaria"/>
+			<column colspan="10" labelid="register;tdrhiv" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_SICKPED_TDR_VIH" translateresult="trdvih"/>
+			<column colspan="10" labelid="register;testxpert" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_SICKPED_TDR_XPERT" translateresult="testxpert"/>
+			<column colspan="30" labelid="register;diagnosis" source="diagnosis" name="icd10withlocalcodes"/>
+						<column colspan="10" labelid="web;sva" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_SICKPED_SVA" translateresult="msas.sva"/>
+			<column colspan="10" labelid="register;worming" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_SICKPED_DEWORMING" translateresult="yesno"/>
+			<column colspan="10" labelid="register;vitamina" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_SICKPED_VITAMINEA" translateresult="msas.vitamina"/>
+			<column colspan="20" labelid="register;vaccinationstatus" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_SICKPED_VACCINATION" translateresult=""/>
+			<column colspan="20" labelid="register;treatment" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_SICKPED_TREATMENT" translateresult=""/>
+			<column colspan="20" labelid="web;mothermethodepf" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_SICKPED_TDR_METHODE_PF" translateresult="yesno"/>
+			<column colspan="20" labelid="web;conduitetenir" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_SICKPED_TDR_CONDUITE_TENIR" translateresult="conduitetenir"/>
+			<column colspan="30" labelid="web;consultation.advice" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_SICKPED_ADVICE" translateresult=""/>
+			<column colspan="30" labelid="register;observations" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_SICKPED_OBSERVATIONS" translateresult=""/>
+		</columns>
+	</register>
+
+	<register pagesize="A3" id="9" accessright="msas.registry.report.admission.select"  transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MSAS_REGISTRY_ADMISSION">
+		<columns>
+			<column colspan="10" labelid="register;ordernr" source="system" name="id"/>
+			<column colspan="10" labelid="register;patientid" source="patient" name="personid"/>
+			<column colspan="30" labelid="register;patientfullname" source="patient" name="fullname"/>
+			<column colspan="10" labelid="register;patientage" source="patient" name="ageinyears"/>
+			<column colspan="10" labelid="register;patientgender" source="patient" name="gender"/>
+			<column colspan="10" labelid="register;pregnantwomen" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_ADMISSION_PREGNANTWOMEN" translateresult="registre"/>
+			<column colspan="30" labelid="register;patientaddress" source="patient" name="address"/>
+			<column colspan="10" labelid="register;admissionbegin" source="encounter" name="begin"/>
+			<column colspan="30" labelid="register;arrivaldiagnosis" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_ADMISSION_ARRIVALDIAGNOSIS" translateresult=""/>
+			<column colspan="10" labelid="register;patientorigin" source="encounter" name="origin" translateresult="urgency.origin"/>
+			<column colspan="10" labelid="register;admissionend" source="encounter" name="end"/>
+			<column colspan="10" labelid="register;admissionduration" source="encounter" name="duration"/>
+			<column colspan="30" labelid="register;diagnosis" source="diagnosis" name="encountericd10"/>
+			<column colspan="20" labelid="register;patientoutcome" source="encounter" name="outcome" translateresult="outcome"/>
+			<column colspan="30" labelid="register;performedanalyses" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_ADMISSION_ANALYSES" translateresult=""/>
+			<column colspan="30" labelid="register;observations" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_ADMISSION_OBSERVATIONS" translateresult=""/>
+		</columns>
+	</register>
+
+	<register pagesize="A3" id="10" accessright="msas.registry.familyplanning.select"  transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MSAS_REGISTRY_FAMILYPLANNING">
+		<columns>
+			<column colspan="10" labelid="register;ordernr" source="system" name="id"/>
+			<column colspan="15" labelid="register;yearnum" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_FP_YEARNUM" />
+			<column colspan="15" labelid="register;newinproggram" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_NEWINPROGRAM" translateresult="yesno"/>
+			<column colspan="10" labelid="register;patientid" source="patient" name="personid"/>
+			<column colspan="30" labelid="register;patientfullname" source="patient" name="fullname"/>
+			<column colspan="10" labelid="register;patientage" source="patient" name="ageinyears"/>
+			<column colspan="30" labelid="register;patientaddress"  concatenate="1" separator=" / " source="patient;patient;patient" name="address;immatnew;telephone"/> 
+			<column colspan="15" labelid="web;ivafp" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_FP_IVA" translateresult="ivafp"/>
+			<column colspan="15" labelid="web;child_0_6" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_FP_CHILD_0_6" translateresult="yesno"/>
+			<column colspan="15" labelid="web;amefp" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_FP_AME" translateresult="yesno"/>
+			<column colspan="15" labelid="web;ciacfp" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_FP_ADVICE_COMPLEMENTARY_FEEDING" translateresult="yesno"/>
+			<column colspan="15" labelid="web;vaccinationfp" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_FP_VACCINATION" translateresult="yesno"/>
+			<column colspan="15" labelid="web;referencevaccinationfp" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_FP_REFERENCE_VACCINATION" translateresult="yesno"/>
+			<column colspan="15" labelid="register;postabortion" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_POSTABORTION" translateresult="yesno"/>
+			<column colspan="15" labelid="register;postpartum" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_POSTPARTUM" translateresult="msas.postpartum"/>
+			<column colspan="15" labelid="register;contraceptivepill" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_CONTRACEPTICEPILL" translateresult="msas.contraceptivepill"/>
+			<column colspan="15" labelid="register;DIU" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_DIU" translateresult="msas.diu"/>
+			<column colspan="15" labelid="register;injection" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_INJECTION" translateresult="msas.injection"/>
+			<column colspan="15" labelid="register;implant" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_IMPLANT" translateresult="msas.implant"/>
+			<column colspan="15" labelid="register;naturalmethods" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_NATURALMETHOD" translateresult="msas.naturalmethod"/>
+			<column colspan="15" labelid="web;lt"  source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_FP_LOGISTICS_LT" translateresult="yesno"/>
+			<column colspan="15" labelid="register;othermethod" concatenate="1" separator=" / " source="transaction;transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_OTHERMETHODS;be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_FP_OTHER_METHODE_LOGISTICS" translateresult="msas.othermethods"/>
+			<column colspan="15" labelid="register;rfe" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_RFE" translateresult="msas.pf.reasonvisit"/>
+			<column colspan="30" labelid="register;complications" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_SIDEEFFECTS" translateresult=""/>
+			<column colspan="30" labelid="register;extraservices" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_ADDITIONALSERVICE" translateresult=""/>
+			<column colspan="30" labelid="register;observations" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FP_OBSERVATIONS" />
+		</columns>
+	</register>
+
+	<register pagesize="A3" id="11" accessright="msas.registry.cren.select" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MSAS_REGISTRY_CREN">
+		<columns>
+			<column colspan="10" labelid="register;ordernr" source="system" name="id"/>
+			<column colspan="15" labelid="register;masnumber" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CREN_MAS" translateresult=""/>
+			<column colspan="10" labelid="register;patientid" source="patient" name="personid"/>
+			<column colspan="30" labelid="register;patientfullname" source="patient" name="fullname"/>
+			<column colspan="10" labelid="register;patientgender" source="patient" name="gender"/>
+			<column colspan="10" labelid="register;patientage" source="patient" name="ageinyears"/>
+			<column colspan="30" labelid="register;patientaddress" source="patient" name="address"/>
+			<column colspan="30" labelid="register;responsibleperson" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CREN_MOTHERSNAME" translateresult=""/>
+			<column colspan="20" labelid="register;admissiondate" source="transaction" name="updatetime"/>
+			<column colspan="20" labelid="register;admissiontype" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CREN_ADMISSIONTYPE" translateresult="msas.cre.admissiontype"/>
+			<column colspan="20" labelid="register;transferfrom" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CREN_TRANSFERFROM" translateresult="msas.transferfrom"/>
+			<column colspan="20" labelid="register;fromname" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CREN_FROMNAME" translateresult=""/>
+			<column colspan="10" labelid="register;weight" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_BIOMETRY_WEIGHT" translateresult=""/>
+			<column colspan="10" labelid="register;height" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_BIOMETRY_HEIGHT" translateresult=""/>
+			<column colspan="10" labelid="web.occup;medwan.healthrecord.weightforlength" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_WEIGHT4HEIGHT_ZSCORE" translateresult=""/>
+			<column colspan="10" labelid="register;pb" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_ARM_CIRCUMFERENCE" translateresult=""/>
+			<column colspan="10" labelid="register;oedema" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CREN_OEDEMA" translateresult="yesno"/>
+			<column colspan="30" labelid="register;complications" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CREN_COMPLICATION" translateresult=""/>
+			<column colspan="30" labelid="register;observations" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CREN_OBSERVATIONS" translateresult=""/>
+		</columns>
+	</register>
+	<register pagesize="A3" id="12" accessright="msas.registry.cren.select" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MSAS_REGISTRY_CREN_EXIT">
+		<columns>
+			<column colspan="10" labelid="register;ordernr" source="system" name="id"/>
+			<column colspan="15" labelid="register;masnumber" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CREN_MAS" translateresult=""/>
+			<column colspan="10" labelid="register;patientid" source="patient" name="personid"/>
+			<column colspan="30" labelid="register;patientfullname" source="patient" name="fullname"/>
+			<column colspan="10" labelid="register;patientgender" source="patient" name="gender"/>
+			<column colspan="10" labelid="register;patientage" source="patient" name="ageinyears"/>
+			<column colspan="30" labelid="register;patientaddress" source="patient" name="address"/>
+			<column colspan="20" labelid="register;dischargedate" source="transaction" name="updatetime"/>
+			<column colspan="20" labelid="register;dischargetype" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CREN_DISCHARGETYPE" translateresult="msas.cre.dischargetype"/>
+			<column colspan="20" labelid="register;transferto" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CREN_TRANSFERTO" translateresult="msas.transferfrom"/>
+			<column colspan="20" labelid="register;toname" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CREN_TONAME" translateresult=""/>
+			<column colspan="10" labelid="register;weight" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_BIOMETRY_WEIGHT" translateresult=""/>
+			<column colspan="10" labelid="register;height" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_BIOMETRY_HEIGHT" translateresult=""/>
+			<column colspan="10" labelid="web.occup;medwan.healthrecord.weightforlength" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_WEIGHT4HEIGHT_ZSCORE" translateresult=""/>
+			<column colspan="10" labelid="register;pb" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_ARM_CIRCUMFERENCE" translateresult=""/>
+			<column colspan="10" labelid="register;oedema" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CREN_OEDEMA" translateresult="yesno"/>
+			<column colspan="20" labelid="register;minimumweightdate" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CREN_MINIMUMWEIGHTDATE" translateresult=""/>
+			<column colspan="10" labelid="register;minimumweight" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CREN_MINIMUMWEIGHT" translateresult=""/>
+			<column colspan="30" labelid="register;observations" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CREN_OBSERVATIONS" translateresult=""/>
+		</columns>
+	</register>
+	<register pagesize="A3" id="13" accessright="msas.registry.uren.select" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MSAS_REGISTRY_UREN">
+		<columns>
+			<column colspan="10" labelid="register;ordernr" source="system" name="id"/>
+			<column colspan="15" labelid="register;masnumber" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MASNUMBER" translateresult=""/>
+			<column colspan="10" labelid="register;patientid" source="patient" name="personid"/>
+			<column colspan="20" labelid="register;patientfullname" source="patient" name="fullname"/>
+			<column colspan="10" labelid="register;patientgender" source="patient" name="gender"/>
+			<column colspan="10" labelid="register;patientage" source="patient" name="ageinyears"/>
+			<column colspan="20" labelid="register;patientaddress" source="patient" name="address"/>
+			<column colspan="20" labelid="register;responsibleperson" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MOTHERSNAME" translateresult=""/>
+			<column colspan="20" labelid="register;admissiondate" source="transaction" name="updatetime"/>
+			<column colspan="20" labelid="register;admissiontype" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_ADMISSIONTYPE" translateresult="msas.uren.admissiontype"/>
+			<column colspan="20" labelid="register;fromname" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_COMINGFROM" translateresult=""/>
+			<column colspan="20" labelid="register;peopleathome" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_PEOPLEATHOME" translateresult=""/>
+			<column colspan="20" labelid="register;twin" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TWIN" translateresult="yesno"/>
+			<column colspan="10" labelid="register;weight" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_BIOMETRY_WEIGHT" translateresult=""/>
+			<column colspan="10" labelid="register;height" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_BIOMETRY_HEIGHT" translateresult=""/>
+			<column colspan="10" labelid="web.occup;medwan.healthrecord.weightforlength" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_WEIGHT4HEIGHT_ZSCORE" translateresult=""/>
+			<column colspan="10" labelid="register;pb" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_ARM_CIRCUMFERENCE" translateresult=""/>
+			<column colspan="10" labelid="register;oedema" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_UREN_OEDEMA" translateresult="msas.uren.oedema"/>
+			<column colspan="10" labelid="register;diarrhea" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_UREN_DIARRHEA" translateresult="yesno"/>
+			<column colspan="10" labelid="register;vomiting" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_UREN_VOMITING" translateresult="yesno"/>
+			<column colspan="10" labelid="register;cough" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_UREN_COUGH" translateresult="yesno"/>
+			<column colspan="10" labelid="register;appetite" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_UREN_APPETITE" translateresult="msas.uren.appetite"/>
+			<column colspan="10" labelid="register;stool" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_UREN_STOOLPERDAY" translateresult="msas.ure.stool"/>
+			<column colspan="10" labelid="register;urine" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CREN_OEDEMA" translateresult="yesno"/>
+			<column colspan="10" labelid="register;breastfeeding" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_UREN_DOESURINATE" translateresult="yesno"/>
+			<column colspan="10" labelid="register;respiratoryfrequence" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.[GENERAL.ANAMNESE]ITEM_TYPE_RESPIRATORY_FRENQUENCY" translateresult=""/>
+			<column colspan="10" labelid="register;temperature" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.[GENERAL.ANAMNESE]ITEM_TYPE_TEMPERATURE" translateresult=""/>
+			<column colspan="10" labelid="register;eyes" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_UREN_EYES" translateresult="msas.uren.eyes"/>
+			<column colspan="10" labelid="register;ears" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_UREN_EARS" translateresult="msas.uren.ears"/>
+			<column colspan="10" labelid="register;subcostal" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_UREN_CHESTINDRAWING" translateresult="yesno"/>
+			<column colspan="10" labelid="register;conjunctiva" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_UREN_CONJUNCTIVA" translateresult="msas.uren.conjunctiva"/>
+			<column colspan="10" labelid="register;dehydration" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_UREN_DEHYDRATION" translateresult="msas.uren.dehydration"/>
+			<column colspan="10" labelid="register;disability" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_UREN_HANDICAP" translateresult="yesno"/>
+			<column colspan="10" labelid="register;limbs" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_UREN_LIMBS" translateresult="msas.uren.limbs"/>
+			<column colspan="20" labelid="register;vitamina" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_UREN_VITAMINADATE" translateresult=""/>
+			<column colspan="20" labelid="register;mebendazole" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_UREN_MEBENDAZOLEDATE" translateresult=""/>
+			<column colspan="20" labelid="register;amoxycillin" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_UREN_AMOXYCYCILLINDATE" translateresult=""/>
+			<column colspan="20" labelid="register;var" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_UREN_MUMPSDATE" translateresult=""/>
+		</columns>
+	</register>
+	<register pagesize="A3" id="14" accessright="msas.registry.uren.select" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MSAS_REGISTRY_UREN_FOLLOWUP">
+		<columns>
+			<column colspan="10" labelid="register;ordernr" source="system" name="id"/>
+			<column colspan="15" labelid="register;masnumber" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MASNUMBER" translateresult=""/>
+			<column colspan="10" labelid="register;patientid" source="patient" name="personid"/>
+			<column colspan="20" labelid="register;patientfullname" source="patient" name="fullname"/>
+			<column colspan="10" labelid="register;patientgender" source="patient" name="gender"/>
+			<column colspan="10" labelid="register;patientage" source="patient" name="ageinyears"/>
+			<column colspan="20" labelid="register;patientaddress" source="patient" name="address"/>
+			<column colspan="20" labelid="register;date" source="transaction" name="updatetime"/>
+			<column colspan="10" labelid="register;weight" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_BIOMETRY_WEIGHT" translateresult=""/>
+			<column colspan="10" labelid="register;height" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_BIOMETRY_HEIGHT" translateresult=""/>
+			<column colspan="10" labelid="web.occup;medwan.healthrecord.weightforlength" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_WEIGHT4HEIGHT_ZSCORE" translateresult=""/>
+			<column colspan="10" labelid="register;pb" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_ARM_CIRCUMFERENCE" translateresult=""/>
+			<column colspan="10" labelid="register;oedema" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_UREN_OEDEMA" translateresult="msas.uren.oedema"/>
+			<column colspan="10" labelid="register;vomiting" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_UREN_VOMITING" translateresult="yesno"/>
+			<column colspan="10" labelid="register;cough" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_UREN_COUGH" translateresult="yesno"/>
+			<column colspan="10" labelid="register;appetite" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_UREN_APPETITE" translateresult="msas.uren.appetite"/>
+			<column colspan="10" labelid="register;stool" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_UREN_STOOLPERDAY" translateresult="msas.ure.stool"/>
+			<column colspan="10" labelid="register;respiratoryfrequence" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.[GENERAL.ANAMNESE]ITEM_TYPE_RESPIRATORY_FRENQUENCY" translateresult=""/>
+			<column colspan="10" labelid="register;temperature" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.[GENERAL.ANAMNESE]ITEM_TYPE_TEMPERATURE" translateresult=""/>
+			<column colspan="10" labelid="register;dehydration" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_UREN_DEHYDRATION" translateresult="msas.uren.dehydration"/>
+			<column colspan="10" labelid="register;anemia" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_UREN_ANEMIA" translateresult="yesno"/>
+			<column colspan="10" labelid="register;skininfection" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_UREN_SKININFECTION" translateresult="yesno"/>
+			<column colspan="10" labelid="register;action" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_UREN_ACTION" translateresult=""/>
+			<column colspan="10" labelid="register;atpebags" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_UREN_ATPEBAGS" translateresult=""/>
+			<column colspan="20" labelid="register;examinator" source="transaction" name="user"/>
+		</columns>
+	</register>
+	<register pagesize="A3" id="15" accessright="msas.registry.report.dentist.select" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MSAS_REGISTRY_DENTIST">
+		<columns>
+			<column colspan="10" labelid="register;ordernr" source="system" name="id"/>
+			<column colspan="12" labelid="register;date" source="transaction" name="updatetime"/>
+			<column colspan="10" labelid="register;patientid" source="patient" name="personid"/>
+			<column colspan="30" labelid="register;patientfullname" source="patient" name="fullname"/>
+			<column colspan="10" labelid="register;patientage" source="patient" name="ageinyears"/>
+			<column colspan="10" labelid="register;patientgender" source="patient" name="gender"/>
+			<column colspan="30" labelid="register;patientaddress" source="patient" name="address"/>
+			<column colspan="10" labelid="register;pregnantwomen" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_PREGNANTWOMEN" translateresult="yesno"/>
+			<column colspan="30" labelid="register;motive" source="encounter" name="reasonsforencounter" translateresult=""/>
+			<column colspan="30" labelid="register;morbidity" concatenate="1" source="transaction;transaction;transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DENTIST_PROBLEM;be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DENTIST_PROBLEM2;be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DENTIST_PROBLEM3" translateresult="msas.dentist.problems;msas.dentist.problems;msas.dentist.problems"/>
+			<column colspan="30" labelid="register;diagnosis" source="diagnosis" name="icd10withlocalcodes"/>
+			<column colspan="10" labelid="register;CAO" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DENTIST_CAO" translateresult=""/>
+			<column colspan="10" labelid="register;CO" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DENTIST_CO" translateresult=""/>
+			<column colspan="30" labelid="register;treatment" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DENTIST_TREATMENT" translateresult=""/>
+			<column colspan="30" labelid="register;acts" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DENTIST_ACTS" translateresult="msas.dentist.acts"/>
+			<!--<column colspan="30" labelid="register;insurance" source="financial" name="insurer"/> -->
+			<column colspan="20" labelid="web;paymentmode" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DENTIST_PAYMENT_MODE" translateresult="msas.dentist.paymentmode"/>
+			<column colspan="20" labelid="register;reference" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DENTIST_REFERENCE" translateresult="msas.dentist.reference"/>
+			<column colspan="30" labelid="register;observations" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_DENTIST_OBSERVATION" translateresult=""/>
+		</columns>
+	</register>
+	<register pagesize="A3" id="16" accessright="occup.anesthesiareport.select" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_ANESTHESIA_REPORT" title="anesthesiaregister">
+		<columns>
+			<column colspan="10" labelid="register;ordernr" source="system" name="id"/>
+			<column colspan="10" labelid="register;date" source="transaction" name="updatetime"/>
+			<column colspan="10" labelid="register;patientid" source="patient" name="personid"/>
+			<column colspan="30" labelid="register;patientfullname" source="patient" name="fullname"/>
+			<column colspan="10" labelid="register;patientage" source="patient" name="ageinyears"/>
+			<column colspan="10" labelid="register;patientgender" source="patient" name="gender"/>
+			<column colspan="30" labelid="register;diagnosis" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_ANESTHESIA_REPORT_DIAGNOSTIC" translateresult=""/>
+			<column colspan="30" labelid="register;intervention" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_ANESTHESIA_REPORT_INTERVENTION" translateresult=""/>
+			<column colspan="15" labelid="register;general" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_ANESTHESIA_REPORT_ANESTHESIE_GENERAL" translateresult="registre"/>
+			<column colspan="15" labelid="register;regional" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_ANESTHESIA_REPORT_ANESTHESIE_REGIONAL" translateresult="registre"/>
+			<column colspan="15" labelid="register;local" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_ANESTHESIA_REPORT_ANESTHESIE_LOCAL" translateresult="registre"/>
+			<column colspan="30" labelid="register;anesthesiologist" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_ANESTHESIA_REPORT_ANESTHESIST" translateresult="{user}"/>
+			<column colspan="30" labelid="register;nurse" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_ANESTHESIA_REPORT_NURSE" translateresult="{user}"/>
+			<column colspan="30" labelid="register;surgeon" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_ANESTHESIA_REPORT_SURGEON" translateresult="{user}"/>
+			<column colspan="30" labelid="register;instrumentalist" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_ANESTHESIA_REPORT_INSTRUMENTALIST" translateresult=""/>
+			<column colspan="30" labelid="register;other" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_ANESTHESIA_REPORT_OTHER" translateresult=""/>
+		</columns>
+	</register>	
+	<register pagesize="A3" id="17" accessright="occup.anesthesiareport.select" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_ANESTHESIA_REPORT" title="csectionregister">
+		<columns>
+			<column colspan="10" labelid="register;ordernr" source="system" name="id"/>
+			<column colspan="10" labelid="register;patientid" source="patient" name="personid"/>
+			<column colspan="20" labelid="register;firstname" source="patient" name="firstname"/>
+			<column colspan="20" labelid="register;lastname" source="patient" name="lastname"/>
+			<column colspan="20" labelid="register;natreg" source="patient" name="natreg"/>
+			<column colspan="10" labelid="register;patientage" source="patient" name="ageinyears"/>
+			<column colspan="20" labelid="register;telephone" source="patient" name="telephone"/>
+			<column colspan="30" labelid="register;address" source="patient" name="address"/>
+			<column colspan="10" labelid="register;operatingtheaterid" source="transaction" name="id"/>
+			<column colspan="30" labelid="register;diagnosis" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_ANESTHESIA_REPORT_DIAGNOSTIC" translateresult=""/>
+			<column colspan="20" labelid="register;intervention" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_ANESTHESIA_REPORT_INTERVENTION" translateresult=""/>
+			<column colspan="10" labelid="register;date" source="transaction" name="updatetime"/>
+			<column colspan="10" labelid="register;admissionduration" source="encounter" name="duration"/>
+		</columns>
+	</register>	
+	<register pagesize="A3" id="18" accessright="msas.cancer.uterus.select" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MSAS_UTERUSCANCER">
+		<columns>
+			<column colspan="10" labelid="register;ordernr" source="system" name="id"/>
+			<column colspan="10" labelid="register;date" source="transaction" name="updatetime"/>
+			<column colspan="10" labelid="register;patientid" source="patient" name="personid"/>
+			<column colspan="30" labelid="register;patientfullname" source="patient" name="fullname"/>
+			<column colspan="10" labelid="register;patientage" source="patient" name="ageinyears"/>
+			<column colspan="30" labelid="register;patientaddress" source="patient" name="address"/>
+			<column colspan="20" labelid="register;telephone" source="patient" name="telephone"/>
+			<column colspan="20" labelid=";Statut matrimonial" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MATRIMONIALSTATUS" translateresult="msas.matrimonialstatus"/>
+			<column colspan="20" labelid=";Régime matrimonial" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MATRIMONIALREGIMEN" translateresult="msas.matrimonialregimen"/>
+			<column colspan="10" labelid=";Gestité" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_GESTITY"/>
+			<column colspan="10" labelid=";Parité" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_PARITY"/>
+			<column colspan="20" labelid=";Contraception" concatenate="1" source="transaction;transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CONTRACEPTION;be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CONTRACEPTIONDURATION" translateresult="msas.contraception;"/>
+			<column colspan="30" labelid=";Antécédents médicaux" concatenate="1" source="transaction;transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MEDICALANTECEDENTS;be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MEDICALANTECEDENTS_TEXT" translateresult="msas.cancerscreening.antecedents;"/>
+			<column colspan="20" labelid=";Examen seins" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_BREASTEXAMINATION"/>
+			<column colspan="10" labelid=";IVA" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_IVA"/>
+			<column colspan="10" labelid=";IVL" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_IVL"/>
+			<column colspan="30" labelid=";Conduite à tenir" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_APPROACH"/>
+			<column colspan="20" labelid=";Observations" concatenate="1" source="transaction;transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_NEXTAPPOINTMENT;be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_OBSERVATIONS" translateresult="$RDV:$"/>
+		</columns>
+	</register>
+	<register pagesize="A2" id="19" accessright="msas.pcr.select" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MSAS_PCR">
+		<columns>
+			<column colspan="10" labelid="register;ordernr" source="system" name="id"/>
+			<column colspan="10" labelid=";Code national mère" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_NATIONALCODEOFMOTHER"/>
+			<column colspan="20" labelid=";Nom de la mère" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MOTHERNAMES"/>
+			<column colspan="10" labelid=";Sérologie mère" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_SEROLOGYMOTHER"/>
+			<column colspan="10" labelid=";Provenance" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TESTORIGIN"/>
+			<column colspan="20" labelid=";Schéma thér. mère" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_THERAPYMOTHER"/>
+			<column colspan="10" labelid=";Début ARV mère" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_STARTARVMOTHER"/>
+			<column colspan="10" labelid=";ID enfant" source="patient" name="personid"/>
+			<column colspan="30" labelid=";Noms enfant" source="patient" name="fullname"/>
+			<column colspan="10" labelid="register;gender" source="patient" name="gender"/>
+			<column colspan="10" labelid="register;patientage" source="patient" name="childage"/>
+			<column colspan="10" labelid=";Prophylaxe ARV enfant" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_PROHYLAXISARV" translateresult="yesno"/>
+			<column colspan="20" labelid=";Protocole ARV enfant" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_PROHYLAXISARVSCHEMA"/>
+			<column colspan="10" labelid=";Date début ARV enfant" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_STARTARVCHILD"/>
+			<column colspan="10" labelid=";Mode alimentation" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TYPEOFFEEDING" translateresult="msas.pcr.feeding"/>
+			<column colspan="10" labelid=";PCR" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_PCRTYPE" translateresult="msas.pcr.type"/>
+			<column colspan="10" labelid=";ID labo" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_PCRID"/>
+			<column colspan="10" labelid=";Date prélèvement" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_PCRSAMPLE"/>
+			<column colspan="10" labelid=";Réception prélèvement" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_PCRSAMPLERECEIVED"/>
+			<column colspan="10" labelid=";Date réalisation" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_PCRTEST"/>
+			<column colspan="10" labelid=";Date résultat" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_PCRRESULTDATE"/>
+			<column colspan="10" labelid=";Résultat PCR" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_PCRRESULT"/>
+			<column colspan="10" labelid=";Date sérologie" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_DATESEROLOGY"/>
+			<column colspan="10" labelid=";Age enfant sérologie" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CHILDAGE" translateresult="$$ mois"/>
+			<column colspan="10" labelid=";Résultat sérologie" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_SEROLOGYRESULT"/>
+			<column colspan="20" labelid=";Observations" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_OBSERVATIONS"/>
+		</columns>
+	</register>
+	<register pagesize="A1" id="20" accessright="msas.ptme.select" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MSAS_PTME">
+		<columns>
+			<column colspan="10" labelid=";Date" source="transaction" name="updatetime"/>
+			<column colspan="10" labelid=";Code national mère" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_NATIONALCODEOFMOTHER"/>
+			<column colspan="10" labelid=";ID" source="patient" name="personid"/>
+			<column colspan="30" labelid=";Noms" source="patient" name="fullname"/>
+			<column colspan="30" labelid="register;patientaddress" source="patient" name="address"/>
+			<column colspan="10" labelid=";Nro CPN" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CPNORDER"/>
+			<column colspan="10" labelid=";Confirmation VIH" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_DATECONFIRMEDHIV"/>
+			<column colspan="10" labelid=";Profil VIH" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_SEROLOGYMOTHER"/>
+			<column colspan="10" labelid=";Début ARV" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_STARTARVMOTHER"/>
+			<column colspan="20" labelid=";Protocole ARV" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_THERAPYMOTHER"/>
+			<column colspan="10" labelid=";Age gestastionnel" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_GESTATIONALAGE" translateresult="$$ sem."/>
+			<column colspan="10" labelid=";Terme prévu" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FORESEENTERM"/>
+			<column colspan="10" labelid=";Date charge virale" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_VIRALLOADDATE"/>
+			<column colspan="10" labelid=";Date résultat charge virale" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_VIRALLOADRESULTDATE"/>
+			<column colspan="10" labelid=";Résultat charge virale" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_VIRALLOADRESULT"/>
+			<column colspan="10" labelid=";Date accouchement" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_DELIVERYDATE"/>
+			<column colspan="10" labelid=";Lieu accouchement" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_DELIVERYLOCATION"/>
+			<column colspan="10" labelid=";Proph. ARV NN" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_ARVNEWBORN" translateresult="yesno"/>
+			<column colspan="10" labelid=";Date ARV NN" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_ARVNEWBORNDATE"/>
+			<column colspan="20" labelid=";Protocole ARV NN" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_ARVNEWBORNSCHEMA"/>
+			<column colspan="10" labelid=";Dépistage partenaire" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_PARTNERSCREENING"/>
+			<column colspan="10" labelid=";Profil partenaire" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_PARTNERPROFILE"/>
+			<column colspan="10" labelid=";Age PCR1" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_PCRCHILDAGE_1"/>
+			<column colspan="10" labelid=";Prélèvement PCR1" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_PCRSAMPLE_1"/>
+			<column colspan="10" labelid=";Réception PCR1" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_PCRSAMPLERECEIVED_1"/>
+			<column colspan="10" labelid=";Résultat PCR1" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_PCRRESULT_1"/>
+			<column colspan="10" labelid=";Age PCR2" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_PCRCHILDAGE_2"/>
+			<column colspan="10" labelid=";Prélèvement PCR2" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_PCRSAMPLE_2"/>
+			<column colspan="10" labelid=";Réception PCR2" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_PCRSAMPLERECEIVED_2"/>
+			<column colspan="10" labelid=";Résultat PCR2" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_PCRRESULT_2"/>
+			<column colspan="10" labelid=";Age PCR3" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_PCRCHILDAGE_3"/>
+			<column colspan="10" labelid=";Prélèvement PCR3" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_PCRSAMPLE_3"/>
+			<column colspan="10" labelid=";Réception PCR3" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_PCRSAMPLERECEIVED_3"/>
+			<column colspan="10" labelid=";Résultat PCR3" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_PCRRESULT_3"/>
+			<column colspan="10" labelid=";Date sérologie 14m+" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_SEROLOGYDATE"/>
+			<column colspan="10" labelid=";Age sérologie 14m+" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_SEROLOGYCHILDAGE"/>
+			<column colspan="10" labelid=";Résultat sérologie 14m+" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_SEROLOGYRESULT"/>
+			<column colspan="10" labelid=";Début cotrimoxazole" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_COTRIMOXAZOLEBEGIN"/>
+			<column colspan="10" labelid=";Fin cotrimoxazole" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_COTRIMOXAZOLEEND"/>
+			<column colspan="10" labelid=";Date CPoN1" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CPONDATE_1"/>
+			<column colspan="10" labelid=";Vaccins OK CPoN1" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_VACCINATIONSTATUS_1"/>
+			<column colspan="10" labelid=";PF CPoN1" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FAMILYPLANNING_1"/>
+			<column colspan="10" labelid=";Date CPoN2" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CPONDATE_2"/>
+			<column colspan="10" labelid=";Vaccins OK CPoN2" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_VACCINATIONSTATUS_2"/>
+			<column colspan="10" labelid=";PF CPoN2" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FAMILYPLANNING_2"/>
+			<column colspan="10" labelid=";Date CPoN3" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CPONDATE_3"/>
+			<column colspan="10" labelid=";Vaccins OK CPoN3" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_VACCINATIONSTATUS_3"/>
+			<column colspan="10" labelid=";PF CPoN3" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FAMILYPLANNING_3"/>
+			<column colspan="30" labelid=";Observations" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_OBSERVATIONS"/>
+		</columns>
+	</register>
+	<register pagesize="A1" id="21" accessright="msas.kangaroo.select" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MSAS_KANGAROO">
+		<columns>
+			<column colspan="10" labelid="register;ordernr" source="system" name="id"/>
+			<column colspan="10" labelid="register;patientid" source="patient" name="personid"/>
+			<column colspan="30" labelid="register;patientfullname" source="patient" name="fullname"/>
+			<column colspan="10" labelid="register;patientgender" source="patient" name="gender"/>
+			<column colspan="10" labelid="register;dateofbirth" source="patient" name="dateofbirth"/>
+			<column colspan="10" labelid="register;age" source="patient" name="childage"/>
+			<column colspan="10" labelid=";Nom mère" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MOTHERNAMES"/>
+			<column colspan="20" labelid="register;patientaddress" source="patient" name="address"/>
+			<column colspan="10" labelid="register;telephone" source="patient" name="telephone"/>
+			<column colspan="20" labelid=";Traitement anténatal" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_ANTENATALTREATMENT" translateresult="msas.anetanatal.treatment"/>
+			<column colspan="20" labelid=";Accouchement" concatenate="1" source="transaction;transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_DELIVERY_MODALITY;be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_DELIVERY_ROUTE" translateresult="msas.delivery.modality;msas.delivery.route"/>
+			<column colspan="10" labelid=";Réanimation" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_REANIMATION" translateresult="yesno"/>
+			<column colspan="10" labelid=";P naiss." source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_BIRTH_WEIGHT"/>
+			<column colspan="10" labelid=";T naiss." source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_BIRTH_HEIGHT"/>
+			<column colspan="10" labelid=";PT naiss." source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_BIRTH_WEIGHTFORHEIGHT"/>
+			<column colspan="10" labelid=";PB naiss." source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_BIRTH_ARMCIRCUMFERENCE"/>
+			<column colspan="10" labelid=";PC naiss." source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_BIRTH_HEADCIRCUMFERENCE"/>
+			<column colspan="20" labelid=";Signes danger" concatenate="1" source="transaction;transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_DANGERSIGNS;be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_DANGERSIGNS_TEXT" translateresult="yesno;"/>
+			<column colspan="10" labelid=";Hospitalisation" concatenate="1" source="transaction;transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_HOSPITALISATIONS;be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_HOSPITALISATION_DURATION" translateresult="yesno;$$ jours"/>
+			<column colspan="10" labelid=";SMK âge" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_SMK_STARTAGE"/>
+			<column colspan="10" labelid=";SMK poids" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_SMK_STARTWEIGHT"/>
+			<column colspan="10" labelid=";SMK problèmes" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_SMK_PROBLEMS"/>
+			<column colspan="10" labelid=";SMK arrêt" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_SMK_STOPDATE"/>
+			<column colspan="10" labelid=";SMK motif arrêt" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_SMK_REASONFORSTOP"/>
+			<column colspan="10" labelid=";P arrêt" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_STOP_WEIGHT"/>
+			<column colspan="10" labelid=";T arrêt" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_STOP_HEIGHT"/>
+			<column colspan="10" labelid=";PT arrêt" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_STOP_WEIGHTFORHEIGHT"/>
+			<column colspan="10" labelid=";PB arrêt" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_STOP_ARMCIRCUMFERENCE"/>
+			<column colspan="10" labelid=";PC arrêt" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_STOP_HEADCIRCUMFERENCE"/>
+			<column colspan="10" labelid=";Rang visite" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_SMK_VISITNR"/>
+			<column colspan="10" labelid=";Date visite" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_SMK_VISITDATE"/>
+			<column colspan="10" labelid=";Age visite" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_SMK_VISITAGE"/>
+			<column colspan="10" labelid=";Poids visite" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_SMK_VISITWEIGHT"/>
+			<column colspan="10" labelid=";Taille visite" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_SMK_VISITHEIGHT"/>
+			<column colspan="10" labelid=";Temp visite" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_SMK_VISITTEMPERATURE"/>
+			<column colspan="10" labelid=";PB visite" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_SMK_VISITARMCIRCUMFERENCE"/>
+			<column colspan="10" labelid=";PC visite" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_SMK_VISITHEADCIRCUMFERENCE"/>
+			<column colspan="10" labelid=";PT visite" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_SMK_VISITWEIGHTFORHEIGHT"/>
+			<column colspan="10" labelid=";Evolution" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_SMK_OUTCOME" translateresult="msas.smk.outcome"/>
+			<column colspan="10" labelid=";Alimentation" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_SMK_FEEDING" translateresult="msas.smk.feeding"/>
+			<column colspan="20" labelid=";Observations" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_OBSERVATIONS"/>
+		</columns>
+	</register>
+	<register pagesize="A3" id="22" accessright="msas.referrals.select" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MSAS_REFERRALS">
+		<columns>
+			<column colspan="10" labelid="register;ordernr" source="system" name="id"/>
+			<column colspan="10" labelid=";Date" source="transaction" name="updatetime"/>
+			<column colspan="10" labelid="register;patientid" source="patient" name="personid"/>
+			<column colspan="20" labelid="register;patientfullname" source="patient" name="fullname"/>
+			<column colspan="10" labelid="register;age" source="patient" name="childage"/>
+			<column colspan="10" labelid="register;patientgender" source="patient" name="gender"/>
+			<column colspan="20" labelid="register;patientaddress" source="patient" name="address"/>
+			<column colspan="10" labelid="register;telephone" source="patient" name="telephone"/>
+			<column colspan="20" labelid=";Structure référente" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_REFERRINGSTRUCTURE"/>
+			<column colspan="10" labelid=";No fiche référence" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_REFERRALDOCNUMBER"/>
+			<column colspan="10" labelid=";Qualification référant" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_REFERRINGAGENTQUALIFICATION" translateresult="msas.referringagent"/>
+			<column colspan="20" labelid=";Diagnostic/traitement référant" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TREATMENTATORIGIN"/>
+			<column colspan="10" labelid=";Qualification agent CS" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_REFERREDAGENTQUALIFICATION" translateresult="msas.referredagent"/>
+			<column colspan="20" labelid=";Diagnostic/traitement CS" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TREATMENTATDESTINATION"/>
+			<column colspan="20" labelid=";Motif référence" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_REASONFORREFERRAL" translateresult="msas.reasonforreferral"/>
+			<column colspan="10" labelid=";Moyen transport" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MEANSOFTRANSPORTATION" translateresult="msas.meansoftransportation"/>
+			<column colspan="10" labelid=";No fiche rétroinformation" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_COUNTERREFERRALDOCNUMBER"/>
+		</columns>
+	</register>
+	<register pagesize="A4" id="23" accessright="msas.ultrasound.select" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MSAS_ULTRASOUND">
+		<columns>
+			<column colspan="10" labelid="register;ordernr" source="system" name="id"/>
+			<column colspan="10" labelid=";Date" source="transaction" name="updatetime"/>
+			<column colspan="10" labelid="register;patientid" source="patient" name="personid"/>
+			<column colspan="20" labelid="register;patientfullname" source="patient" name="fullname"/>
+			<column colspan="10" labelid="register;age" source="patient" name="childage"/>
+			<column colspan="20" labelid="register;patientaddress" source="patient" name="address"/>
+			<column colspan="8" labelid=";Gestité" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_GESTITY"/>
+			<column colspan="8" labelid=";Parité" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_PARITY"/>
+			<column colspan="20" labelid=";Motifs" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_REASON"/>
+			<column colspan="20" labelid=";Résultats" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_RESULT"/>
+			<column colspan="10" labelid=";Prescripteur" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_PRESCRIBER"/>
+			<column colspan="10" labelid=";Examinateur" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_EXAMINATOR"/>
+			<column colspan="20" labelid=";Observations" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_OBSERVATIONS"/>
+		</columns>
+	</register>
+	<register pagesize="A3" id="24" accessright="msas.tbcontact.select" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MSAS_TBCONTACT">
+		<columns>
+			<column colspan="10" labelid="register;ordernr" source="system" name="id"/>
+			<column colspan="10" labelid=";Date" source="transaction" name="updatetime"/>
+			<column colspan="10" labelid=";No registre cas index" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_INDEXCASENUMBER"/>
+			<column colspan="10" labelid=";Type de cas index" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_INDEXCASETYPE"/>
+			<column colspan="10" labelid="register;patientid" source="patient" name="personid"/>
+			<column colspan="20" labelid="register;patientfullname" source="patient" name="fullname"/>
+			<column colspan="10" labelid="register;age" source="patient" name="childage"/>
+			<column colspan="10" labelid="register;gender" source="patient" name="gender"/>
+			<column colspan="20" labelid="register;patientaddress" source="patient" name="address"/>
+			<column colspan="10" labelid=";Signes suspects TB" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_SIGNSPRESENT" translateresult="yesno"/>
+			<column colspan="10" labelid=";Date RX pulmonaire" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_PULMONARYXRAYDATE"/>
+			<column colspan="15" labelid=";Resultat RX pulmonaire" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_PULMONARYXRAYRESULT"/>
+			<column colspan="10" labelid=";Date Xpert MTB/RIF" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_XPERTDATE"/>
+			<column colspan="15" labelid=";Resultat Xpert MTB/RIF" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_XPERTRESULT"/>
+			<column colspan="10" labelid=";Date test VIH" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_HIVDATE"/>
+			<column colspan="15" labelid=";Resultat test VIH" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_HIVRESULT" translateresult="posneg"/>
+			<column colspan="10" labelid=";Diagnostic TB posé" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_DIAGNOSIS" translateresult="yesno"/>
+			<column colspan="10" labelid=";Date registre TB" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_REGISTRATIONDATE"/>
+			<column colspan="10" labelid=";No registre TB" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_REGISTRATIONNUMBER"/>
+			<column colspan="10" labelid=";Date registre prévention TB" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_PREVREGISTRATIONDATE"/>
+			<column colspan="10" labelid=";No registre prévention TB" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_PREVREGISTRATIONNUMBER"/>
+			<column colspan="20" labelid=";Observations" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_OBSERVATIONS"/>
+		</columns>
+	</register>
+	<register pagesize="A1" id="25" accessright="msas.tbtreatment.select" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MSAS_TBTREATMENT">
+		<columns>
+			<column colspan="10" labelid=";Date" source="transaction" name="updatetime"/>
+			<column colspan="10" labelid=";No CDT" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_CDTNUMBER"/>
+			<column colspan="10" labelid="register;patientid" source="patient" name="personid"/>
+			<column colspan="20" labelid="register;patientfullname" source="patient" name="fullname"/>
+			<column colspan="10" labelid="register;gender" source="patient" name="gender"/>
+			<column colspan="10" labelid="register;age" source="patient" name="childage"/>
+			<column colspan="10" labelid=";Source orientation" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_ORIENTATIONSOURCE"/>
+			<column colspan="20" labelid="register;patientaddress" source="patient" name="address"/>
+			<column colspan="10" labelid="register;telephone" source="patient" name="telephone"/>
+			<column colspan="10" labelid="register;profession" source="patient" name="profession"/>
+			<column colspan="10" labelid=";Population vulnérable" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_VULNERABLEPOPULATION" translateresult="msas.vulnerable.population"/>
+			<column colspan="10" labelid=";Unité de traitement" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_TREATMENTUNIT"/>
+			<column colspan="10" labelid=";Début du traitement" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_STARTTREATMENT"/>
+			<column colspan="12" labelid=";Régime thérapeutique" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_THERAPEUTICSCHEMA"/>
+			<column colspan="10" labelid=";Site maladie" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_INFECTIONSITE" translateresult="msas.tb.site"/>
+			<column colspan="10" labelid=";Type de patient" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_PATIENTTYPE" translateresult="msas.tb.patienttype"/>
+			<column colspan="10" labelid=";Date frottis avant traitement" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_BTSWABDATE"/>
+			<column colspan="10" labelid=";ID labo frottis avant traitement" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_BTSWABID"/>
+			<column colspan="10" labelid=";Résultat frottis avant traitement" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_BTSWABRESULT"/>
+			<column colspan="10" labelid=";Date radio avant traitement" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_BTXRAYDATE"/>
+			<column colspan="10" labelid=";Résultat radio avant traitement" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_BTXRAYRESULT"/>
+			<column colspan="10" labelid=";Date GenXpert avant traitement" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_BTGENXPERTDATE"/>
+			<column colspan="10" labelid=";ID labo GenXpert avant traitement" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_BTGENXPERTID"/>
+			<column colspan="10" labelid=";Résultat GenXpert avant traitement" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_BTGENXPERTRESULT"/>
+			<column colspan="10" labelid=";Date frottis à 2 mois" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_2MSWABDATE"/>
+			<column colspan="10" labelid=";ID labo frottis à 2 mois" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_2MSWABID"/>
+			<column colspan="10" labelid=";Résultat frottis à 2 mois" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_2MSWABRESULT"/>
+			<column colspan="12" labelid=";Date consultation à 2 mois" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_2MCONSDATE"/>
+			<column colspan="12" labelid=";Résultat consultation à 2 mois" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_2MCONSRESULT"/>
+			<column colspan="10" labelid=";Date frottis à 5 mois" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_5MSWABDATE"/>
+			<column colspan="10" labelid=";ID labo frottis à 5 mois" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_5MSWABID"/>
+			<column colspan="10" labelid=";Résultat frottis à 5 mois" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_5MSWABRESULT"/>
+			<column colspan="12" labelid=";Date consultation à 5 mois" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_5MCONSDATE"/>
+			<column colspan="12" labelid=";Résultat consultation à 5 mois" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_5MCONSRESULT"/>
+			<column colspan="10" labelid=";Date frottis fin traitement" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_ENDSWABDATE"/>
+			<column colspan="10" labelid=";ID labo frottis fin traitement" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_ENDSWABID"/>
+			<column colspan="10" labelid=";Résultat frottis fin traitement" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_ENDSWABRESULT"/>
+			<column colspan="12" labelid=";Date consultation fin traitement" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_ENDCONSDATE"/>
+			<column colspan="12" labelid=";Résultat consultation fin traitement" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_ENDCONSRESULT"/>
+			<column colspan="10" labelid=";TDO sanitaire" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_TDO" translateresult="yesno"/>
+			<column colspan="10" labelid=";Date résultat traitement" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_TREATMENTDATE"/>
+			<column colspan="10" labelid=";Résultat traitement" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_TREATMENTRESULT"/>
+			<column colspan="10" labelid=";Dépistage VIH" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_HIVSCREENING" translateresult="msas.tb.hivscreening"/>
+			<column colspan="12" labelid=";Cotrimoxazole" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_COTRIM" translateresult="yesno"/>
+			<column colspan="12" labelid=";Début cotrimoxazole" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_COTRIMDATE"/>
+			<column colspan="10" labelid=";ARV" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_ARV" translateresult="yesno"/>
+			<column colspan="10" labelid=";Début ARV" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_ARVDATE"/>
+			<column colspan="10" labelid=";TB+Diabète" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TB_DIABETES" translateresult="yesno"/>
+			<column colspan="20" labelid=";Observations" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_OBSERVATIONS"/>
+		</columns>
+	</register>
+	<register pagesize="A3" id="26" accessright="msas.leprosity.select" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MSAS_LEPROSITY">
+		<columns>
+			<column colspan="15" labelid=";Date enregistrement" source="transaction" name="updatetime"/>
+			<column colspan="10" labelid="register;ordernr" source="system" name="id"/>
+			<column colspan="10" labelid="register;patientid" source="patient" name="personid"/>
+			<column colspan="20" labelid="register;patientfullname" source="patient" name="fullname"/>
+			<column colspan="10" labelid="register;gender" source="patient" name="gender"/>
+			<column colspan="10" labelid="register;age" source="patient" name="childage"/>
+			<column colspan="20" labelid="register;patientaddress" source="patient" name="address"/>
+			<column colspan="20" labelid=";Unité de traitement" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_LP_TREATMENTUNIT"/>
+			<column colspan="13" labelid=";Classification" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_LP_CLASSIFICATION" translateresult="msas.lepra.classification"/>
+			<column colspan="11" labelid=";Traitement PCT" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_LP_TREATMENT" translateresult="msas.lepra.treatment"/>
+			<column colspan="10" labelid=";Début traitement" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_LP_TREATMENTSTART"/>
+			<column colspan="10" labelid=";Type de malade" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_LP_PATIENTTYPE" translateresult="msas.lepra.patienttype"/>
+			<column colspan="10" labelid=";Pre D" concatenate="1" source="transaction;transaction;transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_0M_R_Y;be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_0M_R_M;be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_0M_R_P" translateresult="$Y: ${nl};$M: ${nl};$P: $"/>
+			<column colspan="10" labelid=";Pre L" concatenate="1" source="transaction;transaction;transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_0M_L_Y;be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_0M_L_M;be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_0M_L_P" translateresult="$Y: ${nl};$M: ${nl};$P: $"/>
+			<column colspan="10" labelid=";3 mois D" concatenate="1" source="transaction;transaction;transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_3M_R_Y;be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_3M_R_M;be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_3M_R_P" translateresult="$Y: ${nl};$M: ${nl};$P: $"/>
+			<column colspan="10" labelid=";3 mois L" concatenate="1" source="transaction;transaction;transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_3M_L_Y;be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_3M_L_M;be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_3M_L_P" translateresult="$Y: ${nl};$M: ${nl};$P: $"/>
+			<column colspan="10" labelid=";6 mois D" concatenate="1" source="transaction;transaction;transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_6M_R_Y;be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_6M_R_M;be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_6M_R_P" translateresult="$Y: ${nl};$M: ${nl};$P: $"/>
+			<column colspan="10" labelid=";6 mois L" concatenate="1" source="transaction;transaction;transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_6M_L_Y;be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_6M_L_M;be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_6M_L_P" translateresult="$Y: ${nl};$M: ${nl};$P: $"/>
+			<column colspan="10" labelid=";9 mois D" concatenate="1" source="transaction;transaction;transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_9M_R_Y;be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_9M_R_M;be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_9M_R_P" translateresult="$Y: ${nl};$M: ${nl};$P: $"/>
+			<column colspan="10" labelid=";9 mois L" concatenate="1" source="transaction;transaction;transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_9M_L_Y;be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_9M_L_M;be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_9M_L_P" translateresult="$Y: ${nl};$M: ${nl};$P: $"/>
+			<column colspan="10" labelid=";12 mois D" concatenate="1" source="transaction;transaction;transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_12M_R_Y;be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_12M_R_M;be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_12M_R_P" translateresult="$Y: ${nl};$M: ${nl};$P: $"/>
+			<column colspan="10" labelid=";12 mois L" concatenate="1" source="transaction;transaction;transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_12M_L_Y;be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_12M_L_M;be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_12M_L_P" translateresult="$Y: ${nl};$M: ${nl};$P: $"/>
+			<column colspan="10" labelid=";Arrêt traitement" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_LP_TREATMENTEND"/>
+			<column colspan="10" labelid=";Résultat traitement" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_LP_TREATMENTOUTCOME" translateresult="msas.lepra.outcome"/>
+			<column colspan="20" labelid=";Observations" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_OBSERVATIONS"/>
+		</columns>
+	</register>
+	
+	<register pagesize="A3" id="27" accessright="teleconsultation.select" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_TELECONSULTATION" title="MSAS - Registre de téléconsultations">
+		<columns>
+			<column colspan="10" labelid="register;ordernr" source="system" name="id"/>
+			<column colspan="10" labelid="register;patientid" source="patient" name="personid"/>
+			<column colspan="20" labelid="register;firstname" source="patient" name="firstname"/>
+			<column colspan="20" labelid="register;lastname" source="patient" name="lastname"/>
+			<column colspan="20" labelid="register;natreg" source="patient" name="natreg"/>
+			<column colspan="10" labelid="register;patientage" source="patient" name="ageinyears"/>
+			<column colspan="10" labelid=";Sexe" source="patient" name="gender"/>
+			<column colspan="20" labelid="register;telephone" source="patient" name="telephone"/>
+			<column colspan="30" labelid="register;address" source="patient" name="address"/>
+			<column colspan="30" labelid=";Formation sanitaire" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_DESTINATIONNAME" translateresult=""/>
+			<column colspan="30" labelid=";Prestataire" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CAREPROVIDER" translateresult=""/>
+			<column colspan="20" labelid=";Date demande" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_REQUESTDATE" translateresult=""/>
+			<column colspan="20" labelid=";Date rdv" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_APPOINTMENTDATE" translateresult=""/>
+			<column colspan="20" labelid=";Indication" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_INDICATION" translateresult="teleconsultation.indication"/>
+			<column colspan="20" labelid=";Spécialiste" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_SPECIALIST" translateresult=""/>
+			<column colspan="20" labelid=";Plaintes" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_COMPLAINTS" translateresult=""/>
+			<column colspan="20" labelid=";Diagnostic" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_DIAGNOSIS" translateresult=""/>
+			<column colspan="20" labelid=";Référence" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_REFERRALNEEDED" translateresult="teleconsultation.referral"/>
+			<column colspan="20" labelid=";Traitement" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TREATMENT" translateresult=""/>
+			<column colspan="10" labelid=";Durée en min" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_DURATION" translateresult=""/>
+		</columns>
+	</register>	
+	<register pagesize="A3" id="28" accessright="teleconsultation.select" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_TELECONSULTATION" title="MSAS - Registre de téléconsultations anonymes">
+		<columns>
+			<column colspan="10" labelid="register;ordernr" source="system" name="id"/>
+			<column colspan="10" labelid="register;patientage" source="patient" name="ageinyears"/>
+			<column colspan="10" labelid=";Sexe" source="patient" name="gender"/>
+			<column colspan="30" labelid=";Formation sanitaire" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_DESTINATIONNAME" translateresult=""/>
+			<column colspan="30" labelid=";Prestataire" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_CAREPROVIDER" translateresult=""/>
+			<column colspan="20" labelid=";Date demande" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_REQUESTDATE" translateresult=""/>
+			<column colspan="20" labelid=";Date rdv" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_APPOINTMENTDATE" translateresult=""/>
+			<column colspan="20" labelid=";Indication" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_INDICATION" translateresult="teleconsultation.indication"/>
+			<column colspan="20" labelid=";Spécialiste" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_SPECIALIST" translateresult=""/>
+			<column colspan="20" labelid=";Plaintes" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_COMPLAINTS" translateresult=""/>
+			<column colspan="20" labelid=";Diagnostic" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_DIAGNOSIS" translateresult=""/>
+			<column colspan="20" labelid=";Référence" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_REFERRALNEEDED" translateresult="teleconsultation.referral"/>
+			<column colspan="20" labelid=";Traitement" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TREATMENT" translateresult=""/>
+			<column colspan="10" labelid=";Durée en min" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_DURATION" translateresult=""/>
+		</columns>
+	</register>	
+	
+	
+</registers>

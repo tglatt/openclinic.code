@@ -1,0 +1,192 @@
+<registers>
+	<register pagesize="A4" id="1" accessright="msas.registry.report.consultations.select" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MSAS_REGISTRY_CONSULTATIONS" itemtypeneeded="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_NEWCASE" itemvalueneeded="1;">
+		<columns>
+			<column colspan="10" labelid="register;date" source="transaction" name="updatetime"/>
+			<column colspan="10" labelid=";Serial nr" source="system" name="id"/>
+			<column colspan="10" labelid=";Card nr" source="patient" name="personid"/>
+			<column colspan="30" labelid="register;patientfullname" source="patient" name="fullname"/>
+			<column colspan="30" labelid=";Nationality" source="patient" name="nationality" translateresult="country"/>
+			<column colspan="10" labelid="register;patientage" source="patient" name="childage"/>
+			<column colspan="10" labelid="register;patientgender" source="patient" name="gender"/>
+			<column colspan="30" labelid="register;patientaddress" source="patient" name="address"/>
+			<column colspan="30" labelid="register;diagnosis" source="diagnosis" name="icd10withlocalcodes"/>
+			<column colspan="30" labelid="register;treatment" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_TREATMENT" translateresult=""/>
+			<column colspan="30" labelid=";Remarks" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_CONS_OBSERVATIONS" translateresult=""/>
+		</columns>
+	</register>
+	<register pagesize="A4" id="2" accessright="occup.medicalimagingrequest.select" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MIR2">
+		<columns>
+			<column colspan="10" labelid=";X-Ray nr" source="system" name="id"/>
+			<column colspan="10" labelid="register;date" source="transaction" name="updatetime"/>
+			<column colspan="30" labelid="register;patientfullname" source="patient" name="fullname"/>
+			<column colspan="10" labelid="register;patientage" source="patient" name="childage"/>
+			<column colspan="10" labelid="register;patientgender" source="patient" name="gender"/>
+			<column colspan="30" labelid=";Part of body examined" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MIR2_TYPE" translateresult="mir_type"/>
+			<column colspan="10" labelid=";34x43cm" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FILM1" translateresult=""/>
+			<column colspan="10" labelid=";35x35cm" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FILM2" translateresult=""/>
+			<column colspan="10" labelid=";30x40cm" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FILM3" translateresult=""/>
+			<column colspan="10" labelid=";24x30cm" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FILM4" translateresult=""/>
+			<column colspan="10" labelid=";18x24cm" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FILM5" translateresult=""/>
+			<column colspan="10" labelid=";18x43cm" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FILM6" translateresult=""/>
+			<column colspan="10" labelid=";Reject" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_OTHER_REQUESTS_PRESTATION" translateresult="web.occup"/>
+			<column colspan="10" labelid=";Receipt" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_RECEIPT" translateresult=""/>
+			<column colspan="10" labelid=";Amount" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_AMOUNT" translateresult=""/>
+		</columns>
+	</register>
+	<register pagesize="A2" id="3" accessright="msas.registry.report.prenatal.select"  transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MSAS_REGISTRY_PRENATAL">
+		<columns>
+			<column colspan="10" labelid=";Serial nr" source="system" name="id"/>
+			<column colspan="10" labelid="register;date" source="transaction" name="updatetime"/>
+			<column colspan="10" labelid=";Hosp nr" source="patient" name="personid"/>
+			<column colspan="30" labelid="register;patientfullname" source="patient" name="fullname"/>
+			<column colspan="10" labelid=";Village" source="patient" name="city"/>
+			<column colspan="10" labelid=";Address" source="patient" name="address"/>
+			<column colspan="10" labelid=";Compound head" source="patient" name="cell"/>
+			<column colspan="20" labelid=";Phone" source="patient" name="telephones"/>
+			<column colspan="10" labelid=";Age" source="patient" name="childage"/>
+			<column colspan="10" labelid=";Gravida" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_GESTITY" translateresult=""/>
+			<column colspan="10" labelid=";Para" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_PARITY" translateresult=""/>
+			<column colspan="10" labelid=";Children alive" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FILM2" translateresult=""/>
+			<column colspan="10" labelid=";Children dead" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_CHILDRENALIVE" translateresult=""/>
+			<column colspan="10" labelid=";DOB last child" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_CHILDRENDEAD" translateresult=""/>
+			<column colspan="10" labelid=";Status last child" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_STATUSLASTCHILD" translateresult="deadalive"/>
+			<column colspan="20" labelid=";Last FP methods" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_FPAFTERLASTBIRTH" translateresult=""/>
+			<column colspan="20" labelid=";Risks 1st contact" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEL_TYPE_RISKFACTORSLASTCONTACT" translateresult="web.occup"/>
+			<column colspan="20" labelid=";Risks after" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEL_TYPE_RISKFACTORSTHISCONTACT" translateresult=""/>
+			<column colspan="10" labelid=";Urine" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_URINE" translateresult=""/>
+			<column colspan="10" labelid=";Hb" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_HB" translateresult=""/>
+			<column colspan="10" labelid=";Sickle cell" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_SICKLECELL" translateresult=""/>
+			<column colspan="10" labelid=";IPT" output="X" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_TPI" contains="1"/>
+			<column colspan="10" labelid=";LLIN" output="X" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_MILDA" contains="medwan.common.true"/>
+			<column colspan="20" labelid=";Malaria treatment" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_MALARIATREATMENT"/>
+			<column colspan="10" labelid=";Iron" output="X" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_IRON" contains="medwan.common.true"/>
+			<column colspan="10" labelid=";Gest age" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_GESTATIONALAGE"/>
+			<column colspan="10" labelid=";Blood pressure" concatenate="1" separator=" / " source="transaction;transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MOTHERSYSTOLICBP;be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MOTHERDIASTOLICBP"/>
+			<column colspan="10" labelid=";STI" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_STI"/>
+			<column colspan="10" labelid=";STI partner" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_STIPARTNER"/>
+			<column colspan="10" labelid=";Syphilis index" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_SYPHILIS_TREATMENT_DATE"/>
+			<column colspan="10" labelid=";Syphilis partner" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_SYPHILIS_PARTNERTREATMENT_DATE"/>
+			<column colspan="30" labelid=";Remarks" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_MSAS_PRENATAL_OBSERVATIONS"/>
+		</columns>
+	</register>
+	<register pagesize="A4" id="4" accessright="occup.medicalcare.select" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_MEDICALCARE">
+		<columns>
+			<column colspan="10" labelid=";Serial nr" source="system" name="id"/>
+			<column colspan="10" labelid="register;date" source="transaction" name="updatetime"/>
+			<column colspan="30" labelid="register;patientfullname" source="patient" name="fullname"/>
+			<column colspan="10" labelid="register;patientage" source="patient" name="childage"/>
+			<column colspan="10" labelid="register;patientgender" source="patient" name="gender"/>
+			<column colspan="30" labelid="register;patientaddress" source="patient" name="address"/>
+			<column colspan="20" labelid=";Telephone" source="patient" name="telephones"/>
+			<column colspan="20" labelid=";Nationality" source="patient" name="nationality" translateresult="country"/>
+			<column colspan="30" labelid="register;diagnosis" source="diagnosis" name="icd10withlocalcodes"/>
+			<column colspan="30" labelid=";Nature of wound" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_TYPEOFWOUND" translateresult=""/>
+			<column colspan="20" labelid=";Service provider" source="transaction" name="user" translateresult=""/>
+		</columns>
+	</register>
+	<register pagesize="A4" id="5" title="Gambia - Laboratory register" accessright="occup.labrequest.select" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_LAB_REQUEST">
+		<columns>
+			<column colspan="10" labelid=";Lab nr" source="transaction" name="id"/>
+			<column colspan="10" labelid="register;date" source="transaction" name="updatetime"/>
+			<column colspan="30" labelid="register;patientfullname" source="patient" name="fullname"/>
+			<column colspan="20" labelid=";Address" source="patient" name="address"/>
+			<column colspan="10" labelid=";Telephone" source="patient" name="telephones"/>
+			<column colspan="10" labelid="register;patientgender" source="patient" name="gender"/>
+			<column colspan="10" labelid="register;patientage" source="patient" name="childage"/>
+			<column colspan="20" labelid=";Referred by" source="encounter" name="origin" translateresult="urgency.origin"/>
+			<column colspan="20" labelid=";Type of patient" source="encounter" name="type" translateresult="web"/>
+			<column colspan="10" labelid=";Urgency" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_LAB_URGENCY" translateresult="labrequest.urgency"/>
+			<column colspan="20" labelid=";Comment" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_LAB_REMARK" translateresult=""/>
+		</columns>
+	</register>
+	<register pagesize="A3" id="6" title="Gambia - Laboratory biochemistry register" labtestsneeded="5010;5011;5230;5110;5140;5050;5040;5070;5060;5220;5130;5020;5030;51550;5080;5090;5091;5100" accessright="occup.labrequest.select" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_LAB_REQUEST">
+		<columns>
+			<column colspan="10" labelid="register;date" source="transaction" name="updatetime"/>
+			<column colspan="10" labelid=";Lab nr" source="transaction" name="id"/>
+			<column colspan="30" labelid="register;patientfullname" source="patient" name="fullname"/>
+			<column colspan="10" labelid="register;patientage" source="patient" name="childage"/>
+			<column colspan="10" labelid="register;patientgender" source="patient" name="gender"/>
+			<column colspan="30" labelid=";Ward/unit" source="encounter" name="service" translateresult="service"/>
+			<column colspan="10" labelid=";FBS" source="transaction" name="labresult=5010" translateresult=""/>
+			<column colspan="10" labelid=";RBS" source="transaction" name="labresult=5011" translateresult=""/>
+			<column colspan="10" labelid=";HbA1c" source="transaction" name="labresult=5230" translateresult=""/>
+			<column colspan="10" labelid=";Alka Phos" source="transaction" name="labresult=5110" translateresult=""/>
+			<column colspan="10" labelid=";Albumin" source="transaction" name="labresult=5140" translateresult=""/>
+			<column colspan="10" labelid=";ALAT/GPT" source="transaction" name="labresult=5050" translateresult=""/>
+			<column colspan="10" labelid=";GOT" source="transaction" name="labresult=5040" translateresult=""/>
+			<column colspan="10" labelid=";Bili Direct" source="transaction" name="labresult=5070" translateresult=""/>
+			<column colspan="10" labelid=";Bili Total" source="transaction" name="labresult=5060" translateresult=""/>
+			<column colspan="10" labelid=";Total Proteines" source="transaction" name="labresult=5220" translateresult=""/>
+			<column colspan="10" labelid=";Gamma GT" source="transaction" name="labresult=5130" translateresult=""/>
+			<column colspan="10" labelid=";Urea" source="transaction" name="labresult=5020" translateresult=""/>
+			<column colspan="10" labelid=";Creatinine" source="transaction" name="labresult=5030" translateresult=""/>
+			<column colspan="10" labelid=";Uric acid" source="transaction" name="labresult=5150" translateresult=""/>
+			<column colspan="10" labelid=";Total cholesterol" source="transaction" name="labresult=5080" translateresult=""/>
+			<column colspan="10" labelid=";HDL" source="transaction" name="labresult=5090" translateresult=""/>
+			<column colspan="10" labelid=";LDL" source="transaction" name="labresult=5091" translateresult=""/>
+			<column colspan="10" labelid=";Triglyc." source="transaction" name="labresult=5100" translateresult=""/>
+		</columns>
+	</register>
+	<register pagesize="A4" id="7" title="Gambia - Laboratory urine analysis register" labtestsneeded="4011;4039;4033;4032;4030;4037;4020;4036;4038;4035;4034;4012" accessright="occup.labrequest.select" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_LAB_REQUEST">
+		<columns>
+			<column colspan="10" labelid="register;date" source="transaction" name="updatetime"/>
+			<column colspan="10" labelid=";Lab nr" source="transaction" name="id"/>
+			<column colspan="30" labelid="register;patientfullname" source="patient" name="fullname"/>
+			<column colspan="10" labelid="register;patientage" source="patient" name="childage"/>
+			<column colspan="10" labelid="register;patientgender" source="patient" name="gender"/>
+			<column colspan="20" labelid=";Source" source="encounter" name="origin" translateresult="urgency.origin"/>
+			<column colspan="15" labelid=";Appearance" source="transaction" name="labresult=4011" translateresult=""/>
+			<column colspan="10" labelid=";Sg" source="transaction" name="labresult=4039" translateresult=""/>
+			<column colspan="10" labelid=";Ph" source="transaction" name="labresult=4033" translateresult=""/>
+			<column colspan="10" labelid=";Blood" source="transaction" name="labresult=4032" translateresult=""/>
+			<column colspan="10" labelid=";Pro" source="transaction" name="labresult=4030" translateresult=""/>
+			<column colspan="10" labelid=";Nit" source="transaction" name="labresult=4037" translateresult=""/>
+			<column colspan="10" labelid=";Glu" source="transaction" name="labresult=4020" translateresult=""/>
+			<column colspan="10" labelid=";Ket" source="transaction" name="labresult=4036" translateresult=""/>
+			<column colspan="10" labelid=";Leu" source="transaction" name="labresult=4038" translateresult=""/>
+			<column colspan="10" labelid=";Uro" source="transaction" name="labresult=4035" translateresult=""/>
+			<column colspan="10" labelid=";Bili" source="transaction" name="labresult=4034" translateresult=""/>
+			<column colspan="10" labelid=";Deposits" source="transaction" name="labresult=4012" translateresult=""/>
+		</columns>
+	</register>
+	<register pagesize="A4" id="8" title="Gambia - Laboratory malaria register" labtestsneeded="3023;5300;3021;3011;5301" accessright="occup.labrequest.select" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_LAB_REQUEST">
+		<columns>
+			<column colspan="10" labelid="register;date" source="transaction" name="updatetime"/>
+			<column colspan="10" labelid=";Serial nr" source="system" name="id"/>
+			<column colspan="10" labelid=";OPD nr" source="encounter" name="id"/>
+			<column colspan="30" labelid="register;patientfullname" source="patient" name="fullname"/>
+			<column colspan="10" labelid="register;patientage" source="patient" name="childage"/>
+			<column colspan="10" labelid="register;patientgender" source="patient" name="gender"/>
+			<column colspan="20" labelid=";Address" source="patient" name="address"/>
+			<column colspan="20" labelid=";Clinic" source="encounter" name="origin" translateresult="urgency.origin"/>
+			<column colspan="30" labelid=";Ward/unit" source="encounter" name="service" translateresult="service"/>
+			<column colspan="10" labelid=";Hb" source="transaction" name="labresult=3023" translateresult=""/>
+			<column colspan="10" labelid=";RDT" source="transaction" name="labresult=5300" translateresult=""/>
+			<column colspan="10" labelid=";WBC" source="transaction" name="labresult=3021" translateresult=""/>
+			<column colspan="15" labelid=";Blood group" source="transaction" name="labresult=3011" translateresult=""/>
+			<column colspan="15" labelid=";Sickle cell" source="transaction" name="labresult=5301" translateresult=""/>
+			<column colspan="20" labelid=";Remarks" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_LAB_REMARK" translateresult=""/>
+		</columns>
+	</register>
+	<register pagesize="A3" id="9" title="Gambia - Theatre and anesthesia register" accessright="occup.labrequest.select" transactiontype="be.mxs.common.model.vo.healthrecord.IConstants.TRANSACTION_TYPE_OPERATION_PROTOCOL">
+		<columns>
+			<column colspan="10" labelid=";Serial nr" source="system" name="id"/>
+			<column colspan="10" labelid="register;date" source="transaction" name="updatetime"/>
+			<column colspan="10" labelid=";Hospital nr" source="patient" name="personid"/>
+			<column colspan="30" labelid="register;patientfullname" source="patient" name="fullname"/>
+			<column colspan="30" labelid=";Ward/unit" source="encounter" name="service" translateresult="service"/>
+			<column colspan="20" labelid=";Address" source="patient" name="address"/>
+			<column colspan="10" labelid="register;patientage" source="patient" name="childage"/>
+			<column colspan="10" labelid="register;patientgender" source="patient" name="gender"/>
+			<column colspan="30" labelid="register;diagnosis" source="diagnosis" name="icd10withlocalcodes"/>
+			<column colspan="10" labelid=";Hb" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_HB" translateresult=""/>
+			<column colspan="10" labelid=";Phys. status" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_ASA" translateresult="asa"/>
+			<column colspan="20" labelid=";Nature of operation" concatenate="1" source="transaction;transaction;transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_OPERATION_PROTOCOL_SURGICAL_ACT1;be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_OPERATION_PROTOCOL_SURGICAL_ACT2;be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_OPERATION_PROTOCOL_SURGICAL_ACT3" translateresult="surgicalacts;surgicalacts;surgicalacts"/>
+			<column colspan="20" labelid=";Urgency" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_URGENCY" translateresult="surgery.urgency"/>
+			<column colspan="20" labelid=";Anesthesia" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_ANESTHESIA" translateresult="surgery.anesthesia"/>
+			<column colspan="20" labelid=";Anesthesiologists" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_OPERATION_PROTOCOL_ANASTHESISTS" translateresult=""/>
+			<column colspan="20" labelid=";Surgeons" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_OPERATION_PROTOCOL_SURGEONS" translateresult=""/>
+			<column colspan="20" labelid=";Nurses" source="transaction" name="be.mxs.common.model.vo.healthrecord.IConstants.ITEM_TYPE_OPERATION_PROTOCOL_NURSES" translateresult=""/>
+		</columns>
+	</register>
+</registers>
