@@ -272,6 +272,7 @@ public class ScanDirectoryMonitor implements Runnable{
 	}
 	
 	public static void sortOldestFilesFirst(File[] files) {
+	    if(files == null) return;
 	    Arrays.sort(files, Comparator.comparingLong(File::lastModified));
 	}
 
