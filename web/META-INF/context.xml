@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context>
     <Resources cachingAllowed="false" />
+    <ResourceLink global="openclinic"     name="openclinic"     type="javax.sql.DataSource"/>
+    <ResourceLink global="longopenclinic" name="longopenclinic" type="javax.sql.DataSource"/>
+    <ResourceLink global="admin"          name="admin"          type="javax.sql.DataSource"/>
+    <ResourceLink global="longadmin"      name="longadmin"      type="javax.sql.DataSource"/>
+    <ResourceLink global="stats"          name="stats"          type="javax.sql.DataSource"/>
 </Context>
