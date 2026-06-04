@@ -12,8 +12,6 @@ import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import com.mysql.cj.x.protobuf.Mysqlx.ErrorOrBuilder;
-
 import be.mxs.common.util.system.HTMLEntities;
 import be.openclinic.system.SH;
 
