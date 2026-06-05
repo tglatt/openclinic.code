@@ -11,7 +11,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar:///opt/homebrew/Cellar/tomcat@9/9.0.118/libexec/lib/servlet-api.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/provided/servlet-api.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -20,7 +20,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar:///opt/homebrew/Cellar/tomcat@9/9.0.118/libexec/lib/catalina.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/provided/catalina.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -29,7 +29,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar:///opt/homebrew/Cellar/tomcat@9/9.0.118/libexec/lib/catalina-ant.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/provided/catalina-ant.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -38,7 +38,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar:///opt/homebrew/Cellar/tomcat@9/9.0.118/libexec/lib/catalina-ha.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/provided/catalina-ha.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -47,7 +47,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar:///opt/homebrew/Cellar/tomcat@9/9.0.118/libexec/lib/catalina-ssi.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/provided/catalina-ssi.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -56,7 +56,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar:///opt/homebrew/Cellar/tomcat@9/9.0.118/libexec/lib/catalina-storeconfig.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/provided/catalina-storeconfig.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -65,7 +65,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar:///opt/homebrew/Cellar/tomcat@9/9.0.118/libexec/lib/catalina-tribes.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/provided/catalina-tribes.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -282,15 +282,6 @@
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/web/WEB-INF/lib/core-3.3.0.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/web/WEB-INF/lib/cos-09May2002.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1145,15 +1136,6 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/web/WEB-INF/lib/thymeleaf-3.0.11.RELEASE.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
           <root url="jar://$MODULE_DIR$/web/WEB-INF/lib/txw2-2.3.1.jar!/" />
         </CLASSES>
         <JAVADOC />
@@ -1182,15 +1164,6 @@
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/web/WEB-INF/lib/ucum-1.0.2.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/web/WEB-INF/lib/unbescape-1.1.6.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1289,7 +1262,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar:///opt/homebrew/Cellar/tomcat@9/9.0.118/libexec/lib/jsp-api.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/provided/jsp-api.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1298,7 +1271,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar:///opt/homebrew/Cellar/tomcat@9/9.0.118/libexec/lib/el-api.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/provided/el-api.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1353,15 +1326,6 @@
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/web/WEB-INF/lib/dcm4che-tool-dcmrcv-2.0.25.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/web/WEB-INF/lib/itext-2.1.7.js4.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -1814,15 +1778,6 @@
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/web/WEB-INF/lib/animal-sniffer-annotations-1.17.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/web/WEB-INF/lib/attoparser-2.0.5.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
