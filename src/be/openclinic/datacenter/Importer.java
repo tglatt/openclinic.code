@@ -22,8 +22,6 @@ import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 import org.jnp.interfaces.java.javaURLContextFactory;
 
-import com.sun.org.apache.xml.internal.security.utils.Base64;
-
 import be.mxs.common.util.db.MedwanQuery;
 import be.mxs.common.util.system.Debug;
 import be.mxs.common.util.system.ScreenHelper;
