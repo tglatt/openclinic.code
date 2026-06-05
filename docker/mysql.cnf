@@ -1,2 +1,3 @@
 [mysqld]
 lower_case_table_names=1
+sql_mode=NO_ENGINE_SUBSTITUTION
