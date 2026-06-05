@@ -87,7 +87,7 @@ public class CsvCmsck2 {
 		            initialized=false;
 		             Sum sum;
 	           
-	            	sOutput+="\r\n"+" N°;NOMS et PRENOMS; N° BC ; MONTANT;\r\n";
+	            	sOutput+="\r\n"+" Nï¿½;NOMS et PRENOMS; Nï¿½ BC ; MONTANT;\r\n";
 	            	debetcount=0;
 		            for(int i=0; i<debets.size(); i++){
 		            	sum = (Sum)debets.get(i);
