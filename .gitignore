@@ -1,4 +1,5 @@
 out/
 target/
+META-INF/
 .smarttomcat/
 .idea/workspace.xml
