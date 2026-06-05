@@ -238,7 +238,15 @@ public class Utils {
 			GetMethod method = new GetMethod(url);
 			method.setRequestHeader("Content-type","text/xml; charset=windows-1252");
 			int statusCode = client.executeMethod(method);
+			if(statusCode != 200) {
+				System.out.println("RxNorm DDI API error: HTTP " + statusCode + " for URL " + url);
+				return interactions;
+			}
 			String sResp = method.getResponseBodyAsString();
+			if(sResp == null || !sResp.trim().startsWith("<")) {
+				System.out.println("RxNorm DDI API returned non-XML response: " + sResp);
+				return interactions;
+			}
 			BufferedReader br = new BufferedReader(new StringReader(sResp));
 			SAXReader reader=new SAXReader(false);
 			org.dom4j.Document document=reader.read(br);
