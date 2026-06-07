@@ -55,16 +55,13 @@
     </repositories>
 
     <build>
-        <sourceDirectory>src</sourceDirectory>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.3.2</version>
                 <configuration>
-                    <warSourceDirectory>web</warSourceDirectory>
                     <failOnMissingWebXml>true</failOnMissingWebXml>
-                    <packagingExcludes>WEB-INF/lib/local-*.jar</packagingExcludes>
                 </configuration>
             </plugin>
             <plugin>
@@ -836,8 +833,23 @@
             <version>1.0.5</version>
         </dependency>
         <dependency>
-            <groupId>local</groupId>
+            <groupId>be.fedict.eid-applet</groupId>
             <artifactId>eid-applet-service</artifactId>
+            <version>1.2.6</version>
+        </dependency>
+        <dependency>
+            <groupId>be.fedict.eid-applet</groupId>
+            <artifactId>eid-applet-shared</artifactId>
+            <version>1.2.6</version>
+        </dependency>
+        <dependency>
+            <groupId>be.fedict.eid-applet</groupId>
+            <artifactId>eid-applet-service-spi</artifactId>
+            <version>1.2.6</version>
+        </dependency>
+        <dependency>
+            <groupId>be.fedict.eid-applet</groupId>
+            <artifactId>eid-applet-package</artifactId>
             <version>1.2.6</version>
         </dependency>
 

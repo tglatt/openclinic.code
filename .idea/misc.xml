@@ -5,6 +5,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/web/WEB-INF/lib/ph-jaxb-pom-1.0.3.pom" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>

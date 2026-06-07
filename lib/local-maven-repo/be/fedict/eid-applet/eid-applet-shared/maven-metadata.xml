@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>be.fedict.eid-applet</groupId>
+  <artifactId>eid-applet-shared</artifactId>
+  <versioning>
+    <release>1.2.6</release>
+    <versions>
+      <version>1.2.6</version>
+    </versions>
+    <lastUpdated>20260607131852</lastUpdated>
+  </versioning>
+</metadata>

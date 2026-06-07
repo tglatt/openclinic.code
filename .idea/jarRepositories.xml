@@ -22,9 +22,19 @@
       <option name="url" value="https://repo.maven.apache.org/maven2" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="jitpack.io" />
+      <option name="name" value="jitpack.io" />
+      <option name="url" value="https://jitpack.io" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="sonatype-central-snapshots" />
       <option name="name" value="Sonatype Central Snapshots" />
       <option name="url" value="https://central.sonatype.com/repository/maven-snapshots" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="local-repo" />
+      <option name="name" value="local-repo" />
+      <option name="url" value="file://$PROJECT_DIR$/lib/local-maven-repo" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="central" />
@@ -45,6 +55,11 @@
       <option name="id" value="openmrs-repo" />
       <option name="name" value="OpenMRS Repository" />
       <option name="url" value="https://mavenrepo.openmrs.org/public" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="dcm4che" />
+      <option name="name" value="dcm4che" />
+      <option name="url" value="https://www.dcm4che.org/maven2" />
     </remote-repository>
   </component>
 </project>

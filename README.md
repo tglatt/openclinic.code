@@ -50,21 +50,7 @@ Ouvrir **Run → Edit Configurations**, créer une nouvelle configuration **Smar
 
 Dans l'onglet **Before Launch**, ajouter : **Run Maven Goal** → `war:exploded`
 
-### 5. Configurer le `server.xml` de Tomcat
-
-Ajouter dans `GlobalNamingResources` du `server.xml` de Tomcat (`conf/server.xml`) :
-
-```xml
-<Resource name="openclinic" auth="Container"
-          type="uk.org.primrose.vendor.tomcat.PrimroseDataSource"
-          factory="uk.org.primrose.vendor.tomcat.PrimroseDataSourceFactory"
-          poolName="openclinic"
-          primroseConfigFile="/chemin/vers/.smarttomcat/openclinic.code/conf/db.cfg"/>
-```
-
-> **Note** : Les datasources JNDI sont configurées dans `web/META-INF/context.xml` via le pool Tomcat JDBC — aucune configuration Tomcat supplémentaire n'est normalement requise.
-
-### 6. Lancer l'application
+### 5. Lancer l'application
 
 Démarrer la configuration depuis IntelliJ. L'application est accessible à :
 
@@ -77,12 +63,15 @@ http://localhost:8080/code
 ## Structure du projet
 
 ```
-src/                    # Code source Java
-web/                    # Ressources web (JSP, HTML, WEB-INF/)
-  META-INF/
-    context.xml         # Configuration JNDI (datasources MySQL)
-  WEB-INF/
-    web.xml             # Descripteur de déploiement
+src/
+  main/
+    java/               # Code source Java
+    webapp/             # Ressources web (JSP, HTML, WEB-INF/)
+      META-INF/
+        context.xml     # Configuration JNDI (datasources MySQL)
+      WEB-INF/
+        web.xml         # Descripteur de déploiement
+    resources/          # Fichiers de config (log4j.properties, logback.xml)
 docker/
   Dockerfile            # Image MySQL
   dump.sql              # Données initiales
@@ -103,7 +92,7 @@ pom.xml                 # Dépendances Maven
 | `stats` | `ocstats_dbo` | Statistiques |
 | `ikirezi` | `ikirezi` | Module Ikirezi |
 
-Toutes les connexions sont configurées dans `web/META-INF/context.xml`.
+Toutes les connexions sont configurées dans `src/main/webapp/META-INF/context.xml`.
 
 ---
 
@@ -133,5 +122,6 @@ Pour reconstruire la base depuis zéro :
 ```bash
 docker rm -f openclinic-db
 docker volume prune
+docker build -t openclinic-mysql ./docker
 docker run -d -p 3306:3306 --name openclinic-db openclinic-mysql
 ```
