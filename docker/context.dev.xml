@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+    <Resources cachingAllowed="false" />
+
+    <Resource name="openclinic"
+              auth="Container"
+              type="javax.sql.DataSource"
+              factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+              driverClassName="com.mysql.jdbc.Driver"
+              url="jdbc:mysql://db:3306/openclinic_dbo?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull&amp;sessionVariables=sql_mode='NO_ENGINE_SUBSTITUTION'"
+              username="root" password="root"
+              initialSize="5" maxActive="100" maxIdle="20" minIdle="5"
+              removeAbandoned="true" removeAbandonedTimeout="300"
+              minEvictableIdleTimeMillis="120000"/>
+
+    <Resource name="longopenclinic"
+              auth="Container"
+              type="javax.sql.DataSource"
+              factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+              driverClassName="com.mysql.jdbc.Driver"
+              url="jdbc:mysql://db:3306/openclinic_dbo?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull&amp;sessionVariables=sql_mode='NO_ENGINE_SUBSTITUTION'"
+              username="root" password="root"
+              initialSize="5" maxActive="100" maxIdle="20" minIdle="5"
+              removeAbandoned="true" removeAbandonedTimeout="1200"
+              minEvictableIdleTimeMillis="1200000"/>
+
+    <Resource name="admin"
+              auth="Container"
+              type="javax.sql.DataSource"
+              factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+              driverClassName="com.mysql.jdbc.Driver"
+              url="jdbc:mysql://db:3306/ocadmin_dbo?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull&amp;sessionVariables=sql_mode='NO_ENGINE_SUBSTITUTION'"
+              username="root" password="root"
+              initialSize="5" maxActive="100" maxIdle="20" minIdle="5"
+              removeAbandoned="true" removeAbandonedTimeout="300"
+              minEvictableIdleTimeMillis="120000"/>
+
+    <Resource name="longadmin"
+              auth="Container"
+              type="javax.sql.DataSource"
+              factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+              driverClassName="com.mysql.jdbc.Driver"
+              url="jdbc:mysql://db:3306/ocadmin_dbo?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull&amp;sessionVariables=sql_mode='NO_ENGINE_SUBSTITUTION'"
+              username="root" password="root"
+              initialSize="5" maxActive="100" maxIdle="20" minIdle="5"
+              removeAbandoned="true" removeAbandonedTimeout="1200"
+              minEvictableIdleTimeMillis="1200000"/>
+
+    <Resource name="stats"
+              auth="Container"
+              type="javax.sql.DataSource"
+              factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+              driverClassName="com.mysql.jdbc.Driver"
+              url="jdbc:mysql://db:3306/ocstats_dbo?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull&amp;sessionVariables=sql_mode='NO_ENGINE_SUBSTITUTION'"
+              username="root" password="root"
+              initialSize="5" maxActive="100" maxIdle="20" minIdle="5"
+              removeAbandoned="true" removeAbandonedTimeout="1200"
+              minEvictableIdleTimeMillis="120000"/>
+
+    <Resource name="ikirezi"
+              auth="Container"
+              type="javax.sql.DataSource"
+              factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+              driverClassName="com.mysql.jdbc.Driver"
+              url="jdbc:mysql://db:3306/ikirezi?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull&amp;sessionVariables=sql_mode='NO_ENGINE_SUBSTITUTION'"
+              username="root" password="root"
+              initialSize="5" maxActive="100" maxIdle="20" minIdle="5"
+              removeAbandoned="true" removeAbandonedTimeout="300"
+              minEvictableIdleTimeMillis="120000"/>
+</Context>

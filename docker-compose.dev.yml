@@ -1,0 +1,36 @@
+services:
+  db:
+    build:
+      context: ./docker/mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: openclinic
+      MYSQL_PASSWORD: openclinic
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  app:
+    image: tomcat:9.0-jdk8
+    ports:
+      - "8080:8080"
+    volumes:
+      # Répertoire buildé par Maven — monté en live dans Tomcat
+      - ./target/openclinic-1.0-SNAPSHOT:/usr/local/tomcat/webapps/code
+      # context.xml pointant vers le service "db" avec reloadable activé
+      - ./docker/context.dev.xml:/usr/local/tomcat/webapps/code/META-INF/context.xml
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      JAVA_OPTS: >-
+        -Dfile.encoding=UTF-8
+
+volumes:
+  mysql_data:

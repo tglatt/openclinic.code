@@ -22,11 +22,11 @@ cd openclinic.code
 ### 2. Démarrer la base de données
 
 ```bash
-docker build -t openclinic-mysql ./docker
+docker build -t openclinic-mysql ./docker/mysql
 docker run -d -p 3306:3306 --name openclinic-db openclinic-mysql
 ```
 
-La base de données est initialisée automatiquement avec le dump inclus.  
+La base de données est initialisée automatiquement avec le dump inclus (et les scripts complémentaires comme `zz_nupsref.sql`).  
 Connexion : `root / root`, port `3306`.
 
 ### 3. Construire le projet
@@ -60,6 +60,31 @@ http://localhost:8080/code
 
 ---
 
+## Alternative : tout lancer avec Docker Compose
+
+Pour un environnement de développement complet (base de données + application) sans IntelliJ :
+
+```bash
+mvn war:exploded
+docker compose -f docker-compose.dev.yml up -d
+```
+
+- `db` : construit depuis `docker/mysql`, healthcheck MySQL, données persistées dans le volume `mysql_data`.
+- `app` : Tomcat 9 qui monte en live `target/openclinic-1.0-SNAPSHOT` ainsi que `docker/context.dev.xml` (datasources pointant vers le service `db`).
+
+L'application est accessible sur `http://localhost:8080/code` et la base sur `localhost:3306`.
+
+Après une modification Java, relancer `mvn war:exploded` : Tomcat recharge le déploiement monté en volume.
+
+Pour repartir d'une base vierge :
+
+```bash
+docker compose -f docker-compose.dev.yml down -v
+docker compose -f docker-compose.dev.yml up -d --build
+```
+
+---
+
 ## Structure du projet
 
 ```
@@ -73,9 +98,16 @@ src/
         web.xml         # Descripteur de déploiement
     resources/          # Fichiers de config (log4j.properties, logback.xml)
 docker/
-  Dockerfile            # Image MySQL
-  dump.sql              # Données initiales
-  mysql.cnf             # Configuration MySQL
+  mysql/
+    Dockerfile          # Image MySQL
+    00_init.sql         # Création de l'utilisateur applicatif
+    dump.sql            # Données initiales
+    zz_nupsref.sql      # Table nupsref (absente du dump, exécutée après celui-ci)
+    mysql.cnf           # Configuration MySQL
+  tomcat/
+    Dockerfile          # Image Tomcat (build Maven multi-stage + déploiement)
+  context.dev.xml       # context.xml pour docker-compose (datasources -> service "db")
+docker-compose.dev.yml  # Stack complète db + app pour le développement
 lib/
   local-maven-repo/     # JARs propriétaires (Primrose, Aspose, etc.)
 pom.xml                 # Dépendances Maven
@@ -122,6 +154,6 @@ Pour reconstruire la base depuis zéro :
 ```bash
 docker rm -f openclinic-db
 docker volume prune
-docker build -t openclinic-mysql ./docker
+docker build -t openclinic-mysql ./docker/mysql
 docker run -d -p 3306:3306 --name openclinic-db openclinic-mysql
 ```
